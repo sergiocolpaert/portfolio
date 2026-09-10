@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -124,23 +125,36 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
       {/* About */}
       <section className="border-t border-border">
-        <Container className="grid grid-cols-1 gap-10 py-20 sm:py-28 md:grid-cols-[1fr_1fr]">
+        <Container className="grid grid-cols-1 gap-10 py-20 sm:py-28 md:grid-cols-[280px_1fr] md:items-center">
           <Reveal>
-            <p className="text-sm tracking-widest text-muted uppercase">
-              {t("aboutTitle")}
-            </p>
-            <p className="mt-6 max-w-md font-display text-2xl leading-snug font-medium tracking-tight sm:text-3xl">
-              {t("aboutSummary")}
-            </p>
+            <div className="relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-xl border border-border">
+              <Image
+                src="/images/sergio-portrait.png"
+                alt="Sergio Colpaert"
+                fill
+                sizes="280px"
+                className="object-cover grayscale"
+              />
+            </div>
           </Reveal>
-          <Reveal delay={0.15} className="flex items-end">
-            <Link
-              href="/sobre"
-              className="link-underline font-display text-lg font-medium"
-            >
-              {t("aboutLink")} ↗
-            </Link>
-          </Reveal>
+          <div>
+            <Reveal delay={0.1}>
+              <p className="text-sm tracking-widest text-muted uppercase">
+                {t("aboutTitle")}
+              </p>
+              <p className="mt-6 max-w-md font-display text-2xl leading-snug font-medium tracking-tight sm:text-3xl">
+                {t("aboutSummary")}
+              </p>
+            </Reveal>
+            <Reveal delay={0.2} className="mt-8">
+              <Link
+                href="/sobre"
+                className="link-underline font-display text-lg font-medium"
+              >
+                {t("aboutLink")} ↗
+              </Link>
+            </Reveal>
+          </div>
         </Container>
       </section>
 

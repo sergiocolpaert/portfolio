@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -7,15 +7,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../globals.css";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800", "900"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const switzer = localFont({
+  variable: "--font-switzer",
+  src: [
+    { path: "../../fonts/Switzer-Thin.woff2", weight: "100", style: "normal" },
+    { path: "../../fonts/Switzer-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../fonts/Switzer-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/Switzer-Semibold.woff2", weight: "600", style: "normal" },
+    { path: "../../fonts/Switzer-Bold.woff2", weight: "700", style: "normal" },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${archivo.variable} ${inter.variable} h-full antialiased`}
+      className={`${switzer.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider>

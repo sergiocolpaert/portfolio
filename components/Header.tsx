@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import LocaleSwitcher from "./LocaleSwitcher";
 import DownloadCVButton from "./DownloadCVButton";
 import Container from "./Container";
+import Logo from "./Logo";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -10,14 +11,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
       <Container className="flex flex-wrap items-center justify-between gap-4 py-5">
-        <Link
-          href="/"
-          className="flex items-center gap-1.5 font-display text-lg font-extrabold tracking-tight uppercase"
-        >
-          Sergio
-          <span className="rounded-full bg-foreground px-2.5 py-0.5 text-background">
-            .design
-          </span>
+        <Link href="/" className="flex items-center">
+          <Logo className="h-8 w-auto sm:h-9" />
         </Link>
 
         <nav className="flex items-center gap-6 text-sm md:gap-8">

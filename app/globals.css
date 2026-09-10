@@ -13,8 +13,8 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-border: var(--border);
-  --font-display: var(--font-archivo);
-  --font-sans: var(--font-inter);
+  --font-display: var(--font-switzer);
+  --font-sans: var(--font-switzer);
 }
 
 body {
