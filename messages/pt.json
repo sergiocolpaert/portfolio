@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Início",
+    "cases": "Trabalhos",
+    "about": "Sobre",
+    "contact": "Contato",
+    "downloadCV": "Baixar currículo"
+  },
+  "home": {
+    "headline": "UI/UX & Product Designer",
+    "positioning": "Eu desenho produtos digitais que transformam problemas de negócio em experiências claras e usáveis.",
+    "featuredTitle": "Trabalhos selecionados",
+    "aboutTitle": "Sobre",
+    "aboutSummary": "Comecei como desenvolvedor e migrei para product design para ficar mais perto das decisões que moldam um produto — da pesquisa ao pixel. Gosto de trabalho que é fácil de usar e fácil de justificar.",
+    "aboutLink": "Ler mais",
+    "ctaCases": "Ver todos os trabalhos",
+    "servicesLabel": "O que eu faço",
+    "servicesTitle": "Do problema ao pixel, e de volta.",
+    "statsLabel": "Em números",
+    "faqLabel": "Perguntas frequentes",
+    "faqTitle": "Tudo que você precisa saber",
+    "ctaTitle": "Vamos construir o próximo case juntos."
+  },
+  "skills": {
+    "items": [
+      { "index": "01", "title": "UX Research" },
+      { "index": "02", "title": "Product Design" },
+      { "index": "03", "title": "UI Design & Design Systems" },
+      { "index": "04", "title": "Front-end (HTML/CSS/JS)" }
+    ]
+  },
+  "stats": {
+    "items": [
+      { "value": "5+", "label": "Anos de experiência" },
+      { "value": "20+", "label": "Projetos entregues" },
+      { "value": "3", "label": "Idiomas de atendimento" },
+      { "value": "100%", "label": "Foco em produto digital" }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "Como funciona o seu processo?",
+        "answer": "Começo entendendo o problema de negócio e do usuário, sigo para pesquisa e wireframes, itero com base em feedback e só então desenho as telas finais — sempre documentando as decisões, não só o resultado."
+      },
+      {
+        "question": "Você trabalha com times de desenvolvimento?",
+        "answer": "Sim. Como venho de desenvolvimento, entrego specs, componentes e fluxos pensados para reduzir atrito na entrega — falo a língua de quem vai codar."
+      },
+      {
+        "question": "Está disponível para novas oportunidades?",
+        "answer": "Sim, estou aberto a posições e projetos em Product Design e UI/UX — inclusive remotos ou com mudança de cidade."
+      }
+    ]
+  },
+  "cases": {
+    "title": "Trabalhos",
+    "subtitle": "Uma seleção de case studies — processo e decisões, não só telas finais.",
+    "filterAll": "Todos",
+    "viewCase": "Ver case"
+  },
+  "case": {
+    "role": "Papel",
+    "duration": "Duração",
+    "tools": "Ferramentas",
+    "context": "Contexto e problema",
+    "process": "Processo",
+    "solution": "Solução",
+    "result": "Resultado",
+    "learnings": "Aprendizados",
+    "viewOnBehance": "Ver no Behance",
+    "back": "Voltar aos trabalhos"
+  },
+  "about": {
+    "title": "Sobre",
+    "toolsTitle": "Ferramentas",
+    "educationTitle": "Formação"
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Aberto a novas oportunidades em Product Design e UI/UX.",
+    "emailLabel": "E-mail",
+    "linkedinLabel": "LinkedIn",
+    "behanceLabel": "Behance",
+    "downloadCV": "Baixar currículo"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "locale": {
+    "pt": "PT",
+    "es": "ES",
+    "en": "EN"
+  }
+}

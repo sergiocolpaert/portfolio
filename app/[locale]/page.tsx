@@ -1,0 +1,181 @@
+import { getTranslations } from "next-intl/server";
+import { hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
+import { getAllCasesWithTitles } from "@/lib/cases";
+import CaseCard from "@/components/CaseCard";
+import DownloadCVButton from "@/components/DownloadCVButton";
+import HeroVisual from "@/components/HeroVisual";
+import NumberedList from "@/components/NumberedList";
+import Stats from "@/components/Stats";
+import FAQ from "@/components/FAQ";
+import CTASection from "@/components/CTASection";
+import Container from "@/components/Container";
+import Reveal from "@/components/motion/Reveal";
+import SplitText from "@/components/motion/SplitText";
+import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
+
+const TOOLS = ["Figma", "FigJam", "Framer", "Photoshop", "Illustrator", "Maze"];
+
+export default async function HomePage({ params }: PageProps<"/[locale]">) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
+
+  const t = await getTranslations("home");
+  const tNav = await getTranslations("nav");
+  const tSkills = await getTranslations("skills");
+  const tStats = await getTranslations("stats");
+  const tFaq = await getTranslations("faq");
+  const cases = (await getAllCasesWithTitles(locale)).slice(0, 4);
+
+  const skillItems = tSkills.raw("items") as { index: string; title: string }[];
+  const statItems = tStats.raw("items") as { value: string; label: string }[];
+  const faqItems = tFaq.raw("items") as { question: string; answer: string }[];
+
+  return (
+    <div>
+      {/* Hero */}
+      <Container className="pt-16 pb-20 sm:pt-24 sm:pb-28">
+        <Reveal>
+          <p className="text-sm tracking-widest text-muted uppercase">
+            {t("headline")}
+          </p>
+        </Reveal>
+
+        <SplitText
+          as="h1"
+          text={t("positioning")}
+          delay={0.15}
+          className="mt-5 max-w-3xl font-display text-4xl leading-[1.05] font-semibold tracking-tight sm:text-6xl"
+        />
+
+        <Reveal delay={0.5} className="mt-10 flex flex-wrap items-center gap-4">
+          <DownloadCVButton />
+          <Link href="/cases" className="link-underline text-sm">
+            {t("ctaCases")} ↗
+          </Link>
+        </Reveal>
+
+        <Reveal delay={0.2} className="mt-16">
+          <HeroVisual />
+        </Reveal>
+
+        <StaggerGroup
+          className="mt-10 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-t border-border pt-8 text-sm text-muted"
+          stagger={0.05}
+        >
+          {TOOLS.map((tool) => (
+            <StaggerItem key={tool}>{tool}</StaggerItem>
+          ))}
+        </StaggerGroup>
+      </Container>
+
+      {/* Services / skills */}
+      <Container className="py-20 sm:py-28">
+        <Reveal>
+          <p className="text-sm tracking-widest text-muted uppercase">
+            {t("servicesLabel")}
+          </p>
+        </Reveal>
+        <SplitText
+          as="h2"
+          text={t("servicesTitle")}
+          inView
+          className="mt-4 max-w-2xl font-display text-3xl leading-[1.1] font-semibold tracking-tight sm:text-5xl"
+        />
+        <Reveal delay={0.1} className="mt-14">
+          <NumberedList items={skillItems} />
+        </Reveal>
+      </Container>
+
+      {/* Stats */}
+      <Container className="pb-20 sm:pb-28">
+        <Reveal>
+          <p className="text-sm tracking-widest text-muted uppercase">
+            {t("statsLabel")}
+          </p>
+        </Reveal>
+        <div className="mt-8">
+          <Stats stats={statItems} />
+        </div>
+      </Container>
+
+      {/* Featured work */}
+      <Container className="pb-20 sm:pb-28">
+        <div className="flex items-baseline justify-between border-b border-border pb-4">
+          <Reveal>
+            <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+              {t("featuredTitle")}
+            </h2>
+          </Reveal>
+          <Link href="/cases" className="link-underline text-sm text-muted">
+            {t("ctaCases")} ↗
+          </Link>
+        </div>
+        <StaggerGroup className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
+          {cases.map((meta, i) => (
+            <StaggerItem key={meta.slug}>
+              <CaseCard meta={meta} title={meta.title} index={i + 1} />
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+      </Container>
+
+      {/* About */}
+      <section className="border-t border-border">
+        <Container className="grid grid-cols-1 gap-10 py-20 sm:py-28 md:grid-cols-[1fr_1fr]">
+          <Reveal>
+            <p className="text-sm tracking-widest text-muted uppercase">
+              {t("aboutTitle")}
+            </p>
+            <p className="mt-6 max-w-md font-display text-2xl leading-snug font-medium tracking-tight sm:text-3xl">
+              {t("aboutSummary")}
+            </p>
+          </Reveal>
+          <Reveal delay={0.15} className="flex items-end">
+            <Link
+              href="/sobre"
+              className="link-underline font-display text-lg font-medium"
+            >
+              {t("aboutLink")} ↗
+            </Link>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-border">
+        <Container className="py-20 sm:py-28">
+          <Reveal>
+            <p className="text-sm tracking-widest text-muted uppercase">
+              {t("faqLabel")}
+            </p>
+          </Reveal>
+          <SplitText
+            as="h2"
+            text={t("faqTitle")}
+            inView
+            className="mt-4 font-display text-3xl font-semibold tracking-tight sm:text-5xl"
+          />
+          <div className="mt-14">
+            <FAQ items={faqItems} />
+          </div>
+        </Container>
+      </section>
+
+      <CTASection title={t("ctaTitle")}>
+        <Link
+          href="/contato"
+          className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm text-foreground transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]"
+        >
+          {tNav("contact")} ↗
+        </Link>
+      </CTASection>
+    </div>
+  );
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}

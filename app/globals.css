@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #f4f3f0;
+  --foreground: #0a0a0a;
+  --muted: #6f6c66;
+  --border: #dedbd3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-display: var(--font-archivo);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15em;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Article grid: body text caps at a readable measure, while elements
+   marked .full-bleed (case screenshots) span the full container width. */
+.prose-grid {
+  display: grid;
+  grid-template-columns: 1fr min(68ch, 100%) 1fr;
+  column-gap: 0;
+}
+
+.prose-grid > *,
+.prose-grid > .contents > * {
+  grid-column: 2;
+}
+
+.prose-grid > .full-bleed,
+.prose-grid > .contents > .full-bleed {
+  grid-column: 1 / -1;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}

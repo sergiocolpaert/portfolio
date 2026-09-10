@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Home",
+    "cases": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "home": {
+    "headline": "UI/UX & Product Designer",
+    "positioning": "I design digital products that turn business problems into clear, usable experiences.",
+    "featuredTitle": "Selected work",
+    "aboutTitle": "About",
+    "aboutSummary": "Started as a developer, moved into product design to sit closer to the decisions that shape a product — from research to the pixel. I care about work that is easy to use and easy to justify.",
+    "aboutLink": "Read more",
+    "ctaCases": "See all work",
+    "servicesLabel": "What I do",
+    "servicesTitle": "From the problem to the pixel, and back.",
+    "statsLabel": "In numbers",
+    "faqLabel": "FAQs",
+    "faqTitle": "Everything you need to know",
+    "ctaTitle": "Let's build the next case study together."
+  },
+  "skills": {
+    "items": [
+      { "index": "01", "title": "UX Research" },
+      { "index": "02", "title": "Product Design" },
+      { "index": "03", "title": "UI Design & Design Systems" },
+      { "index": "04", "title": "Front-end (HTML/CSS/JS)" }
+    ]
+  },
+  "stats": {
+    "items": [
+      { "value": "5+", "label": "Years of experience" },
+      { "value": "20+", "label": "Projects delivered" },
+      { "value": "3", "label": "Languages I work in" },
+      { "value": "100%", "label": "Focus on digital product" }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "How does your process work?",
+        "answer": "I start by understanding the business and user problem, move into research and wireframes, iterate based on feedback, and only then design the final screens — always documenting decisions, not just the outcome."
+      },
+      {
+        "question": "Do you work with development teams?",
+        "answer": "Yes. Coming from a development background, I deliver specs, components, and flows built to reduce friction at handoff — I speak the language of whoever is going to build it."
+      },
+      {
+        "question": "Are you available for new opportunities?",
+        "answer": "Yes, I'm open to positions and projects in Product Design and UI/UX — including remote roles or relocation."
+      }
+    ]
+  },
+  "cases": {
+    "title": "Work",
+    "subtitle": "A selection of case studies — process and decisions, not just final screens.",
+    "filterAll": "All",
+    "viewCase": "View case"
+  },
+  "case": {
+    "role": "Role",
+    "duration": "Duration",
+    "tools": "Tools",
+    "context": "Context & problem",
+    "process": "Process",
+    "solution": "Solution",
+    "result": "Result",
+    "learnings": "Learnings",
+    "viewOnBehance": "View on Behance",
+    "back": "Back to work"
+  },
+  "about": {
+    "title": "About",
+    "toolsTitle": "Tools",
+    "educationTitle": "Education"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Open to new opportunities in Product Design and UI/UX.",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "behanceLabel": "Behance",
+    "downloadCV": "Download CV"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "locale": {
+    "pt": "PT",
+    "es": "ES",
+    "en": "EN"
+  }
+}
