@@ -14,7 +14,7 @@ export type NumberedListItem = {
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function NumberedList({ items }: { items: NumberedListItem[] }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <ul className="border-t border-border">

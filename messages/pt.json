@@ -7,11 +7,12 @@
     "downloadCV": "Baixar currículo"
   },
   "home": {
-    "headline": "UI/UX & Product Designer",
-    "positioning": "Eu desenho produtos digitais que transformam problemas de negócio em experiências claras e usáveis.",
+    "heroTitle": "Product Designer",
+    "heroBio": "Olá, sou Sergio, Product Designer criando experiências digitais intuitivas.",
     "featuredTitle": "Trabalhos selecionados",
     "aboutTitle": "Sobre",
-    "aboutSummary": "Comecei como desenvolvedor e migrei para product design para ficar mais perto das decisões que moldam um produto — da pesquisa ao pixel. Gosto de trabalho que é fácil de usar e fácil de justificar.",
+    "aboutSummary1": "Comecei como desenvolvedor e migrei para product design para ficar mais perto das decisões que moldam um produto, da pesquisa ao pixel.",
+    "aboutSummary2": "Gosto de trabalho que é fácil de usar e fácil de justificar.",
     "aboutLink": "Ler mais",
     "ctaCases": "Ver todos os trabalhos",
     "servicesLabel": "O que eu faço",
@@ -33,7 +34,7 @@
         "index": "02",
         "title": "Product Design",
         "tags": ["Estratégia", "Wireframes", "Prototipagem"],
-        "description": "Da estratégia de produto ao protótipo navegável — priorizo o que move o negócio e testo as decisões antes de escalar para produção."
+        "description": "Da estratégia de produto ao protótipo navegável, priorizo o que move o negócio e testo as decisões antes de escalar para produção."
       },
       {
         "index": "03",
@@ -45,7 +46,7 @@
         "index": "04",
         "title": "Front-end (HTML/CSS/JS)",
         "tags": ["Next.js", "Tailwind", "Handoff"],
-        "description": "Venho de desenvolvimento — entrego specs e componentes pensados pra reduzir atrito no handoff, e às vezes eu mesmo codifico a interface."
+        "description": "Venho de desenvolvimento, entrego specs e componentes pensados pra reduzir atrito no handoff, e às vezes eu mesmo codifico a interface."
       }
     ]
   },
@@ -61,21 +62,21 @@
     "items": [
       {
         "question": "Como funciona o seu processo?",
-        "answer": "Começo entendendo o problema de negócio e do usuário, sigo para pesquisa e wireframes, itero com base em feedback e só então desenho as telas finais — sempre documentando as decisões, não só o resultado."
+        "answer": "Começo entendendo o problema de negócio e do usuário, sigo para pesquisa e wireframes, itero com base em feedback e só então desenho as telas finais, sempre documentando as decisões, não só o resultado."
       },
       {
         "question": "Você trabalha com times de desenvolvimento?",
-        "answer": "Sim. Como venho de desenvolvimento, entrego specs, componentes e fluxos pensados para reduzir atrito na entrega — falo a língua de quem vai codar."
+        "answer": "Sim. Como venho de desenvolvimento, entrego specs, componentes e fluxos pensados para reduzir atrito na entrega, falo a língua de quem vai codar."
       },
       {
         "question": "Está disponível para novas oportunidades?",
-        "answer": "Sim, estou aberto a posições e projetos em Product Design e UI/UX — inclusive remotos ou com mudança de cidade."
+        "answer": "Sim, estou aberto a posições e projetos em Product Design e UI/UX, inclusive remotos ou com mudança de cidade."
       }
     ]
   },
   "cases": {
     "title": "Trabalhos",
-    "subtitle": "Uma seleção de case studies — processo e decisões, não só telas finais.",
+    "subtitle": "Uma seleção de case studies, processo e decisões, não só telas finais.",
     "filterAll": "Todos",
     "viewCase": "Ver case"
   },
@@ -105,7 +106,11 @@
     "downloadCV": "Baixar currículo"
   },
   "footer": {
-    "rights": "Todos os direitos reservados."
+    "rights": "Todos os direitos reservados.",
+    "navigate": "Navegar",
+    "connect": "Conectar",
+    "languages": "Idiomas",
+    "backToTop": "Voltar ao topo"
   },
   "locale": {
     "pt": "PT",

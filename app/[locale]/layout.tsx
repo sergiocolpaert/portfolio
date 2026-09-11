@@ -19,7 +19,7 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sergio Colpaert — UI/UX & Product Designer",
+  title: "Sergio Colpaert | UI/UX & Product Designer",
   description:
     "Portfolio de Sergio Colpaert, UI/UX & Product Designer. Cases de produto digital com processo e decisões.",
 };

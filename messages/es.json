@@ -7,11 +7,12 @@
     "downloadCV": "Descargar CV"
   },
   "home": {
-    "headline": "UI/UX & Product Designer",
-    "positioning": "Diseño productos digitales que convierten problemas de negocio en experiencias claras y usables.",
+    "heroTitle": "Product Designer",
+    "heroBio": "Hola, soy Sergio, Product Designer creando experiencias digitales intuitivas.",
     "featuredTitle": "Trabajos seleccionados",
     "aboutTitle": "Sobre mí",
-    "aboutSummary": "Empecé como desarrollador y me pasé a product design para estar más cerca de las decisiones que dan forma a un producto — desde la investigación hasta el píxel. Me interesa el trabajo fácil de usar y fácil de justificar.",
+    "aboutSummary1": "Empecé como desarrollador y me pasé a product design para estar más cerca de las decisiones que dan forma a un producto, desde la investigación hasta el píxel.",
+    "aboutSummary2": "Me interesa el trabajo fácil de usar y fácil de justificar.",
     "aboutLink": "Leer más",
     "ctaCases": "Ver todos los trabajos",
     "servicesLabel": "Qué hago",
@@ -33,7 +34,7 @@
         "index": "02",
         "title": "Product Design",
         "tags": ["Estrategia", "Wireframes", "Prototipado"],
-        "description": "De la estrategia de producto a un prototipo navegable — priorizo lo que mueve el negocio y valido las decisiones antes de escalar a producción."
+        "description": "De la estrategia de producto a un prototipo navegable, priorizo lo que mueve el negocio y valido las decisiones antes de escalar a producción."
       },
       {
         "index": "03",
@@ -45,7 +46,7 @@
         "index": "04",
         "title": "Front-end (HTML/CSS/JS)",
         "tags": ["Next.js", "Tailwind", "Handoff"],
-        "description": "Vengo del desarrollo — entrego specs y componentes pensados para reducir la fricción en la entrega, y a veces yo mismo codifico la interfaz."
+        "description": "Vengo del desarrollo, entrego specs y componentes pensados para reducir la fricción en la entrega, y a veces yo mismo codifico la interfaz."
       }
     ]
   },
@@ -61,21 +62,21 @@
     "items": [
       {
         "question": "¿Cómo funciona tu proceso?",
-        "answer": "Empiezo entendiendo el problema de negocio y de usuario, sigo con investigación y wireframes, itero según el feedback y recién entonces diseño las pantallas finales — siempre documentando las decisiones, no solo el resultado."
+        "answer": "Empiezo entendiendo el problema de negocio y de usuario, sigo con investigación y wireframes, itero según el feedback y recién entonces diseño las pantallas finales, siempre documentando las decisiones, no solo el resultado."
       },
       {
         "question": "¿Trabajas con equipos de desarrollo?",
-        "answer": "Sí. Como vengo del desarrollo, entrego specs, componentes y flujos pensados para reducir fricción en la entrega — hablo el idioma de quien va a programarlo."
+        "answer": "Sí. Como vengo del desarrollo, entrego specs, componentes y flujos pensados para reducir fricción en la entrega, hablo el idioma de quien va a programarlo."
       },
       {
         "question": "¿Estás disponible para nuevas oportunidades?",
-        "answer": "Sí, estoy abierto a posiciones y proyectos en Product Design y UI/UX — incluyendo remoto o cambio de ciudad."
+        "answer": "Sí, estoy abierto a posiciones y proyectos en Product Design y UI/UX, incluyendo remoto o cambio de ciudad."
       }
     ]
   },
   "cases": {
     "title": "Trabajos",
-    "subtitle": "Una selección de case studies — proceso y decisiones, no solo pantallas finales.",
+    "subtitle": "Una selección de case studies, proceso y decisiones, no solo pantallas finales.",
     "filterAll": "Todos",
     "viewCase": "Ver case"
   },
@@ -105,7 +106,11 @@
     "downloadCV": "Descargar CV"
   },
   "footer": {
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "navigate": "Navegar",
+    "connect": "Conectar",
+    "languages": "Idiomas",
+    "backToTop": "Volver arriba"
   },
   "locale": {
     "pt": "PT",

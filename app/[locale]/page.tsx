@@ -36,26 +36,41 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     <div>
       {/* Hero */}
       <Container className="pt-16 pb-20 sm:pt-24 sm:pb-28">
-        <Reveal>
-          <p className="text-sm tracking-widest text-muted uppercase">
-            {t("headline")}
-          </p>
-        </Reveal>
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:items-start">
+          <div>
+            <SplitText
+              as="h1"
+              text={t("heroTitle")}
+              className="font-display text-6xl leading-[0.95] font-semibold tracking-tight md:text-[80px]"
+            />
+            <Reveal delay={0.4} className="mt-10 flex flex-wrap items-center gap-4">
+              <DownloadCVButton />
+              <Link href="/cases" className="link-underline flex items-center gap-1 text-sm">
+                {t("ctaCases")}
+                <ArrowIcon className="h-3.5 w-3.5" />
+              </Link>
+            </Reveal>
+          </div>
 
-        <SplitText
-          as="h1"
-          text={t("positioning")}
-          delay={0.15}
-          className="mt-5 max-w-3xl font-display text-4xl leading-[1.05] font-semibold tracking-tight sm:text-6xl"
-        />
-
-        <Reveal delay={0.5} className="mt-10 flex flex-wrap items-center gap-4">
-          <DownloadCVButton />
-          <Link href="/cases" className="link-underline flex items-center gap-1 text-sm">
-            {t("ctaCases")}
-            <ArrowIcon className="h-3.5 w-3.5" />
-          </Link>
-        </Reveal>
+          <div className="flex flex-col items-start gap-4 sm:items-end">
+            <Reveal delay={0.15}>
+              <div className="relative aspect-[4/5] w-[280px] max-w-full overflow-hidden">
+                <Image
+                  src="/images/sergio-portrait.png"
+                  alt="Sergio Colpaert"
+                  fill
+                  sizes="280px"
+                  className="object-cover grayscale"
+                />
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <p className="w-[260px] max-w-full text-sm text-muted sm:text-right">
+                {t("heroBio")}
+              </p>
+            </Reveal>
+          </div>
+        </div>
       </Container>
 
       {/* Featured work */}
@@ -72,9 +87,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           </Link>
         </div>
         <StaggerGroup className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
-          {cases.map((meta, i) => (
+          {cases.map((meta) => (
             <StaggerItem key={meta.slug}>
-              <CaseCard meta={meta} title={meta.title} index={i + 1} />
+              <CaseCard meta={meta} title={meta.title} />
             </StaggerItem>
           ))}
         </StaggerGroup>
@@ -112,25 +127,33 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
       {/* About */}
       <section className="border-t border-border">
-        <Container className="grid grid-cols-1 gap-10 py-20 sm:py-28 md:grid-cols-[280px_1fr] md:items-center">
+        <Container className="grid grid-cols-1 gap-12 py-20 sm:py-28 md:grid-cols-[240px_1fr]">
           <Reveal>
-            <div className="relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-xl border border-border">
+            <div className="relative aspect-[3/4] w-full max-w-[240px] overflow-hidden">
               <Image
                 src="/images/sergio-portrait.png"
                 alt="Sergio Colpaert"
                 fill
-                sizes="280px"
+                sizes="240px"
                 className="object-cover grayscale"
               />
             </div>
+            <p className="mt-3 text-sm text-muted">
+              Sergio Colpaert
+              <br />
+              Product Designer
+            </p>
           </Reveal>
           <div>
             <Reveal delay={0.1}>
               <p className="text-sm tracking-widest text-muted uppercase">
-                {t("aboutTitle")}
+                ({t("aboutTitle")})
               </p>
-              <p className="mt-6 max-w-md font-display text-2xl leading-snug font-medium tracking-tight sm:text-3xl">
-                {t("aboutSummary")}
+              <p className="mt-6 font-display text-2xl leading-snug font-medium tracking-tight sm:text-4xl">
+                {t("aboutSummary1")}
+              </p>
+              <p className="mt-6 font-display text-2xl leading-snug font-medium tracking-tight sm:text-4xl">
+                {t("aboutSummary2")}
               </p>
             </Reveal>
             <Reveal delay={0.2} className="mt-8">

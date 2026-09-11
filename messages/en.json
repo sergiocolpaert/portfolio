@@ -7,11 +7,12 @@
     "downloadCV": "Download CV"
   },
   "home": {
-    "headline": "UI/UX & Product Designer",
-    "positioning": "I design digital products that turn business problems into clear, usable experiences.",
+    "heroTitle": "Product Designer",
+    "heroBio": "Hi, I'm Sergio, a Product Designer creating intuitive digital experiences.",
     "featuredTitle": "Selected work",
     "aboutTitle": "About",
-    "aboutSummary": "Started as a developer, moved into product design to sit closer to the decisions that shape a product — from research to the pixel. I care about work that is easy to use and easy to justify.",
+    "aboutSummary1": "Started as a developer, moved into product design to sit closer to the decisions that shape a product, from research to the pixel.",
+    "aboutSummary2": "I care about work that is easy to use and easy to justify.",
     "aboutLink": "Read more",
     "ctaCases": "See all work",
     "servicesLabel": "What I do",
@@ -33,7 +34,7 @@
         "index": "02",
         "title": "Product Design",
         "tags": ["Strategy", "Wireframes", "Prototyping"],
-        "description": "From product strategy to a navigable prototype — I prioritize what moves the business and validate decisions before scaling to production."
+        "description": "From product strategy to a navigable prototype, I prioritize what moves the business and validate decisions before scaling to production."
       },
       {
         "index": "03",
@@ -45,7 +46,7 @@
         "index": "04",
         "title": "Front-end (HTML/CSS/JS)",
         "tags": ["Next.js", "Tailwind", "Handoff"],
-        "description": "I come from a development background — I deliver specs and components built to reduce handoff friction, and sometimes I build the interface myself."
+        "description": "I come from a development background, I deliver specs and components built to reduce handoff friction, and sometimes I build the interface myself."
       }
     ]
   },
@@ -61,21 +62,21 @@
     "items": [
       {
         "question": "How does your process work?",
-        "answer": "I start by understanding the business and user problem, move into research and wireframes, iterate based on feedback, and only then design the final screens — always documenting decisions, not just the outcome."
+        "answer": "I start by understanding the business and user problem, move into research and wireframes, iterate based on feedback, and only then design the final screens, always documenting decisions, not just the outcome."
       },
       {
         "question": "Do you work with development teams?",
-        "answer": "Yes. Coming from a development background, I deliver specs, components, and flows built to reduce friction at handoff — I speak the language of whoever is going to build it."
+        "answer": "Yes. Coming from a development background, I deliver specs, components, and flows built to reduce friction at handoff, I speak the language of whoever is going to build it."
       },
       {
         "question": "Are you available for new opportunities?",
-        "answer": "Yes, I'm open to positions and projects in Product Design and UI/UX — including remote roles or relocation."
+        "answer": "Yes, I'm open to positions and projects in Product Design and UI/UX, including remote roles or relocation."
       }
     ]
   },
   "cases": {
     "title": "Work",
-    "subtitle": "A selection of case studies — process and decisions, not just final screens.",
+    "subtitle": "A selection of case studies, process and decisions, not just final screens.",
     "filterAll": "All",
     "viewCase": "View case"
   },
@@ -105,7 +106,11 @@
     "downloadCV": "Download CV"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "navigate": "Navigate",
+    "connect": "Connect",
+    "languages": "Languages",
+    "backToTop": "Back to top"
   },
   "locale": {
     "pt": "PT",

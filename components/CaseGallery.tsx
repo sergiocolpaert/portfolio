@@ -52,9 +52,9 @@ export default function CaseGallery({
       </div>
 
       <StaggerGroup className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
-        {filtered.map((meta, i) => (
+        {filtered.map((meta) => (
           <StaggerItem key={meta.slug}>
-            <CaseCard meta={meta} title={meta.title} index={i + 1} />
+            <CaseCard meta={meta} title={meta.title} />
           </StaggerItem>
         ))}
       </StaggerGroup>

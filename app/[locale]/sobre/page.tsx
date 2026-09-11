@@ -26,11 +26,12 @@ export default async function AboutPage({
             className="font-display text-5xl font-semibold tracking-tight sm:text-7xl"
           />
           <Reveal delay={0.25}>
-            <p className="mt-8 text-lg text-muted">{home("aboutSummary")}</p>
+            <p className="mt-8 text-lg text-muted">{home("aboutSummary1")}</p>
+            <p className="mt-4 text-lg text-muted">{home("aboutSummary2")}</p>
           </Reveal>
         </div>
         <Reveal delay={0.15}>
-          <div className="relative aspect-[4/5] w-full max-w-[260px] overflow-hidden rounded-xl border border-border">
+          <div className="relative aspect-[4/5] w-full max-w-[260px] overflow-hidden border border-border">
             <Image
               src="/images/sergio-portrait.png"
               alt="Sergio Colpaert"
@@ -58,7 +59,7 @@ export default async function AboutPage({
             {t("educationTitle")}
           </h2>
           <p className="mt-3 text-muted">
-            Análise e Desenvolvimento de Sistemas — IBMR
+            Análise e Desenvolvimento de Sistemas, IBMR
           </p>
         </Reveal>
       </div>

@@ -6,7 +6,7 @@ export default function BehanceEmbed({
   title: string;
 }) {
   return (
-    <div className="relative aspect-[404/316] w-full overflow-hidden rounded-xl border border-border">
+    <div className="relative aspect-[404/316] w-full overflow-hidden border border-border">
       <iframe
         src={`https://www.behance.net/embed/project/${embedId}?ilo0=1`}
         title={title}
