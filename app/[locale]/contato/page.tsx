@@ -22,7 +22,7 @@ export default async function ContactPage({
       <SplitText
         as="h1"
         text={t("title")}
-        className="font-display text-5xl font-semibold tracking-tight sm:text-7xl"
+        className="font-display text-6xl leading-[0.65] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
       />
       <Reveal delay={0.25}>
         <p className="mt-6 text-muted">{t("subtitle")}</p>
