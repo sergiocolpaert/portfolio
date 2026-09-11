@@ -33,7 +33,8 @@ export default async function AboutPage({
         <SplitText
           as="h1"
           text={t("title")}
-          className="font-display text-6xl leading-[0.89] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
+          lineHeight={0.89}
+          className="font-display text-6xl font-semibold tracking-tight uppercase sm:text-7xl md:text-[90px]"
         />
         <Reveal delay={0.3} className="mt-8 max-w-xl">
           <p className="text-lg text-muted sm:text-xl">{t("subtitle")}</p>
