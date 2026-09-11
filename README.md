@@ -16,8 +16,8 @@ Abre em `http://localhost:3000` e redireciona para `/pt`, `/es` ou `/en` conform
 
 ## Adicionando um novo case
 
-1. Crie `content/cases/[slug]/meta.json` (dados não-textuais: ano, tags, ferramentas, imagem de capa, link do Behance).
-2. Crie `content/cases/[slug]/pt.mdx`, `es.mdx`, `en.mdx` com o texto do case em cada idioma (cada arquivo exporta `meta` com `title`, `client`, `role`).
+1. Crie `content/cases/[slug]/meta.json` (dados não-textuais: ano, tags, ferramentas, imagem de capa, link do Behance, `featuredOrder` define a posição na listagem e no destaque da home).
+2. Crie `content/cases/[slug]/pt.mdx`, `es.mdx`, `en.mdx` com o texto do case em cada idioma (cada arquivo exporta `meta` com `title`, `client`, `role` e, opcionalmente, `tagline` — um subtítulo curto mostrado abaixo do título na página do case).
 3. Adicione a imagem de capa em `public/images/cases/[slug]/cover.jpg`.
 4. Para imagens de conteúdo do case (telas do projeto), use o componente `<CaseImage />` (`components/CaseImage.tsx`) dentro do `.mdx`, importando-o no topo do arquivo — ele usa `next/image` para otimização automática. Exemplo:
    ```mdx
@@ -32,7 +32,7 @@ Coloque os PDFs em `public/cv/cv-pt.pdf`, `cv-es.pdf`, `cv-en.pdf`. O botão de 
 
 ## Pendências antes do launch
 
-- [ ] Popular os 3–5 cases prioritários (hoje só existe `semiglobe`, com as 8 telas do projeto nativas + link "Ver no Behance")
+- [ ] Popular os 3–5 cases prioritários (hoje existem `semiglobe` e `fac-infoserver`, com as telas do projeto nativas + link "Ver no Behance")
 - [ ] Atualizar links de LinkedIn/Behance em `components/Footer.tsx` e `app/[locale]/contato/page.tsx`
 - [ ] Configurar analytics (Plausible ou GA4)
 - [ ] Deploy na Vercel

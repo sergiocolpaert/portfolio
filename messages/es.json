@@ -82,6 +82,7 @@
     "viewCase": "Ver case"
   },
   "case": {
+    "client": "Cliente",
     "role": "Rol",
     "duration": "Duración",
     "tools": "Herramientas",
@@ -91,7 +92,8 @@
     "result": "Resultado",
     "learnings": "Aprendizajes",
     "viewOnBehance": "Ver en Behance",
-    "back": "Volver a los trabajos"
+    "back": "Volver a los trabajos",
+    "nextCase": "Siguiente case"
   },
   "about": {
     "title": "Sobre mí",

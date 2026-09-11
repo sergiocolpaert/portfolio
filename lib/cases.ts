@@ -22,6 +22,7 @@ export type CaseFrontmatter = {
   title: string;
   client: string;
   role: string;
+  tagline?: string;
 };
 
 export function getAllCaseSlugs(): string[] {
