@@ -1,17 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* Registered under the plain family name "Switzer" so the inline logo
-   SVG (which sets font-family: Switzer-Regular, Switzer) renders with
-   the real typeface instead of falling back to a system serif. */
-@font-face {
-  font-family: "Switzer";
-  src: url("/fonts/switzer-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --background: #f4f3f0;
   --foreground: #0a0a0a;

@@ -10,6 +10,8 @@ export default function DownloadCVButton({
 }) {
   const locale = useLocale();
   const t = useTranslations("nav");
+  const tHome = useTranslations("home");
+  const fileName = `Sergio Colpaert - ${tHome("role").replace(/\//g, "-")}.pdf`;
 
   const variants = {
     solid:
@@ -20,7 +22,11 @@ export default function DownloadCVButton({
   };
 
   return (
-    <a href={`/cv/cv-${locale}.pdf`} download className={className ?? variants[variant]}>
+    <a
+      href={`/cv/cv-${locale}.pdf`}
+      download={fileName}
+      className={className ?? variants[variant]}
+    >
       {t("downloadCV")}
       <ArrowIcon className="h-3.5 w-3.5 rotate-90" />
     </a>
