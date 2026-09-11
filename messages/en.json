@@ -7,16 +7,17 @@
     "downloadCV": "Download CV"
   },
   "home": {
-    "heroTitle": "Sergio Colpaert Product Designer",
-    "heroSubtitle": "Through user research, product decisions and thoughtful interfaces, I help companies build digital experiences that are clear and easy to use.",
+    "heroTitle": "Sergio Colpaert UI/UX & Product Designer",
+    "heroSubtitle": "I design interfaces and decide on product, from research to the pixel, and from the pixel to code when the project calls for it.",
+    "role": "UI/UX & Product Designer",
     "featuredTitle": "Selected work",
     "aboutTitle": "About",
-    "aboutSummary1": "Started as a developer, moved into product design to sit closer to the decisions that shape a product, from research to the pixel.",
-    "aboutSummary2": "I care about work that is easy to use and easy to justify.",
+    "aboutSummary1": "Started as a developer and moved into product design without dropping the code, today I move between research, interface and implementation within the same engagement.",
+    "aboutSummary2": "I care about work that looks good, is easy to use and easy to justify.",
     "aboutLink": "Read more",
     "ctaCases": "See all work",
     "servicesLabel": "What I do",
-    "servicesTitle": "From the problem to the pixel, and back.",
+    "servicesTitle": "From the problem to the interface, and from the interface to a live product.",
     "statsLabel": "In numbers",
     "faqLabel": "FAQs",
     "faqTitle": "Everything you need to know",
@@ -26,21 +27,21 @@
     "items": [
       {
         "index": "01",
-        "title": "UX Research",
-        "tags": ["Interviews", "Benchmarking", "User flows"],
-        "description": "I understand the problem before designing the solution: interviews, benchmarking and flow mapping to make decisions based on evidence, not guesswork."
+        "title": "UI/UX Design",
+        "tags": ["Wireframes", "Prototypes", "Interaction"],
+        "description": "Interfaces built for real use: clear flows, visual hierarchy and interactions that guide the user without friction."
       },
       {
         "index": "02",
-        "title": "Product Design",
-        "tags": ["Strategy", "Wireframes", "Prototyping"],
-        "description": "From product strategy to a navigable prototype, I prioritize what moves the business and validate decisions before scaling to production."
+        "title": "Product Design & Research",
+        "tags": ["Interviews", "Benchmarking", "Strategy"],
+        "description": "Interviews, benchmarking and strategy definition to understand what moves the business before any visual decision."
       },
       {
         "index": "03",
-        "title": "UI Design & Design Systems",
+        "title": "Design Systems",
         "tags": ["Figma", "Design Tokens", "Components"],
-        "description": "Final screens and consistent design systems, with reusable components that scale alongside the product."
+        "description": "Consistent design systems, with reusable components and tokens that scale alongside the product."
       },
       {
         "index": "04",
@@ -66,17 +67,17 @@
       },
       {
         "question": "Do you work with development teams?",
-        "answer": "Yes. Coming from a development background, I deliver specs, components, and flows built to reduce friction at handoff, I speak the language of whoever is going to build it."
+        "answer": "Yes, and I speak their language. Coming from front-end, I deliver specs and prototypes designed with technical feasibility in mind, not just aesthetics."
       },
       {
         "question": "Are you available for new opportunities?",
-        "answer": "Yes, I'm open to positions and projects in Product Design and UI/UX, including remote roles or relocation."
+        "answer": "Yes, for positions in UI/UX and Product Design, remote or hybrid, see the details on the Contact page."
       }
     ]
   },
   "cases": {
     "title": "Work",
-    "subtitle": "A selection of case studies, process and decisions, not just final screens.",
+    "subtitle": "A selection of case studies: UI/UX and product decisions, not just final screens.",
     "filterAll": "All",
     "viewCase": "View case"
   },
@@ -94,17 +95,25 @@
   },
   "about": {
     "title": "About",
-    "subtitle": "Product designer with a development background, helping companies turn business problems into digital products that are clear and easy to use.",
+    "subtitle": "UI/UX designer with roots in development, I think about the experience end to end: from research to interface, and from interface to code when the project calls for it.",
     "approachLabel": "How I work",
     "approachIntro": "The best results come from well informed decisions. I understand the business context before designing a single screen, and I never ship an interface without validating that it actually solves the problem.",
     "approachPoints": [
       {
-        "title": "Research and problem definition",
+        "title": "Immersion and research",
         "text": "Interviews, benchmarking and flow mapping to understand what the user needs and what moves the business before any visual decision."
       },
       {
-        "title": "Visual design and interface decisions",
-        "text": "Wireframes, navigable prototypes and final screens consistent with a design system, always validated with the people who will use it."
+        "title": "Information architecture and wireframes",
+        "text": "I organize content, copy and navigation structure, and test the flow in wireframes before any final interface decision."
+      },
+      {
+        "title": "UI design and design systems",
+        "text": "Final interfaces consistent with a design system, always validated with the people who will use it."
+      },
+      {
+        "title": "Development and delivery",
+        "text": "When the project includes development, I build it myself in HTML/CSS/JS. Otherwise, I run a complete technical handoff to the dev team."
       }
     ],
     "servicesLabel": "Services",
@@ -116,7 +125,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Open to new opportunities in Product Design and UI/UX.",
+    "subtitle": "Open to new opportunities in UI/UX and Product Design.",
     "emailLabel": "Email",
     "whatsappLabel": "WhatsApp",
     "linkedinLabel": "LinkedIn",

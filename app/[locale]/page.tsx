@@ -121,7 +121,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <p className="mt-3 text-sm text-muted">
               Sergio Colpaert
               <br />
-              Product Designer
+              {t("role")}
             </p>
           </Reveal>
           <div>

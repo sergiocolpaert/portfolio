@@ -7,16 +7,17 @@
     "downloadCV": "Baixar currículo"
   },
   "home": {
-    "heroTitle": "Sergio Colpaert Product Designer",
-    "heroSubtitle": "Através de pesquisa, decisões de produto e interfaces bem pensadas, ajudo empresas a criar experiências digitais mais claras e fáceis de usar.",
+    "heroTitle": "Sergio Colpaert UI/UX & Product Designer",
+    "heroSubtitle": "Desenho interfaces e decido sobre produto, da pesquisa ao pixel, e do pixel ao código quando o projeto pede.",
+    "role": "UI/UX & Product Designer",
     "featuredTitle": "Trabalhos selecionados",
     "aboutTitle": "Sobre",
-    "aboutSummary1": "Comecei como desenvolvedor e migrei para product design para ficar mais perto das decisões que moldam um produto, da pesquisa ao pixel.",
-    "aboutSummary2": "Gosto de trabalho que é fácil de usar e fácil de justificar.",
+    "aboutSummary1": "Comecei como desenvolvedor e migrei para design de produto sem largar o código, hoje transito entre pesquisa, interface e implementação na mesma entrega.",
+    "aboutSummary2": "Gosto de trabalho que é bonito de ver, fácil de usar e fácil de justificar.",
     "aboutLink": "Ler mais",
     "ctaCases": "Ver todos os trabalhos",
     "servicesLabel": "O que eu faço",
-    "servicesTitle": "Do problema ao pixel, e de volta.",
+    "servicesTitle": "Do problema à interface, e da interface ao produto no ar.",
     "statsLabel": "Em números",
     "faqLabel": "Perguntas frequentes",
     "faqTitle": "Tudo que você precisa saber",
@@ -26,21 +27,21 @@
     "items": [
       {
         "index": "01",
-        "title": "UX Research",
-        "tags": ["Entrevistas", "Benchmarking", "Fluxos de usuário"],
-        "description": "Entendo o problema antes de desenhar a solução: entrevistas, benchmarking e mapeamento de fluxos para tomar decisões com base em evidência, não em achismo."
+        "title": "UI/UX Design",
+        "tags": ["Wireframes", "Protótipos", "Interação"],
+        "description": "Interfaces pensadas para uso real: fluxos claros, hierarquia visual e interações que guiam o usuário sem fricção."
       },
       {
         "index": "02",
-        "title": "Product Design",
-        "tags": ["Estratégia", "Wireframes", "Prototipagem"],
-        "description": "Da estratégia de produto ao protótipo navegável, priorizo o que move o negócio e testo as decisões antes de escalar para produção."
+        "title": "Product Design & Research",
+        "tags": ["Entrevistas", "Benchmarking", "Estratégia"],
+        "description": "Entrevistas, benchmarking e definição de estratégia para entender o que move o negócio antes de qualquer decisão visual."
       },
       {
         "index": "03",
-        "title": "UI Design & Design Systems",
+        "title": "Design Systems",
         "tags": ["Figma", "Design Tokens", "Componentes"],
-        "description": "Telas finais e sistemas de design consistentes, com componentes reutilizáveis que escalam junto com o produto."
+        "description": "Sistemas de design consistentes, com componentes reutilizáveis e tokens que escalam junto com o produto."
       },
       {
         "index": "04",
@@ -66,17 +67,17 @@
       },
       {
         "question": "Você trabalha com times de desenvolvimento?",
-        "answer": "Sim. Como venho de desenvolvimento, entrego specs, componentes e fluxos pensados para reduzir atrito na entrega, falo a língua de quem vai codar."
+        "answer": "Sim, e converso na língua deles. Como venho de front-end, entrego specs e protótipos pensando em viabilidade técnica, não só em estética."
       },
       {
         "question": "Está disponível para novas oportunidades?",
-        "answer": "Sim, estou aberto a posições e projetos em Product Design e UI/UX, inclusive remotos ou com mudança de cidade."
+        "answer": "Sim, para posições em UI/UX e Product Design, remoto ou híbrido, veja os detalhes na página de Contato."
       }
     ]
   },
   "cases": {
     "title": "Trabalhos",
-    "subtitle": "Uma seleção de case studies, processo e decisões, não só telas finais.",
+    "subtitle": "Uma seleção de case studies: processo e decisões de UI/UX e produto, não só telas finais.",
     "filterAll": "Todos",
     "viewCase": "Ver case"
   },
@@ -94,17 +95,25 @@
   },
   "about": {
     "title": "Sobre",
-    "subtitle": "Product designer com background em desenvolvimento, ajudando empresas a transformar problemas de negócio em produtos digitais claros e fáceis de usar.",
+    "subtitle": "UI/UX designer com raízes em desenvolvimento, penso a experiência de ponta a ponta: da pesquisa à interface, e da interface ao código quando o projeto exige.",
     "approachLabel": "Como eu trabalho",
     "approachIntro": "Os melhores resultados vêm de decisões bem informadas. Entendo o contexto do negócio antes de desenhar qualquer tela, e nunca entrego uma interface sem validar se ela realmente resolve o problema.",
     "approachPoints": [
       {
-        "title": "Pesquisa e definição do problema",
+        "title": "Imersão e pesquisa",
         "text": "Entrevistas, benchmarking e mapeamento de fluxos para entender o que o usuário precisa e o que move o negócio antes de qualquer decisão visual."
       },
       {
-        "title": "Design visual e decisões de interface",
-        "text": "Wireframes, protótipos navegáveis e telas finais consistentes com um sistema de design, sempre validados com quem vai usar."
+        "title": "Arquitetura da informação e wireframes",
+        "text": "Organizo conteúdo, copy e estrutura de navegação, e testo o fluxo em wireframes antes de qualquer decisão final de interface."
+      },
+      {
+        "title": "Design UI e design systems",
+        "text": "Interfaces finais consistentes com um sistema de design, sempre validadas com quem vai usar."
+      },
+      {
+        "title": "Desenvolvimento e entrega",
+        "text": "Quando o projeto inclui desenvolvimento, eu mesmo implemento em HTML/CSS/JS. Caso contrário, realizo o handoff técnico completo para o time de dev."
       }
     ],
     "servicesLabel": "Serviços",
@@ -116,7 +125,7 @@
   },
   "contact": {
     "title": "Contato",
-    "subtitle": "Aberto a novas oportunidades em Product Design e UI/UX.",
+    "subtitle": "Aberto a novas oportunidades em UI/UX e Product Design.",
     "emailLabel": "E-mail",
     "whatsappLabel": "WhatsApp",
     "linkedinLabel": "LinkedIn",
