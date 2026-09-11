@@ -12,7 +12,7 @@ export default function CaseImage({
   alt?: string;
 }) {
   return (
-    <div className="full-bleed not-prose my-8 overflow-hidden border border-border">
+    <div className="full-bleed not-prose overflow-hidden border border-border">
       <Image
         src={src}
         width={width}
