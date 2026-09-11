@@ -7,7 +7,6 @@ import { Link } from "@/i18n/navigation";
 import { getAllCasesWithTitles } from "@/lib/cases";
 import CaseCard from "@/components/CaseCard";
 import DownloadCVButton from "@/components/DownloadCVButton";
-import HeroVisual from "@/components/HeroVisual";
 import NumberedList, { type NumberedListItem } from "@/components/NumberedList";
 import Stats from "@/components/Stats";
 import FAQ from "@/components/FAQ";
@@ -17,8 +16,6 @@ import ArrowIcon from "@/components/ArrowIcon";
 import Reveal from "@/components/motion/Reveal";
 import SplitText from "@/components/motion/SplitText";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
-
-const TOOLS = ["Figma", "FigJam", "Framer", "Photoshop", "Illustrator", "Maze"];
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
@@ -59,23 +56,32 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <ArrowIcon className="h-3.5 w-3.5" />
           </Link>
         </Reveal>
+      </Container>
 
-        <Reveal delay={0.2} className="mt-16">
-          <HeroVisual />
-        </Reveal>
-
-        <StaggerGroup
-          className="mt-10 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-t border-border pt-8 text-sm text-muted"
-          stagger={0.05}
-        >
-          {TOOLS.map((tool) => (
-            <StaggerItem key={tool}>{tool}</StaggerItem>
+      {/* Featured work */}
+      <Container className="pb-20 sm:pb-28">
+        <div className="flex items-baseline justify-between border-b border-border pb-4">
+          <Reveal>
+            <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+              {t("featuredTitle")}
+            </h2>
+          </Reveal>
+          <Link href="/cases" className="link-underline flex items-center gap-1 text-sm text-muted">
+            {t("ctaCases")}
+            <ArrowIcon className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+        <StaggerGroup className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
+          {cases.map((meta, i) => (
+            <StaggerItem key={meta.slug}>
+              <CaseCard meta={meta} title={meta.title} index={i + 1} />
+            </StaggerItem>
           ))}
         </StaggerGroup>
       </Container>
 
       {/* Services / skills */}
-      <Container className="py-20 sm:py-28">
+      <Container className="pb-20 sm:pb-28">
         <Reveal>
           <p className="text-sm tracking-widest text-muted uppercase">
             {t("servicesLabel")}
@@ -102,28 +108,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <div className="mt-8">
           <Stats stats={statItems} />
         </div>
-      </Container>
-
-      {/* Featured work */}
-      <Container className="pb-20 sm:pb-28">
-        <div className="flex items-baseline justify-between border-b border-border pb-4">
-          <Reveal>
-            <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-              {t("featuredTitle")}
-            </h2>
-          </Reveal>
-          <Link href="/cases" className="link-underline flex items-center gap-1 text-sm text-muted">
-            {t("ctaCases")}
-            <ArrowIcon className="h-3.5 w-3.5" />
-          </Link>
-        </div>
-        <StaggerGroup className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
-          {cases.map((meta, i) => (
-            <StaggerItem key={meta.slug}>
-              <CaseCard meta={meta} title={meta.title} index={i + 1} />
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
       </Container>
 
       {/* About */}
