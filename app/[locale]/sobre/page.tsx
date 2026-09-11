@@ -52,13 +52,13 @@ export default async function AboutPage({
       {/* Portrait */}
       <Container className="pb-20 sm:pb-28">
         <Reveal>
-          <div className="relative aspect-[4/5] w-full max-w-xl overflow-hidden border border-border">
+          <div className="group relative aspect-[7/4] w-full overflow-hidden border border-border">
             <Image
-              src="/images/sergio-portrait.png"
+              src="/images/sergio-portrait-about.webp"
               alt="Sergio Colpaert"
               fill
-              sizes="(min-width: 640px) 576px, 100vw"
-              className="object-cover grayscale"
+              sizes="(min-width: 1024px) 1272px, 100vw"
+              className="object-cover opacity-90 grayscale transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02] group-hover:opacity-100 group-hover:grayscale-0"
             />
           </div>
         </Reveal>
