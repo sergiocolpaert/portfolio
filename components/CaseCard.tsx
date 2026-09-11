@@ -31,7 +31,7 @@ export default function CaseCard({
           </h3>
           <p className="mt-1 text-sm text-muted">{meta.tags.join(" · ")}</p>
         </div>
-        <span className="link-underline mt-1 flex shrink-0 items-center gap-1 text-sm">
+        <span className="link-underline mt-1 inline-flex shrink-0 items-center gap-1 text-sm">
           {t("viewCase")}
           <ArrowIcon className="h-3.5 w-3.5" />
         </span>

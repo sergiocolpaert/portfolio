@@ -69,7 +69,7 @@ export default function Footer() {
           <span>
             © {YEAR} Sergio Colpaert. {t("rights")}
           </span>
-          <a href="#" className="link-underline flex items-center gap-1">
+          <a href="#" className="link-underline inline-flex items-center gap-1">
             {t("backToTop")}
             <ArrowIcon className="h-3.5 w-3.5 -rotate-45" />
           </a>

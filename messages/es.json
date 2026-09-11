@@ -7,8 +7,8 @@
     "downloadCV": "Descargar CV"
   },
   "home": {
-    "heroTitle": "Product Designer",
-    "heroBio": "Hola, soy Sergio, Product Designer creando experiencias digitales intuitivas.",
+    "heroTitle": "Sergio Colpaert Product Designer",
+    "heroSubtitle": "A través de investigación de usuarios, decisiones de producto e interfaces cuidadas, ayudo a empresas a crear experiencias digitales más claras y fáciles de usar.",
     "featuredTitle": "Trabajos seleccionados",
     "aboutTitle": "Sobre mí",
     "aboutSummary1": "Empecé como desarrollador y me pasé a product design para estar más cerca de las decisiones que dan forma a un producto, desde la investigación hasta el píxel.",
@@ -52,7 +52,7 @@
   },
   "stats": {
     "items": [
-      { "value": "5+", "label": "Años de experiencia" },
+      { "value": "+6", "label": "Años de experiencia" },
       { "value": "20+", "label": "Proyectos entregados" },
       { "value": "3", "label": "Idiomas de trabajo" },
       { "value": "100%", "label": "Foco en producto digital" }
@@ -94,8 +94,25 @@
   },
   "about": {
     "title": "Sobre mí",
+    "subtitle": "Product designer con background en desarrollo, ayudando a empresas a transformar problemas de negocio en productos digitales claros y fáciles de usar.",
+    "approachLabel": "Cómo trabajo",
+    "approachIntro": "Los mejores resultados vienen de decisiones bien informadas. Entiendo el contexto de negocio antes de diseñar cualquier pantalla, y nunca entrego una interfaz sin validar que realmente resuelve el problema.",
+    "approachPoints": [
+      {
+        "title": "Investigación y definición del problema",
+        "text": "Entrevistas, benchmarking y mapeo de flujos para entender qué necesita el usuario y qué mueve el negocio antes de cualquier decisión visual."
+      },
+      {
+        "title": "Diseño visual y decisiones de interfaz",
+        "text": "Wireframes, prototipos navegables y pantallas finales consistentes con un sistema de diseño, siempre validados con quienes lo van a usar."
+      }
+    ],
+    "servicesLabel": "Servicios",
+    "workLabel": "Trabajo destacado",
+    "workLinkLabel": "Ver case",
     "toolsTitle": "Herramientas",
-    "educationTitle": "Formación"
+    "educationTitle": "Formación",
+    "ctaTitle": "Hablemos sobre tu próximo proyecto."
   },
   "contact": {
     "title": "Contacto",

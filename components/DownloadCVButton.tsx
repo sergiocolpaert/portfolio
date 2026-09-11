@@ -16,7 +16,7 @@ export default function DownloadCVButton({
       "inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm text-background transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]",
     invert:
       "inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm text-foreground transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]",
-    text: "link-underline flex items-center gap-1 text-sm",
+    text: "link-underline inline-flex items-center gap-1 text-sm",
   };
 
   return (

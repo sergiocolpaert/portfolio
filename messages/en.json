@@ -7,8 +7,8 @@
     "downloadCV": "Download CV"
   },
   "home": {
-    "heroTitle": "Product Designer",
-    "heroBio": "Hi, I'm Sergio, a Product Designer creating intuitive digital experiences.",
+    "heroTitle": "Sergio Colpaert Product Designer",
+    "heroSubtitle": "Through user research, product decisions and thoughtful interfaces, I help companies build digital experiences that are clear and easy to use.",
     "featuredTitle": "Selected work",
     "aboutTitle": "About",
     "aboutSummary1": "Started as a developer, moved into product design to sit closer to the decisions that shape a product, from research to the pixel.",
@@ -52,7 +52,7 @@
   },
   "stats": {
     "items": [
-      { "value": "5+", "label": "Years of experience" },
+      { "value": "+6", "label": "Years of experience" },
       { "value": "20+", "label": "Projects delivered" },
       { "value": "3", "label": "Languages I work in" },
       { "value": "100%", "label": "Focus on digital product" }
@@ -94,8 +94,25 @@
   },
   "about": {
     "title": "About",
+    "subtitle": "Product designer with a development background, helping companies turn business problems into digital products that are clear and easy to use.",
+    "approachLabel": "How I work",
+    "approachIntro": "The best results come from well informed decisions. I understand the business context before designing a single screen, and I never ship an interface without validating that it actually solves the problem.",
+    "approachPoints": [
+      {
+        "title": "Research and problem definition",
+        "text": "Interviews, benchmarking and flow mapping to understand what the user needs and what moves the business before any visual decision."
+      },
+      {
+        "title": "Visual design and interface decisions",
+        "text": "Wireframes, navigable prototypes and final screens consistent with a design system, always validated with the people who will use it."
+      }
+    ],
+    "servicesLabel": "Services",
+    "workLabel": "Featured work",
+    "workLinkLabel": "View case",
     "toolsTitle": "Tools",
-    "educationTitle": "Education"
+    "educationTitle": "Education",
+    "ctaTitle": "Let's talk about your next project."
   },
   "contact": {
     "title": "Contact",

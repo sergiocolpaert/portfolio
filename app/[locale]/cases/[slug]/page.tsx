@@ -68,7 +68,7 @@ export default async function CaseStudyPage({
               href={meta.behanceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-underline flex items-center gap-1 text-sm"
+              className="link-underline inline-flex items-center gap-1 text-sm"
             >
               {t("viewOnBehance")}
               <ArrowIcon className="h-3.5 w-3.5" />

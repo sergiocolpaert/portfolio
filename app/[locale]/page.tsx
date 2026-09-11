@@ -6,7 +6,6 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { getAllCasesWithTitles } from "@/lib/cases";
 import CaseCard from "@/components/CaseCard";
-import DownloadCVButton from "@/components/DownloadCVButton";
 import NumberedList, { type NumberedListItem } from "@/components/NumberedList";
 import Stats from "@/components/Stats";
 import FAQ from "@/components/FAQ";
@@ -36,41 +35,22 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     <div>
       {/* Hero */}
       <Container className="pt-16 pb-20 sm:pt-24 sm:pb-28">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:items-start">
-          <div>
-            <SplitText
-              as="h1"
-              text={t("heroTitle")}
-              className="font-display text-6xl leading-[0.95] font-semibold tracking-tight md:text-[80px]"
-            />
-            <Reveal delay={0.4} className="mt-10 flex flex-wrap items-center gap-4">
-              <DownloadCVButton />
-              <Link href="/cases" className="link-underline flex items-center gap-1 text-sm">
-                {t("ctaCases")}
-                <ArrowIcon className="h-3.5 w-3.5" />
-              </Link>
-            </Reveal>
-          </div>
-
-          <div className="flex flex-col items-start gap-4 sm:items-end">
-            <Reveal delay={0.15}>
-              <div className="relative aspect-[4/5] w-[280px] max-w-full overflow-hidden">
-                <Image
-                  src="/images/sergio-portrait.png"
-                  alt="Sergio Colpaert"
-                  fill
-                  sizes="280px"
-                  className="object-cover grayscale"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={0.3}>
-              <p className="w-[260px] max-w-full text-sm text-muted sm:text-right">
-                {t("heroBio")}
-              </p>
-            </Reveal>
-          </div>
-        </div>
+        <SplitText
+          as="h1"
+          text={t("heroTitle")}
+          className="max-w-4xl font-display text-6xl leading-[0.95] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
+        />
+        <Reveal delay={0.35} className="mt-8 max-w-xl">
+          <p className="text-lg text-muted sm:text-xl">{t("heroSubtitle")}</p>
+        </Reveal>
+        <Reveal delay={0.5} className="mt-10">
+          <a
+            href="mailto:sergio.colpaert@gmail.com"
+            className="inline-flex items-center rounded-full border border-foreground px-6 py-3 text-sm transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]"
+          >
+            sergio.colpaert@gmail.com
+          </a>
+        </Reveal>
       </Container>
 
       {/* Featured work */}
@@ -81,7 +61,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               {t("featuredTitle")}
             </h2>
           </Reveal>
-          <Link href="/cases" className="link-underline flex items-center gap-1 text-sm text-muted">
+          <Link href="/cases" className="link-underline inline-flex items-center gap-1 text-sm text-muted">
             {t("ctaCases")}
             <ArrowIcon className="h-3.5 w-3.5" />
           </Link>
@@ -147,7 +127,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           <div>
             <Reveal delay={0.1}>
               <p className="text-sm tracking-widest text-muted uppercase">
-                ({t("aboutTitle")})
+                {t("aboutTitle")}
               </p>
               <p className="mt-6 font-display text-2xl leading-snug font-medium tracking-tight sm:text-4xl">
                 {t("aboutSummary1")}
@@ -159,7 +139,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <Reveal delay={0.2} className="mt-8">
               <Link
                 href="/sobre"
-                className="link-underline flex items-center gap-1.5 font-display text-lg font-medium"
+                className="link-underline inline-flex items-center gap-1.5 font-display text-lg font-medium"
               >
                 {t("aboutLink")}
                 <ArrowIcon className="h-4 w-4" />

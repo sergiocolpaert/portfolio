@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import LocaleSwitcher from "./LocaleSwitcher";
-import DownloadCVButton from "./DownloadCVButton";
 import Container from "./Container";
 import Logo from "./Logo";
 
@@ -28,7 +27,6 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-6">
-          <DownloadCVButton className="link-underline hidden text-sm sm:inline" />
           <LocaleSwitcher />
         </div>
       </Container>

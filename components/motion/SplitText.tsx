@@ -43,7 +43,7 @@ export default function SplitText({
         className="inline"
       >
         {words.map((word, i) => (
-          <span key={i} className="inline-block overflow-hidden pb-[0.08em]">
+          <span key={i} className="inline-block overflow-hidden pb-[0.2em] leading-none">
             <motion.span
               variants={{
                 hidden: { y: "110%" },
