@@ -32,7 +32,6 @@ Coloque os PDFs em `public/cv/cv-pt.pdf`, `cv-es.pdf`, `cv-en.pdf`. O botão de 
 
 ## Pendências antes do launch
 
-- [ ] Substituir os 3 PDFs de currículo em `public/cv/`
 - [ ] Popular os 3–5 cases prioritários (hoje só existe `semiglobe`, com as 8 telas do projeto nativas + link "Ver no Behance")
 - [ ] Atualizar links de LinkedIn/Behance em `components/Footer.tsx` e `app/[locale]/contato/page.tsx`
 - [ ] Configurar analytics (Plausible ou GA4)

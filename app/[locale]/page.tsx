@@ -39,7 +39,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <SplitText
           as="h1"
           text={t("heroTitle")}
-          className="max-w-4xl font-display text-6xl leading-[0.8] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
+          className="max-w-4xl font-display text-6xl leading-[0.65] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
         />
         <Reveal delay={0.35} className="mt-8 max-w-xl">
           <p className="text-lg text-muted sm:text-xl">{t("heroSubtitle")}</p>

@@ -15,6 +15,9 @@ export default function Header() {
         </Link>
 
         <nav className="flex items-center gap-6 text-sm md:gap-8">
+          <Link href="/" className="link-underline">
+            {t("home")}
+          </Link>
           <Link href="/cases" className="link-underline">
             {t("cases")}
           </Link>
