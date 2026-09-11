@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { getAllCasesWithTitles } from "@/lib/cases";
 import CaseCard from "@/components/CaseCard";
+import DownloadCVButton from "@/components/DownloadCVButton";
 import NumberedList, { type NumberedListItem } from "@/components/NumberedList";
 import Stats from "@/components/Stats";
 import FAQ from "@/components/FAQ";
@@ -38,18 +39,17 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <SplitText
           as="h1"
           text={t("heroTitle")}
-          className="max-w-4xl font-display text-6xl leading-[0.95] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
+          className="max-w-4xl font-display text-6xl leading-[0.8] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
         />
         <Reveal delay={0.35} className="mt-8 max-w-xl">
           <p className="text-lg text-muted sm:text-xl">{t("heroSubtitle")}</p>
         </Reveal>
-        <Reveal delay={0.5} className="mt-10">
-          <a
-            href="mailto:sergio.colpaert@gmail.com"
-            className="inline-flex items-center rounded-full border border-foreground px-6 py-3 text-sm transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]"
-          >
-            sergio.colpaert@gmail.com
-          </a>
+        <Reveal delay={0.5} className="mt-10 flex flex-wrap items-center gap-4">
+          <DownloadCVButton />
+          <Link href="/cases" className="link-underline inline-flex items-center gap-1 text-sm">
+            {t("ctaCases")}
+            <ArrowIcon className="h-3.5 w-3.5" />
+          </Link>
         </Reveal>
       </Container>
 

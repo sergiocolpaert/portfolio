@@ -39,6 +39,17 @@ export default async function ContactPage({
           </a>
         </StaggerItem>
         <StaggerItem className="py-6">
+          <p className="text-sm text-muted">{t("whatsappLabel")}</p>
+          <a
+            href="https://wa.me/5521993755022"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline mt-1 inline-block font-display text-xl font-medium tracking-tight sm:text-2xl"
+          >
+            +55 21 99375-5022
+          </a>
+        </StaggerItem>
+        <StaggerItem className="py-6">
           <p className="text-sm text-muted">{t("linkedinLabel")}</p>
           <a
             href="https://www.linkedin.com/in/sergiocolpaert"
