@@ -37,7 +37,7 @@ export default async function CaseStudyPage({
           <SplitText
             as="h1"
             text={frontmatter.title}
-            className="mt-4 font-display text-5xl leading-[0.65] font-bold tracking-tight uppercase sm:text-6xl md:text-7xl"
+            className="mt-4 font-display text-5xl leading-[0.89] font-bold tracking-tight uppercase sm:text-6xl md:text-7xl"
           />
 
           <Reveal delay={0.3}>

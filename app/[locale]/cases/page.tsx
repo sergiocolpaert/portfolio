@@ -22,7 +22,7 @@ export default async function CasesPage({
       <SplitText
         as="h1"
         text={t("title")}
-        className="font-display text-6xl leading-[0.65] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
+        className="font-display text-6xl leading-[0.89] font-bold tracking-tight uppercase sm:text-7xl md:text-[90px]"
       />
       <Reveal delay={0.2}>
         <p className="mt-4 max-w-xl text-muted">{t("subtitle")}</p>
