@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import ArrowIcon from "./ArrowIcon";
 import type { CaseMeta } from "@/lib/cases";
 
 export default function CaseCard({
@@ -37,8 +38,9 @@ export default function CaseCard({
           </h3>
           <p className="mt-1 text-sm text-muted">{meta.tags.join(" · ")}</p>
         </div>
-        <span className="link-underline mt-1 shrink-0 text-sm">
-          {t("viewCase")} ↗
+        <span className="link-underline mt-1 flex shrink-0 items-center gap-1 text-sm">
+          {t("viewCase")}
+          <ArrowIcon className="h-3.5 w-3.5" />
         </span>
       </div>
     </Link>

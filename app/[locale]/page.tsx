@@ -8,11 +8,12 @@ import { getAllCasesWithTitles } from "@/lib/cases";
 import CaseCard from "@/components/CaseCard";
 import DownloadCVButton from "@/components/DownloadCVButton";
 import HeroVisual from "@/components/HeroVisual";
-import NumberedList from "@/components/NumberedList";
+import NumberedList, { type NumberedListItem } from "@/components/NumberedList";
 import Stats from "@/components/Stats";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import Container from "@/components/Container";
+import ArrowIcon from "@/components/ArrowIcon";
 import Reveal from "@/components/motion/Reveal";
 import SplitText from "@/components/motion/SplitText";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
@@ -30,7 +31,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const tFaq = await getTranslations("faq");
   const cases = (await getAllCasesWithTitles(locale)).slice(0, 4);
 
-  const skillItems = tSkills.raw("items") as { index: string; title: string }[];
+  const skillItems = tSkills.raw("items") as NumberedListItem[];
   const statItems = tStats.raw("items") as { value: string; label: string }[];
   const faqItems = tFaq.raw("items") as { question: string; answer: string }[];
 
@@ -53,8 +54,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
         <Reveal delay={0.5} className="mt-10 flex flex-wrap items-center gap-4">
           <DownloadCVButton />
-          <Link href="/cases" className="link-underline text-sm">
-            {t("ctaCases")} ↗
+          <Link href="/cases" className="link-underline flex items-center gap-1 text-sm">
+            {t("ctaCases")}
+            <ArrowIcon className="h-3.5 w-3.5" />
           </Link>
         </Reveal>
 
@@ -110,8 +112,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               {t("featuredTitle")}
             </h2>
           </Reveal>
-          <Link href="/cases" className="link-underline text-sm text-muted">
-            {t("ctaCases")} ↗
+          <Link href="/cases" className="link-underline flex items-center gap-1 text-sm text-muted">
+            {t("ctaCases")}
+            <ArrowIcon className="h-3.5 w-3.5" />
           </Link>
         </div>
         <StaggerGroup className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
@@ -149,9 +152,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <Reveal delay={0.2} className="mt-8">
               <Link
                 href="/sobre"
-                className="link-underline font-display text-lg font-medium"
+                className="link-underline flex items-center gap-1.5 font-display text-lg font-medium"
               >
-                {t("aboutLink")} ↗
+                {t("aboutLink")}
+                <ArrowIcon className="h-4 w-4" />
               </Link>
             </Reveal>
           </div>
@@ -183,7 +187,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           href="/contato"
           className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm text-foreground transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]"
         >
-          {tNav("contact")} ↗
+          {tNav("contact")}
+          <ArrowIcon className="h-3.5 w-3.5" />
         </Link>
       </CTASection>
     </div>

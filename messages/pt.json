@@ -23,10 +23,30 @@
   },
   "skills": {
     "items": [
-      { "index": "01", "title": "UX Research" },
-      { "index": "02", "title": "Product Design" },
-      { "index": "03", "title": "UI Design & Design Systems" },
-      { "index": "04", "title": "Front-end (HTML/CSS/JS)" }
+      {
+        "index": "01",
+        "title": "UX Research",
+        "tags": ["Entrevistas", "Benchmarking", "Fluxos de usuário"],
+        "description": "Entendo o problema antes de desenhar a solução: entrevistas, benchmarking e mapeamento de fluxos para tomar decisões com base em evidência, não em achismo."
+      },
+      {
+        "index": "02",
+        "title": "Product Design",
+        "tags": ["Estratégia", "Wireframes", "Prototipagem"],
+        "description": "Da estratégia de produto ao protótipo navegável — priorizo o que move o negócio e testo as decisões antes de escalar para produção."
+      },
+      {
+        "index": "03",
+        "title": "UI Design & Design Systems",
+        "tags": ["Figma", "Design Tokens", "Componentes"],
+        "description": "Telas finais e sistemas de design consistentes, com componentes reutilizáveis que escalam junto com o produto."
+      },
+      {
+        "index": "04",
+        "title": "Front-end (HTML/CSS/JS)",
+        "tags": ["Next.js", "Tailwind", "Handoff"],
+        "description": "Venho de desenvolvimento — entrego specs e componentes pensados pra reduzir atrito no handoff, e às vezes eu mesmo codifico a interface."
+      }
     ]
   },
   "stats": {

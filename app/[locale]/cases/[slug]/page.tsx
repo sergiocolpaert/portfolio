@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { getAllCaseSlugs, getCaseMeta, getCaseContent } from "@/lib/cases";
 import Container from "@/components/Container";
+import ArrowIcon from "@/components/ArrowIcon";
 import Reveal from "@/components/motion/Reveal";
 import SplitText from "@/components/motion/SplitText";
 
@@ -67,9 +68,10 @@ export default async function CaseStudyPage({
               href={meta.behanceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-underline text-sm"
+              className="link-underline flex items-center gap-1 text-sm"
             >
-              {t("viewOnBehance")} ↗
+              {t("viewOnBehance")}
+              <ArrowIcon className="h-3.5 w-3.5" />
             </a>
           </Reveal>
         )}
