@@ -155,7 +155,7 @@ function Block({ block }: { block: CaseBlock }) {
           {block.items.map((item, i) => (
             <div
               key={item.label}
-              className={`border-border px-0 py-8 md:px-6 ${
+              className={`border-border px-0 py-6 md:px-6 md:py-8 ${
                 i > 0 ? "md:border-l" : "md:pl-0"
               } ${i % 2 === 1 ? "border-l pl-6" : ""} ${
                 i >= 2 ? "border-t md:border-t-0" : ""
@@ -164,7 +164,7 @@ function Block({ block }: { block: CaseBlock }) {
               <dt className="text-xs tracking-widest text-muted uppercase">
                 {item.label}
               </dt>
-              <dd className="mt-3 font-display text-2xl font-medium tracking-tight md:text-3xl">
+              <dd className="mt-2 text-sm font-medium">
                 {item.value}
               </dd>
             </div>
@@ -214,30 +214,6 @@ function Block({ block }: { block: CaseBlock }) {
             ))}
           </div>
         </div>
-      );
-
-    case "credits":
-      return (
-        <p className="text-sm text-muted">
-          {block.label}{" "}
-          {block.people.map((person, i) => (
-            <span key={person.name}>
-              {person.href ? (
-                <a
-                  href={person.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline text-foreground"
-                >
-                  {person.name}
-                </a>
-              ) : (
-                <span className="text-foreground">{person.name}</span>
-              )}
-              {i < block.people.length - 1 && ", "}
-            </span>
-          ))}
-        </p>
       );
 
     case "sitemap":

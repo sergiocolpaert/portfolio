@@ -2,7 +2,6 @@ import type { CaseFrontmatter } from "@/lib/cases";
 import type { CaseSectionDoc } from "@/lib/case-doc";
 
 const IMG = "/images/cases/fac-infoserver";
-const GABRIEL = "https://www.behance.net/Gabrielribeiroalves";
 
 export type FacTexts = {
   meta: CaseFrontmatter;
@@ -11,7 +10,6 @@ export type FacTexts = {
     lead: string;
     stats: { label: string; value: string }[];
     tags: string[];
-    creditLabel: string;
   };
   challenge: {
     eyebrow: string;
@@ -47,11 +45,6 @@ export function buildFacSections(t: FacTexts): CaseSectionDoc[] {
       blocks: [
         { type: "stats", items: t.about.stats },
         { type: "tags", items: t.about.tags },
-        {
-          type: "credits",
-          label: t.about.creditLabel,
-          people: [{ name: "Gabriel Ribeiro", href: GABRIEL }],
-        },
       ],
     },
     {

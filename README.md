@@ -20,7 +20,7 @@ Cada case é montado em seções tipadas (ver `lib/case-doc.ts`), não em MDX. U
 
 1. Crie `content/cases/[slug]/meta.json` (dados não-textuais: ano, categoria, tags, ferramentas, imagem de capa, link do Behance; `featuredOrder` define a posição na listagem e no destaque da home).
 2. Crie `content/cases/[slug]/build.ts` (esqueleto compartilhado: números das seções, imagens, dimensões) e `texts.ts` (textos em PT/EN/ES), mais `pt.ts`, `en.ts` e `es.ts` que exportam `meta` (`title`, `client`, `role`, `tagline`) e `sections`.
-3. Coloque as imagens em `public/images/cases/[slug]/` (WebP, 2800px de largura no máximo). Mantenha como imagem só o que for visual (mockups, wireframes, style guide); textos, listas e tabelas viram blocos HTML (`stats`, `steps`, `sitemap`, `persona`, `mapping`, `speclist`, `scores`, `palette`, `credits`...).
+3. Coloque as imagens em `public/images/cases/[slug]/` (WebP, 2800px de largura no máximo). Mantenha como imagem só o que for visual (mockups, wireframes, style guide); textos, listas e tabelas viram blocos HTML (`stats`, `steps`, `sitemap`, `persona`, `mapping`, `speclist`, `scores`, `palette`...).
 
 ## Currículo
 

@@ -10,8 +10,6 @@ export type SemiglobeTexts = {
     lead: string;
     stats: { label: string; value: string }[];
     tags: string[];
-    creditLabel: string;
-    creditName: string;
     alt: string;
   };
   process: {
@@ -46,11 +44,6 @@ export function buildSemiglobeSections(t: SemiglobeTexts): CaseSectionDoc[] {
       blocks: [
         { type: "stats", items: t.about.stats },
         { type: "tags", items: t.about.tags },
-        {
-          type: "credits",
-          label: t.about.creditLabel,
-          people: [{ name: t.about.creditName }],
-        },
         {
           type: "image",
           src: `${IMG}/mockup-about.webp`,

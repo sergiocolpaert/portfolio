@@ -17,7 +17,6 @@ export const pt: FacTexts = {
       { label: "Tempo", value: "10 dias" },
     ],
     tags: ["UI/UX Design", "Development"],
-    creditLabel: "Em parceria com",
   },
   challenge: {
     eyebrow: "Fac Infoserver",
@@ -90,7 +89,6 @@ export const en: FacTexts = {
       { label: "Time", value: "10 days" },
     ],
     tags: ["UI/UX Design", "Development"],
-    creditLabel: "In partnership with",
   },
   challenge: {
     eyebrow: "Fac Infoserver",
@@ -163,7 +161,6 @@ export const es: FacTexts = {
       { label: "Tiempo", value: "10 días" },
     ],
     tags: ["UI/UX Design", "Development"],
-    creditLabel: "En colaboración con",
   },
   challenge: {
     eyebrow: "Fac Infoserver",

@@ -6,7 +6,7 @@ export default function DownloadCVButton({
   variant = "solid",
 }: {
   className?: string;
-  variant?: "solid" | "invert" | "text";
+  variant?: "solid" | "invert" | "text" | "outline";
 }) {
   const locale = useLocale();
   const t = useTranslations("nav");
@@ -19,6 +19,8 @@ export default function DownloadCVButton({
     invert:
       "inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm text-foreground transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]",
     text: "link-underline inline-flex items-center gap-1 text-sm",
+    outline:
+      "group inline-flex items-center rounded-full border border-foreground px-6 py-3 text-sm transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]",
   };
 
   return (
@@ -28,7 +30,13 @@ export default function DownloadCVButton({
       className={className ?? variants[variant]}
     >
       {t("downloadCV")}
-      <ArrowIcon className="h-3.5 w-3.5 rotate-90" />
+      {variant === "outline" ? (
+        <span className="inline-flex w-0 overflow-hidden opacity-0 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:ml-2 group-hover:w-3.5 group-hover:opacity-100 group-focus-visible:ml-2 group-focus-visible:w-3.5 group-focus-visible:opacity-100">
+          <ArrowIcon className="h-3.5 w-3.5 shrink-0 rotate-[135deg]" />
+        </span>
+      ) : (
+        <ArrowIcon className="h-3.5 w-3.5 rotate-90" />
+      )}
     </a>
   );
 }

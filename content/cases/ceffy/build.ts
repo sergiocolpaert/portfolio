@@ -8,7 +8,6 @@ export type CeffyTexts = {
     lead: string;
     tags: string[];
     alt: string;
-    creditLabel: string;
   };
   problem: {
     title: string;
@@ -91,16 +90,6 @@ export function buildCeffySections(t: CeffyTexts): CaseSectionDoc[] {
       lead: t.about.lead,
       blocks: [
         { type: "tags", items: t.about.tags },
-        {
-          type: "credits",
-          label: t.about.creditLabel,
-          people: [
-            {
-              name: "Gabriel Ribeiro",
-              href: "https://www.behance.net/Gabrielribeiroalves",
-            },
-          ],
-        },
         {
           type: "image",
           src: `${IMG}/mockup-creatina.webp`,

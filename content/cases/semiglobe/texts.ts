@@ -17,8 +17,6 @@ export const pt: SemiglobeTexts = {
       { label: "Tempo", value: "55 dias" },
     ],
     tags: ["Website Institucional", "UI/UX Design"],
-    creditLabel: "Criação",
-    creditName: "Really, Agência de Publicidade",
     alt: "SemiGlobe: home do website em um laptop entre rochas azuis",
   },
   process: {
@@ -82,8 +80,6 @@ export const en: SemiglobeTexts = {
       { label: "Time", value: "55 days" },
     ],
     tags: ["Institutional Website", "UI/UX Design"],
-    creditLabel: "Created by",
-    creditName: "Really, Advertising Agency",
     alt: "SemiGlobe: website home on a laptop between blue rocks",
   },
   process: {
@@ -147,8 +143,6 @@ export const es: SemiglobeTexts = {
       { label: "Tiempo", value: "55 días" },
     ],
     tags: ["Sitio Web Institucional", "UI/UX Design"],
-    creditLabel: "Creación",
-    creditName: "Really, Agencia de Publicidad",
     alt: "SemiGlobe: home del sitio en un portátil entre rocas azules",
   },
   process: {

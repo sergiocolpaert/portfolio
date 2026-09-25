@@ -46,11 +46,14 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           <p className="text-lg text-muted sm:text-xl">{t("heroSubtitle")}</p>
         </Reveal>
         <Reveal delay={0.5} className="mt-10 flex flex-wrap items-center gap-4">
-          <DownloadCVButton />
-          <Link href="/cases" className="link-underline inline-flex items-center gap-1 text-sm">
+          <Link
+            href="/cases"
+            className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm text-background transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] active:scale-[0.96]"
+          >
             {t("ctaCases")}
             <ArrowIcon className="h-3.5 w-3.5" />
           </Link>
+          <DownloadCVButton variant="outline" />
         </Reveal>
       </Container>
 

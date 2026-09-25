@@ -29,11 +29,6 @@ export type CaseBlock =
       swatches: { colors: string[] }[];
       fonts: { name: string; weights: string[] }[];
     }
-  | {
-      type: "credits";
-      label: string;
-      people: { name: string; href?: string }[];
-    }
   | { type: "sitemap"; columns: { title: string; items: string[] }[] }
   | {
       type: "persona";
