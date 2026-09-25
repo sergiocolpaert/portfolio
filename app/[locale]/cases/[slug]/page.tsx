@@ -27,7 +27,7 @@ export default async function CaseStudyPage({
   if (!meta) notFound();
 
   const t = await getTranslations("case");
-  const { Content, frontmatter, sections } = await getCaseContent(slug, locale);
+  const { frontmatter, sections } = await getCaseContent(slug, locale);
 
   const allCases = getAllCasesMeta();
   const currentIndex = allCases.findIndex((c) => c.slug === slug);
@@ -56,17 +56,7 @@ export default async function CaseStudyPage({
       />
       <MetaStrip items={metaItems} />
 
-      {sections ? (
-        <CaseSections sections={sections} />
-      ) : (
-        Content && (
-          <Container className="prose-grid py-20 sm:py-28">
-            <div className="contents prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-foreground">
-              <Content />
-            </div>
-          </Container>
-        )
-      )}
+      <CaseSections sections={sections} />
 
       {meta.behanceUrl && (
         <section className="border-t border-border">

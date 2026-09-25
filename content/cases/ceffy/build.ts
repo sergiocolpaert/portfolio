@@ -3,7 +3,13 @@ import type { CaseSectionDoc } from "@/lib/case-doc";
 const IMG = "/images/cases/ceffy";
 
 export type CeffyTexts = {
-  about: { title: string; lead: string; tags: string[]; alt: string };
+  about: {
+    title: string;
+    lead: string;
+    tags: string[];
+    alt: string;
+    creditLabel: string;
+  };
   problem: {
     title: string;
     quote: string;
@@ -85,6 +91,16 @@ export function buildCeffySections(t: CeffyTexts): CaseSectionDoc[] {
       lead: t.about.lead,
       blocks: [
         { type: "tags", items: t.about.tags },
+        {
+          type: "credits",
+          label: t.about.creditLabel,
+          people: [
+            {
+              name: "Gabriel Ribeiro",
+              href: "https://www.behance.net/Gabrielribeiroalves",
+            },
+          ],
+        },
         {
           type: "image",
           src: `${IMG}/mockup-creatina.webp`,

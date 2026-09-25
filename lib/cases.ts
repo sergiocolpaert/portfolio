@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { ComponentType } from "react";
 import type { Locale } from "@/i18n/routing";
 import type { CaseSectionDoc } from "@/lib/case-doc";
 
@@ -47,31 +46,12 @@ export function getAllCasesMeta(): CaseMeta[] {
     .sort((a, b) => (a.featuredOrder ?? 999) - (b.featuredOrder ?? 999));
 }
 
-function isSectioned(slug: string, locale: Locale) {
-  return fs.existsSync(path.join(CASES_DIR, slug, `${locale}.ts`));
-}
-
 export async function getCaseContent(slug: string, locale: Locale) {
-  if (isSectioned(slug, locale)) {
-    const mod = (await import(`@/content/cases/${slug}/${locale}.ts`)) as {
-      meta: CaseFrontmatter;
-      sections: CaseSectionDoc[];
-    };
-    return {
-      Content: null as ComponentType | null,
-      frontmatter: mod.meta,
-      sections: mod.sections,
-    };
-  }
-  const mod = (await import(`@/content/cases/${slug}/${locale}.mdx`)) as {
-    default: ComponentType;
+  const mod = (await import(`@/content/cases/${slug}/${locale}.ts`)) as {
     meta: CaseFrontmatter;
+    sections: CaseSectionDoc[];
   };
-  return {
-    Content: mod.default as ComponentType | null,
-    frontmatter: mod.meta,
-    sections: null as CaseSectionDoc[] | null,
-  };
+  return { frontmatter: mod.meta, sections: mod.sections };
 }
 
 export async function getAllCasesWithTitles(locale: Locale) {

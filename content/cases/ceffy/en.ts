@@ -14,6 +14,7 @@ export const sections = buildCeffySections({
     lead: "Cèffy is a custom-built e-commerce platform created to reposition gummy supplements as a premium longevity category, combining a sophisticated Design System with a sales engine custom-built in PHP, with automated tax integration.",
     tags: ["UI/UX", "Design", "PHP Engineering"],
     alt: "CÈFFY: Creatine product page on a laptop",
+    creditLabel: "In partnership with",
   },
   problem: {
     title: "The Problem",

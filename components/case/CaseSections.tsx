@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Container from "@/components/Container";
 import ArrowIcon from "@/components/ArrowIcon";
@@ -92,7 +93,7 @@ function Block({ block }: { block: CaseBlock }) {
             height={block.height}
             alt={block.alt}
             sizes="(min-width: 1440px) 1392px, 100vw"
-            className="h-auto w-full"
+            className={`h-auto w-full ${block.rounded ? "rounded-[18px]" : ""}`}
           />
         </figure>
       );
@@ -102,20 +103,37 @@ function Block({ block }: { block: CaseBlock }) {
         <div>
           <div className="grid gap-4 md:grid-cols-4 md:items-end">
             {block.items.map((item, i) => (
-              <div
-                key={item.title}
-                className={`flex flex-col justify-between border border-border p-6 ${STEP_HEIGHTS[i] ?? ""}`}
-              >
-                <h3 className="text-sm font-medium tracking-widest uppercase">
-                  {item.title}
-                </h3>
-                <ul className="mt-10 flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
-                    <li key={tag} className={chip}>
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
+              <div key={item.title} className="flex flex-col">
+                {item.caption && (
+                  <p className="mb-3 text-xs tracking-widest text-muted uppercase">
+                    {item.caption}
+                  </p>
+                )}
+                <div
+                  className={`flex flex-col justify-between border border-border p-6 ${
+                    item.weight !== undefined
+                      ? "md:min-h-[var(--h)]"
+                      : (STEP_HEIGHTS[i] ?? "")
+                  }`}
+                  style={
+                    item.weight !== undefined
+                      ? ({
+                          "--h": `${10 + item.weight * 0.55}rem`,
+                        } as CSSProperties)
+                      : undefined
+                  }
+                >
+                  <h3 className="text-sm font-medium tracking-widest uppercase">
+                    {item.title}
+                  </h3>
+                  <ul className="mt-10 flex flex-wrap gap-2">
+                    {item.tags.map((tag) => (
+                      <li key={tag} className={chip}>
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -125,6 +143,101 @@ function Block({ block }: { block: CaseBlock }) {
             ))}
           </div>
         </div>
+      );
+
+    case "stats":
+      return (
+        <dl
+          className={`grid grid-cols-2 border-y border-border ${
+            block.items.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"
+          }`}
+        >
+          {block.items.map((item, i) => (
+            <div
+              key={item.label}
+              className={`border-border px-0 py-8 md:px-6 ${
+                i > 0 ? "md:border-l" : "md:pl-0"
+              } ${i % 2 === 1 ? "border-l pl-6" : ""} ${
+                i >= 2 ? "border-t md:border-t-0" : ""
+              }`}
+            >
+              <dt className="text-xs tracking-widest text-muted uppercase">
+                {item.label}
+              </dt>
+              <dd className="mt-3 font-display text-2xl font-medium tracking-tight md:text-3xl">
+                {item.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      );
+
+    case "palette":
+      return (
+        <div className="space-y-10">
+          <ul
+            className={`grid grid-cols-2 gap-4 ${
+              block.swatches.length > 2 ? "sm:grid-cols-3 lg:grid-cols-6" : ""
+            }`}
+          >
+            {block.swatches.map((sw) => (
+              <li key={sw.colors.join("-")} className="min-w-0">
+                <div
+                  className="h-28 border border-border"
+                  style={{
+                    background:
+                      sw.colors.length > 1
+                        ? `linear-gradient(to right, ${sw.colors.join(", ")})`
+                        : sw.colors[0],
+                  }}
+                />
+                <p className="mt-3 text-xs tracking-widest text-muted uppercase">
+                  {sw.colors.join(" → ")}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <div className="grid gap-4 md:grid-cols-2">
+            {block.fonts.map((font) => (
+              <div key={font.name} className="border border-border p-6">
+                <p className="font-display text-3xl font-medium tracking-tight">
+                  {font.name}
+                </p>
+                <ul className="mt-6 flex flex-wrap gap-2">
+                  {font.weights.map((w) => (
+                    <li key={w} className={chip}>
+                      {w}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+
+    case "credits":
+      return (
+        <p className="text-sm text-muted">
+          {block.label}{" "}
+          {block.people.map((person, i) => (
+            <span key={person.name}>
+              {person.href ? (
+                <a
+                  href={person.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline text-foreground"
+                >
+                  {person.name}
+                </a>
+              ) : (
+                <span className="text-foreground">{person.name}</span>
+              )}
+              {i < block.people.length - 1 && ", "}
+            </span>
+          ))}
+        </p>
       );
 
     case "sitemap":
@@ -328,17 +441,24 @@ export default function CaseSections({
         >
           <Container className="py-20 sm:py-28">
             <Reveal className="grid gap-6 md:grid-cols-5 md:gap-10">
-              <p className="text-sm tracking-widest text-muted uppercase md:col-span-2">
-                ({section.number})
-              </p>
+              <div className="md:col-span-2">
+                <p className="text-sm tracking-widest text-muted uppercase">
+                  ({section.number})
+                </p>
+                {section.eyebrow && (
+                  <p className="mt-3 text-sm">{section.eyebrow}</p>
+                )}
+              </div>
               <div className="md:col-span-3">
                 <h2 className="font-display text-4xl leading-[1.02] font-medium tracking-tight md:text-6xl">
                   {section.title}
                 </h2>
                 {section.lead && (
-                  <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-                    {section.lead}
-                  </p>
+                  <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-muted sm:text-lg">
+                    {section.lead.split("\n\n").map((para) => (
+                      <p key={para}>{para}</p>
+                    ))}
+                  </div>
                 )}
               </div>
             </Reveal>

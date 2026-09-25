@@ -14,6 +14,7 @@ export const sections = buildCeffySections({
     lead: "Cèffy é uma plataforma de e-commerce sob medida criada para reposicionar a suplementação em goma como categoria premium de longevidade, unindo um Design System sofisticado a um motor de vendas customizado em PHP, com integração fiscal automatizada.",
     tags: ["UI/UX", "Design", "PHP Engineering"],
     alt: "CÈFFY: página de produto da Creatina em um laptop",
+    creditLabel: "Em parceria com",
   },
   problem: {
     title: "O Problema",

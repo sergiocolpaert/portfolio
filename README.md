@@ -16,15 +16,11 @@ Abre em `http://localhost:3000` e redireciona para `/pt`, `/es` ou `/en` conform
 
 ## Adicionando um novo case
 
-1. Crie `content/cases/[slug]/meta.json` (dados não-textuais: ano, tags, ferramentas, imagem de capa, link do Behance, `featuredOrder` define a posição na listagem e no destaque da home).
-2. Crie `content/cases/[slug]/pt.mdx`, `es.mdx`, `en.mdx` com o texto do case em cada idioma (cada arquivo exporta `meta` com `title`, `client`, `role` e, opcionalmente, `tagline` — um subtítulo curto mostrado abaixo do título na página do case).
-3. Adicione a imagem de capa em `public/images/cases/[slug]/cover.jpg`.
-4. Para imagens de conteúdo do case (telas do projeto), use o componente `<CaseImage />` (`components/CaseImage.tsx`) dentro do `.mdx`, importando-o no topo do arquivo — ele usa `next/image` para otimização automática. Exemplo:
-   ```mdx
-   import CaseImage from "@/components/CaseImage";
+Cada case é montado em seções tipadas (ver `lib/case-doc.ts`), não em MDX. Use `content/cases/ceffy/` como modelo.
 
-   <CaseImage src="/images/cases/[slug]/tela-01.webp" width={2800} height={1600} alt="..." />
-   ```
+1. Crie `content/cases/[slug]/meta.json` (dados não-textuais: ano, categoria, tags, ferramentas, imagem de capa, link do Behance; `featuredOrder` define a posição na listagem e no destaque da home).
+2. Crie `content/cases/[slug]/build.ts` (esqueleto compartilhado: números das seções, imagens, dimensões) e `texts.ts` (textos em PT/EN/ES), mais `pt.ts`, `en.ts` e `es.ts` que exportam `meta` (`title`, `client`, `role`, `tagline`) e `sections`.
+3. Coloque as imagens em `public/images/cases/[slug]/` (WebP, 2800px de largura no máximo). Mantenha como imagem só o que for visual (mockups, wireframes, style guide); textos, listas e tabelas viram blocos HTML (`stats`, `steps`, `sitemap`, `persona`, `mapping`, `speclist`, `scores`, `palette`, `credits`...).
 
 ## Currículo
 

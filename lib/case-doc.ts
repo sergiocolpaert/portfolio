@@ -11,11 +11,28 @@ export type CaseBlock =
       alt: string;
       caption?: string;
       narrow?: boolean;
+      rounded?: boolean;
     }
   | {
       type: "steps";
-      items: { title: string; tags: string[] }[];
+      items: {
+        title: string;
+        tags: string[];
+        caption?: string;
+        weight?: number;
+      }[];
       ticks: string[];
+    }
+  | { type: "stats"; items: { label: string; value: string }[] }
+  | {
+      type: "palette";
+      swatches: { colors: string[] }[];
+      fonts: { name: string; weights: string[] }[];
+    }
+  | {
+      type: "credits";
+      label: string;
+      people: { name: string; href?: string }[];
     }
   | { type: "sitemap"; columns: { title: string; items: string[] }[] }
   | {
@@ -48,6 +65,7 @@ export type CaseBlock =
 
 export type CaseSectionDoc = {
   number: string;
+  eyebrow?: string;
   title: string;
   lead?: string;
   tone?: CaseTone;

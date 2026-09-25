@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 
 :root {
   --background: #f4f3f0;
@@ -59,46 +58,6 @@ body {
 
 .link-underline:hover::after {
   transform: scaleX(1);
-}
-
-/* Article grid: body text caps at a readable measure and stays flush
-   with the page's left edge (same inset as every other page), while
-   elements marked .full-bleed (case screenshots) span the full
-   container width. */
-.prose-grid {
-  display: grid;
-  grid-template-columns: min(68ch, 100%) 1fr;
-  column-gap: 0;
-}
-
-.prose-grid > *,
-.prose-grid > .contents > * {
-  grid-column: 1;
-}
-
-.prose-grid > .full-bleed,
-.prose-grid > .contents > .full-bleed {
-  grid-column: 1 / -1;
-}
-
-/* Case screenshots stack flush against each other: no border between
-   two consecutive images, only around the outer edges of the stack. */
-.prose-grid .full-bleed {
-  margin-top: 0;
-}
-
-.prose-grid .full-bleed + .full-bleed {
-  border-top: 0;
-}
-
-.prose-grid .full-bleed:has(+ .full-bleed) {
-  border-bottom: 0;
-}
-
-/* Extra breathing room between the case intro copy and the first
-   screenshot that follows it. */
-.prose-grid > .contents > :not(.full-bleed) + .full-bleed {
-  margin-top: 4rem;
 }
 
 h1,
