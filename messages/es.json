@@ -82,6 +82,7 @@
     "viewCase": "Ver case"
   },
   "case": {
+    "year": "Año",
     "client": "Cliente",
     "role": "Rol",
     "duration": "Duración",

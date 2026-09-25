@@ -6,9 +6,21 @@
   --foreground: #0a0a0a;
   --muted: #6f6c66;
   --border: #dedbd3;
+  --surface: #ebe9e4;
+}
+
+/* Case sections re-map the same tokens locally, so every block inside
+   picks up the right contrast without knowing which band it sits on. */
+.tone-dark {
+  --background: #0a0a0a;
+  --foreground: #f4f3f0;
+  --muted: #9a978f;
+  --border: #2c2c2a;
+  --surface: #161615;
 }
 
 @theme inline {
+  --color-surface: var(--surface);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);

@@ -12,8 +12,10 @@ import {
 } from "@/lib/cases";
 import Container from "@/components/Container";
 import ArrowIcon from "@/components/ArrowIcon";
-import Reveal from "@/components/motion/Reveal";
-import SplitText from "@/components/motion/SplitText";
+import CaseTopBar from "@/components/case/CaseTopBar";
+import CaseHero from "@/components/case/CaseHero";
+import MetaStrip from "@/components/case/MetaStrip";
+import CaseSections from "@/components/case/CaseSections";
 
 export default async function CaseStudyPage({
   params,
@@ -25,7 +27,7 @@ export default async function CaseStudyPage({
   if (!meta) notFound();
 
   const t = await getTranslations("case");
-  const { Content, frontmatter } = await getCaseContent(slug, locale);
+  const { Content, frontmatter, sections } = await getCaseContent(slug, locale);
 
   const allCases = getAllCasesMeta();
   const currentIndex = allCases.findIndex((c) => c.slug === slug);
@@ -35,77 +37,40 @@ export default async function CaseStudyPage({
       ? (await getCaseContent(nextCase.slug, locale)).frontmatter.title
       : null;
 
+  const metaItems = [
+    { label: t("client"), value: frontmatter.client },
+    { label: t("role"), value: frontmatter.role },
+    { label: t("tools"), value: meta.tools.join(", ") },
+    { label: t("year"), value: String(meta.year) },
+  ];
+
   return (
     <article>
-      <Container className="prose-grid py-16 sm:py-24">
-        <Link href="/cases" className="link-underline text-sm text-muted">
-          ← {t("back")}
-        </Link>
+      <CaseTopBar backLabel={t("back")} />
+      <CaseHero
+        eyebrow={meta.category}
+        title={frontmatter.title}
+        tagline={frontmatter.tagline}
+        image={meta.coverImage}
+        imageAlt={frontmatter.title}
+      />
+      <MetaStrip items={metaItems} />
 
-        <header className="mt-8 border-b border-border pb-10">
-          <Reveal>
-            <p className="text-sm tracking-widest text-muted uppercase">
-              {meta.category}
-            </p>
-          </Reveal>
+      {sections ? (
+        <CaseSections sections={sections} />
+      ) : (
+        Content && (
+          <Container className="prose-grid py-20 sm:py-28">
+            <div className="contents prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-foreground">
+              <Content />
+            </div>
+          </Container>
+        )
+      )}
 
-          <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
-            <SplitText
-              as="h1"
-              text={frontmatter.title}
-              lineHeight={0.89}
-              className="font-display text-5xl font-semibold tracking-tight uppercase sm:text-6xl md:text-7xl"
-            />
-            <Reveal delay={0.3}>
-              <span className="font-display text-2xl text-muted">
-                ({meta.year})
-              </span>
-            </Reveal>
-          </div>
-
-          {frontmatter.tagline && (
-            <Reveal delay={0.2}>
-              <p className="mt-6 max-w-xl text-lg text-muted">
-                {frontmatter.tagline}
-              </p>
-            </Reveal>
-          )}
-
-          <Reveal delay={0.35}>
-            <dl className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8 text-sm sm:grid-cols-4">
-              <div>
-                <dt className="text-muted">{t("client")}</dt>
-                <dd className="mt-1">{frontmatter.client}</dd>
-              </div>
-              <div>
-                <dt className="text-muted">{t("role")}</dt>
-                <dd className="mt-1">{frontmatter.role}</dd>
-              </div>
-              {meta.duration && (
-                <div>
-                  <dt className="text-muted">{t("duration")}</dt>
-                  <dd className="mt-1">{meta.duration}</dd>
-                </div>
-              )}
-              <div>
-                <dt className="text-muted">{t("tools")}</dt>
-                <dd className="mt-1">{meta.tools.join(", ")}</dd>
-              </div>
-            </dl>
-          </Reveal>
-        </header>
-
-        <Reveal className="mt-10">
-          <span className="text-xs text-muted">(001)</span>
-        </Reveal>
-
-        <div className="contents prose prose-neutral max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-foreground">
-          <Content />
-        </div>
-
-        {meta.behanceUrl && (
-          <Reveal className="mt-4 border-t border-border pt-8">
-            <span className="mb-4 block text-xs text-muted">(002)</span>
+      {meta.behanceUrl && (
+        <section className="border-t border-border">
+          <Container className="py-10">
             <a
               href={meta.behanceUrl}
               target="_blank"
@@ -115,9 +80,9 @@ export default async function CaseStudyPage({
               {t("viewOnBehance")}
               <ArrowIcon className="h-3.5 w-3.5" />
             </a>
-          </Reveal>
-        )}
-      </Container>
+          </Container>
+        </section>
+      )}
 
       {nextCase && nextCaseTitle && (
         <section className="border-t border-border">
