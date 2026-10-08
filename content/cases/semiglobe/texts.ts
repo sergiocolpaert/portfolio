@@ -2,11 +2,10 @@ import type { SemiglobeTexts } from "./build";
 
 export const pt: SemiglobeTexts = {
   meta: {
-    title: "Uma marca solar, confiança para dois públicos",
-    pageTitle: "Uma home, duas jornadas: confiança para parceiros e consumidores",
+    title: "Credibilidade imediata para uma marca solar que ninguém conhecia no Brasil",
     client: "SemiGlobe",
     role: "UI/UX Designer",
-    tagline: "Uma marca solar nova no Brasil, falando com parceiros de negócio e consumidores no mesmo site.",
+    tagline: "Onze anos de operação internacional traduzidos em confiança para parceiros e consumidores.",
   },
   about: {
     title: "Sobre o projeto",
@@ -62,11 +61,10 @@ export const pt: SemiglobeTexts = {
 
 export const en: SemiglobeTexts = {
   meta: {
-    title: "One solar brand, trust for two audiences",
-    pageTitle: "One home, two journeys: trust for partners and consumers",
+    title: "Instant credibility for a solar brand no one in Brazil knew",
     client: "SemiGlobe",
     role: "UI/UX Designer",
-    tagline: "A solar brand new to Brazil, speaking to business partners and consumers on the same site.",
+    tagline: "Eleven years of international operation translated into trust for partners and consumers.",
   },
   about: {
     title: "About the project",
@@ -122,11 +120,10 @@ export const en: SemiglobeTexts = {
 
 export const es: SemiglobeTexts = {
   meta: {
-    title: "Una marca solar, confianza para dos públicos",
-    pageTitle: "Una home, dos recorridos: confianza para socios y consumidores",
+    title: "Credibilidad inmediata para una marca solar que nadie conocía en Brasil",
     client: "SemiGlobe",
     role: "UI/UX Designer",
-    tagline: "Una marca solar nueva en Brasil, que habla con socios de negocio y consumidores en el mismo sitio.",
+    tagline: "Once años de operación internacional traducidos en confianza para socios y consumidores.",
   },
   about: {
     title: "Sobre el proyecto",

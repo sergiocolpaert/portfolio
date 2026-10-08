@@ -2,11 +2,10 @@ import type { CaseFrontmatter } from "@/lib/cases";
 import { buildCeffySections } from "./build";
 
 export const meta: CaseFrontmatter = {
-  title: "A gummy supplement that takes itself seriously",
-  pageTitle: "A gummy supplement that takes itself seriously, from the first fold to the cart",
+  title: "Repositioning gummy supplements as a premium longevity category",
   client: "CÈFFY",
   role: "Product Designer",
-  tagline: "A supplement brand that earned the trust of people who doubted the format.",
+  tagline: "Design system, art direction and shopping experience for a brand that wanted to be taken seriously.",
 };
 
 export const sections = buildCeffySections({

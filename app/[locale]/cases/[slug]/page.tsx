@@ -49,7 +49,7 @@ export default async function CaseStudyPage({
       <CaseTopBar backLabel={t("back")} />
       <CaseHero
         eyebrow={meta.category}
-        title={frontmatter.pageTitle ?? frontmatter.title}
+        title={frontmatter.title}
         tagline={frontmatter.tagline}
         image={meta.coverImage}
         imageAlt={frontmatter.client}

@@ -2,11 +2,10 @@ import type { CaseFrontmatter } from "@/lib/cases";
 import { buildCeffySections } from "./build";
 
 export const meta: CaseFrontmatter = {
-  title: "Suplemento em goma que se leva a sério",
-  pageTitle: "Suplemento em goma que se leva a sério, da primeira dobra ao carrinho",
+  title: "Reposicionando a suplementação em goma como categoria premium de longevidade",
   client: "CÈFFY",
   role: "Product Designer",
-  tagline: "Uma marca de suplementos que conquistou a confiança de quem desconfiava do formato.",
+  tagline: "Design system, direção de arte e experiência de compra para uma marca que queria ser levada a sério.",
 };
 
 export const sections = buildCeffySections({

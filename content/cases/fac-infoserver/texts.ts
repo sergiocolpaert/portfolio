@@ -2,11 +2,10 @@ import type { FacTexts } from "./build";
 
 export const pt: FacTexts = {
   meta: {
-    title: "12 anos de reputação, do boca a boca à busca ativa",
-    pageTitle: "Do boca a boca à busca ativa: 12 anos de reputação transformados em prova online",
+    title: "Transformando 12 anos de reputação em confiança visível para quem pesquisa na internet",
     client: "Fac Infoserver",
     role: "UI/UX Designer",
-    tagline: "Presença digital para uma empresa de TI com mais de 500 clientes e nenhum site.",
+    tagline: "Estratégia, arquitetura da informação e identidade web para uma empresa sem presença digital.",
   },
   about: {
     title: "Sobre o projeto",
@@ -85,11 +84,10 @@ export const pt: FacTexts = {
 
 export const en: FacTexts = {
   meta: {
-    title: "12 years of reputation, from word of mouth to active search",
-    pageTitle: "From word of mouth to active search: 12 years of reputation turned into online proof",
+    title: "Turning 12 years of reputation into visible trust for people searching online",
     client: "Fac Infoserver",
     role: "UI/UX Designer",
-    tagline: "Digital presence for an IT company with over 500 clients and no website.",
+    tagline: "Strategy, information architecture and web identity for a company with no digital presence.",
   },
   about: {
     title: "About the project",
@@ -168,11 +166,10 @@ export const en: FacTexts = {
 
 export const es: FacTexts = {
   meta: {
-    title: "12 años de reputación, del boca a boca a la búsqueda activa",
-    pageTitle: "Del boca a boca a la búsqueda activa: 12 años de reputación convertidos en prueba online",
+    title: "Transformando 12 años de reputación en confianza visible para quien busca en internet",
     client: "Fac Infoserver",
     role: "UI/UX Designer",
-    tagline: "Presencia digital para una empresa de TI con más de 500 clientes y ningún sitio web.",
+    tagline: "Estrategia, arquitectura de la información e identidad web para una empresa sin presencia digital.",
   },
   about: {
     title: "Sobre el proyecto",
