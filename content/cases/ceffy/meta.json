@@ -1,9 +1,10 @@
 {
   "slug": "ceffy",
   "year": 2026,
-  "category": "Web Design",
-  "tags": ["Web Design", "UI Design", "E-commerce"],
-  "tools": ["Figma", "WordPress", "Elementor", "PHP"],
+  "category": "Product Design",
+  "tags": ["E-commerce", "B2C"],
+  "tools": ["Figma", "Hotjar", "WooCommerce"],
+  "build": ["WordPress", "Elementor", "PHP"],
   "duration": "",
   "coverImage": "/images/cases/ceffy/cover.webp",
   "behanceUrl": "https://www.behance.net/gallery/256216849/CEFFY-Ecommerce",

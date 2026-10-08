@@ -9,12 +9,7 @@ export type CeffyTexts = {
     tags: string[];
     alt: string;
   };
-  problem: {
-    title: string;
-    quote: string;
-    author: string;
-    role: string;
-  };
+  problem: { title: string; text: string };
   process: {
     title: string;
     lead: string;
@@ -53,18 +48,22 @@ export type CeffyTexts = {
     altHome: string;
     homeCaption: string;
   };
-  engineering: {
+  constraint: {
     title: string;
     lead: string;
     rows: { title: string; text: string }[];
-    facts: string[];
+    codeLabel: string;
+  };
+  signals: {
+    title: string;
+    lead: string;
+    decisionLabel: string;
+    rows: { label: string; text: string; decision: string }[];
   };
   performance: {
     title: string;
     lead: string;
-    score: string;
-    cards: { title: string; text: string }[];
-    rows: { label: string; status: string }[];
+    labels: string[];
     columns: { desktop: string; mobile: string };
   };
   reflection: { title: string; lead: string };
@@ -104,12 +103,7 @@ export function buildCeffySections(t: CeffyTexts): CaseSectionDoc[] {
       title: t.problem.title,
       tone: "dark",
       blocks: [
-        {
-          type: "quote",
-          text: t.problem.quote,
-          author: t.problem.author,
-          role: t.problem.role,
-        },
+        { type: "statement", text: t.problem.text },
       ],
     },
     {
@@ -219,31 +213,43 @@ export function buildCeffySections(t: CeffyTexts): CaseSectionDoc[] {
     },
     {
       number: "10",
-      title: t.engineering.title,
-      lead: t.engineering.lead,
+      title: t.constraint.title,
+      lead: t.constraint.lead,
       tone: "dark",
       blocks: [
-        { type: "speclist", rows: t.engineering.rows },
-        { type: "code", code: CODE },
-        { type: "facts", items: t.engineering.facts },
+        { type: "speclist", rows: t.constraint.rows },
+        { type: "code", code: CODE, label: t.constraint.codeLabel },
       ],
     },
     {
       number: "11",
-      title: t.performance.title,
-      lead: t.performance.lead,
+      title: t.signals.title,
+      lead: t.signals.lead,
       blocks: [
         {
-          type: "scores",
-          score: { label: t.performance.score, value: 95 },
-          cards: t.performance.cards,
-          columns: t.performance.columns,
-          rows: t.performance.rows.map((r, i) => ({ ...r, ...SCORES[i] })),
+          type: "mapping",
+          decisionLabel: t.signals.decisionLabel,
+          rows: t.signals.rows,
         },
       ],
     },
     {
       number: "12",
+      title: t.performance.title,
+      lead: t.performance.lead,
+      tone: "muted",
+      blocks: [
+        {
+          type: "stats",
+          items: t.performance.labels.map((label, i) => ({
+            label,
+            value: `${t.performance.columns.desktop} ${SCORES[i].desktop} · ${t.performance.columns.mobile} ${SCORES[i].mobile}`,
+          })),
+        },
+      ],
+    },
+    {
+      number: "13",
       title: t.reflection.title,
       lead: t.reflection.lead,
       tone: "dark",

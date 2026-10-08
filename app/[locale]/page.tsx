@@ -73,7 +73,11 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <StaggerGroup className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
           {cases.map((meta) => (
             <StaggerItem key={meta.slug}>
-              <CaseCard meta={meta} title={meta.title} />
+              <CaseCard
+                meta={meta}
+                title={meta.title}
+                client={meta.client}
+              />
             </StaggerItem>
           ))}
         </StaggerGroup>

@@ -2,8 +2,10 @@ import Container from "@/components/Container";
 
 export default function MetaStrip({
   items,
+  note,
 }: {
   items: { label: string; value: string }[];
+  note?: { label: string; value: string };
 }) {
   return (
     <div className="border-y border-border">
@@ -25,6 +27,13 @@ export default function MetaStrip({
             </div>
           ))}
         </dl>
+        {note && (
+          <p className="border-t border-border py-4 text-xs text-muted">
+            <span className="tracking-widest uppercase">{note.label}</span>
+            <span className="mx-2">·</span>
+            {note.value}
+          </p>
+        )}
       </Container>
     </div>
   );

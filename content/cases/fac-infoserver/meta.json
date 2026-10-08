@@ -1,9 +1,10 @@
 {
   "slug": "fac-infoserver",
   "year": 2025,
-  "category": "Web Design",
-  "tags": ["Web Design", "UI Design"],
-  "tools": ["Figma", "WordPress", "Elementor"],
+  "category": "Product Design · B2B",
+  "tags": ["B2B"],
+  "tools": ["Figma"],
+  "build": ["WordPress", "Elementor Pro"],
   "duration": "",
   "coverImage": "/images/cases/fac-infoserver/cover.webp",
   "behanceUrl": "https://www.behance.net/gallery/236939167/Fac-Infoserver-Landing-Page",

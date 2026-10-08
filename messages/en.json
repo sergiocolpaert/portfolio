@@ -87,6 +87,7 @@
     "role": "Role",
     "duration": "Duration",
     "tools": "Tools",
+    "build": "Built with",
     "context": "Context & problem",
     "process": "Process",
     "solution": "Solution",

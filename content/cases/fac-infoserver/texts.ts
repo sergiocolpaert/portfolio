@@ -2,21 +2,21 @@ import type { FacTexts } from "./build";
 
 export const pt: FacTexts = {
   meta: {
-    title: "Fac Infoserver: Landing Page",
+    title: "Do boca a boca à busca ativa",
     client: "Fac Infoserver",
-    role: "UI/UX Designer",
-    tagline: "Landing page institucional para gerar autoridade e leads.",
+    role: "UX Designer",
+    tagline: "Presença digital para uma empresa de TI com mais de 500 clientes e nenhum site.",
   },
   about: {
     title: "Sobre o projeto",
-    lead: "Desenvolvimento completo da landing page institucional da Fac Infoserver: estratégia digital, arquitetura da informação, identidade visual web e experiência do usuário. O projeto criou um hub profissional que valida a expertise da empresa e gera credibilidade com potenciais clientes.",
+    lead: "Um projeto enxuto: discovery rápido, decisões rápidas e um one-page entregue em 10 dias. A Fac Infoserver tinha 12 anos de reputação construída por indicação e nenhuma forma de ser encontrada ou validada por quem ainda não a conhecia. O trabalho foi transformar essa reputação em prova visível para o lead que pesquisa fornecedores sozinho, antes de pedir orçamento.",
     stats: [
-      { label: "País", value: "BR" },
-      { label: "Nicho", value: "Infraestrutura de T.I" },
-      { label: "Tarefa", value: "One Page Website" },
-      { label: "Tempo", value: "10 dias" },
+      { label: "Problema", value: "Negócio dependente de indicação, invisível na busca" },
+      { label: "Meu papel", value: "UX Designer, do discovery à UI final" },
+      { label: "Restrição", value: "Um one-page, entregue em 10 dias" },
+      { label: "Resultado esperado", value: "Ser encontrada e validada online por leads em pesquisa ativa" },
     ],
-    tags: ["UI/UX Design", "Development"],
+    tags: ["Geração de leads", "Prova de credibilidade", "Presença digital", "Design System"],
   },
   challenge: {
     eyebrow: "Fac Infoserver",
@@ -26,11 +26,7 @@ export const pt: FacTexts = {
   },
   process: {
     title: "Design Process",
-    stats: [
-      { label: "Horas", value: "40" },
-      { label: "Equipe", value: "02" },
-      { label: "Etapas", value: "04" },
-    ],
+    lead: "Com um prazo curto, o discovery serviu para fechar cedo uma única pergunta: o que um lead que nunca ouviu falar da Fac precisa ver para pedir orçamento. As decisões de estrutura saíram dessa resposta.",
     steps: [
       { title: "Pesquisa", caption: "8 horas", tags: ["Briefing", "Onboarding"] },
       {
@@ -49,23 +45,37 @@ export const pt: FacTexts = {
         tags: ["SEO", "Segurança", "Performance"],
       },
     ],
+    note: "Contexto do projeto: 10 dias, 40 horas e uma equipe de 2 pessoas.",
   },
-  wireframe: {
-    eyebrow: "UI Design",
-    title: "Wireframe",
-    lead: "O wireframe estabeleceu a arquitetura informacional do site, definindo o fluxo de leitura e a hierarquia visual. A estrutura one-page foi organizada em blocos funcionais que conduzem o usuário do impacto inicial à conversão.\n\nForam mapeados os elementos essenciais, suas proporções e relações espaciais. O foco estava em criar pontos de ancoragem visual, estabelecer a grid de conteúdo e posicionar estrategicamente os CTAs.\n\nEsta etapa permitiu validar a lógica de navegação antes de qualquer decisão estética, garantindo que a arquitetura suportasse os objetivos de negócio e a usabilidade.",
-    alt: "Fac Infoserver: wireframes da landing page em perspectiva",
-  },
-  final: {
-    eyebrow: "Validação",
-    title: "Design Final",
-    lead: "Esta etapa teve como objetivo materializar a identidade visual do projeto e validar a experiência completa antes do desenvolvimento. No Figma, foram aplicadas decisões de cores, tipografia, espaçamentos e elementos visuais que comunicam profissionalismo e credibilidade.\n\nO protótipo de alta fidelidade serviu como ferramenta de alinhamento entre todas as partes envolvidas. A apresentação permitiu validar escolhas estéticas, testar percepções de marca e garantir consenso sobre a direção visual.\n\nO objetivo principal foi eliminar incertezas e estabelecer uma referência sólida para o desenvolvimento, assegurando que a implementação técnica reproduzisse fielmente a proposta aprovada.",
-    alt: "Fac Infoserver: design final da landing page em um laptop",
+  decisions: {
+    eyebrow: "Wireframe e UI",
+    title: "Decisões",
+    lead: "Cada bloco do one-page responde a uma pergunta que o lead faz antes de pedir orçamento. Três decisões guiaram a estrutura, do wireframe à UI final.",
+    decisionLabel: "O que fiz",
+    rows: [
+      {
+        label: "Prova",
+        text: "O lead em pesquisa ativa não conhece a Fac e precisa validar a empresa em segundos.",
+        decision: "Os números que antes só circulavam por indicação (mais de 500 empresas atendidas, 12 anos de mercado, 100% de garantia) ficam ancorados no hero, antes de qualquer descrição de serviço.",
+      },
+      {
+        label: "Oferta",
+        text: "Quem compara fornecedores precisa saber rápido se a Fac tem o equipamento que procura.",
+        decision: "As soluções se organizam por categoria de equipamento (servidores, storages, switches e peças), com as marcas citadas e uma chamada própria em cada card.",
+      },
+      {
+        label: "Contato",
+        text: "Sem indicação, falta a voz de quem já comprou, e o primeiro contato precisa ter pouco atrito.",
+        decision: "Depoimentos com nome e cargo levam a indicação para o site. O fechamento combina formulário e WhatsApp, com endereço e mapa como prova de operação física.",
+      },
+    ],
+    altWireframes: "Fac Infoserver: wireframes da landing page em perspectiva",
+    altFinal: "Fac Infoserver: design final da landing page em um laptop",
   },
   mobile: {
-    eyebrow: "Desenvolvimento",
+    eyebrow: "Detalhe de entrega",
     title: "Mobile",
-    lead: "Esta etapa teve como objetivo transformar o design aprovado em um site funcional e responsivo. A construção foi realizada no WordPress com Elementor, plataforma escolhida por sua flexibilidade, facilidade de manutenção e capacidade de entrega rápida.\n\nDurante o desenvolvimento, cada seção foi implementada seguindo fielmente as especificações do Figma. Foram realizados testes de responsividade em diferentes dispositivos e navegadores para garantir consistência visual e funcional.\n\nO objetivo principal foi entregar um site performático, com navegação fluida e totalmente responsivo. A apresentação final demonstrou o projeto funcionando em desktop, tablet e mobile, validando a qualidade da implementação antes do lançamento.",
+    lead: "Construído em WordPress com Elementor a partir do Figma, com testes de responsividade em desktop, tablet e celular antes do lançamento.",
     altScreens: "Fac Infoserver: telas da versão mobile",
     altPhoto: "Fac Infoserver: landing page em um celular sobre uma mesa",
   },
@@ -74,21 +84,21 @@ export const pt: FacTexts = {
 
 export const en: FacTexts = {
   meta: {
-    title: "Fac Infoserver: Landing Page",
+    title: "From word of mouth to active search",
     client: "Fac Infoserver",
-    role: "UI/UX Designer",
-    tagline: "Institutional landing page built to generate authority and leads.",
+    role: "UX Designer",
+    tagline: "Digital presence for an IT company with over 500 clients and no website.",
   },
   about: {
     title: "About the project",
-    lead: "Complete institutional landing page for Fac Infoserver: digital strategy, information architecture, web visual identity and user experience. The project created a professional hub that validates the company's expertise and builds credibility with potential clients.",
+    lead: "A lean project: fast discovery, fast decisions and a one-page site delivered in 10 days. Fac Infoserver had 12 years of reputation built on referrals and no way to be found or validated by anyone who didn't already know it. The work was to turn that reputation into visible proof for the lead who researches suppliers on their own, before asking for a quote.",
     stats: [
-      { label: "Country", value: "BR" },
-      { label: "Niche", value: "IT Infrastructure" },
-      { label: "Task", value: "One Page Website" },
-      { label: "Time", value: "10 days" },
+      { label: "Problem", value: "A referral-dependent business, invisible in search" },
+      { label: "My role", value: "UX Designer, from discovery to final UI" },
+      { label: "Constraint", value: "A one-page site, delivered in 10 days" },
+      { label: "Expected outcome", value: "Being found and validated online by leads in active search" },
     ],
-    tags: ["UI/UX Design", "Development"],
+    tags: ["Lead generation", "Proof of credibility", "Digital presence", "Design System"],
   },
   challenge: {
     eyebrow: "Fac Infoserver",
@@ -98,11 +108,7 @@ export const en: FacTexts = {
   },
   process: {
     title: "Design Process",
-    stats: [
-      { label: "Hours", value: "40" },
-      { label: "Team", value: "02" },
-      { label: "Stages", value: "04" },
-    ],
+    lead: "With a short deadline, discovery was used to settle one question early: what does a lead who has never heard of Fac need to see before asking for a quote. The structural decisions came from that answer.",
     steps: [
       { title: "Research", caption: "8 hours", tags: ["Briefing", "Onboarding"] },
       {
@@ -121,23 +127,37 @@ export const en: FacTexts = {
         tags: ["SEO", "Security", "Performance"],
       },
     ],
+    note: "Project context: 10 days, 40 hours and a team of 2.",
   },
-  wireframe: {
-    eyebrow: "UI Design",
-    title: "Wireframe",
-    lead: "The wireframe established the site's information architecture, defining the reading flow and the visual hierarchy. The one-page structure was organized into functional blocks that lead the user from the initial impact to conversion.\n\nThe essential elements were mapped, along with their proportions and spatial relationships. The focus was on creating visual anchor points, establishing the content grid and strategically positioning the CTAs.\n\nThis stage made it possible to validate the navigation logic before any aesthetic decision, ensuring the architecture supported the business goals and usability.",
-    alt: "Fac Infoserver: landing page wireframes in perspective",
-  },
-  final: {
-    eyebrow: "Validation",
-    title: "Final Design",
-    lead: "This stage aimed to materialize the project's visual identity and validate the complete experience before development. In Figma, decisions on color, typography, spacing and visual elements were applied to communicate professionalism and credibility.\n\nThe high-fidelity prototype served as an alignment tool among all parties involved. The presentation made it possible to validate aesthetic choices, test brand perception and secure consensus on the visual direction.\n\nThe main goal was to eliminate uncertainty and establish a solid reference for development, ensuring the technical implementation faithfully reproduced the approved proposal.",
-    alt: "Fac Infoserver: final landing page design on a laptop",
+  decisions: {
+    eyebrow: "Wireframe and UI",
+    title: "Decisions",
+    lead: "Each block of the one-page answers a question the lead asks before requesting a quote. Three decisions guided the structure, from wireframe to final UI.",
+    decisionLabel: "What I did",
+    rows: [
+      {
+        label: "Proof",
+        text: "A lead in active search doesn't know Fac and needs to validate the company in seconds.",
+        decision: "The numbers that used to travel only by referral (over 500 companies served, 12 years in the market, 100% warranty) are anchored in the hero, before any service description.",
+      },
+      {
+        label: "Offer",
+        text: "Someone comparing suppliers needs to know quickly whether Fac has the equipment they're looking for.",
+        decision: "Solutions are organized by equipment category (servers, storage, switches and parts), with brands named and a dedicated call to action on each card.",
+      },
+      {
+        label: "Contact",
+        text: "Without a referral, the voice of a past customer is missing, and the first contact needs little friction.",
+        decision: "Testimonials with name and title bring the referral onto the site. The closing combines a form and WhatsApp, with address and map as proof of a physical operation.",
+      },
+    ],
+    altWireframes: "Fac Infoserver: landing page wireframes in perspective",
+    altFinal: "Fac Infoserver: final landing page design on a laptop",
   },
   mobile: {
-    eyebrow: "Development",
+    eyebrow: "Delivery detail",
     title: "Mobile",
-    lead: "This stage aimed to turn the approved design into a functional, responsive website. It was built in WordPress with Elementor, a platform chosen for its flexibility, ease of maintenance and fast delivery.\n\nDuring development, each section was implemented following the Figma specifications faithfully. Responsiveness tests were run across different devices and browsers to ensure visual and functional consistency.\n\nThe main goal was to deliver a high-performing site with smooth navigation that is fully responsive. The final presentation showed the project working on desktop, tablet and mobile, validating the quality of the implementation before launch.",
+    lead: "Built in WordPress with Elementor from the Figma file, with responsiveness tests on desktop, tablet and mobile before launch.",
     altScreens: "Fac Infoserver: mobile version screens",
     altPhoto: "Fac Infoserver: landing page on a phone over a desk",
   },
@@ -146,21 +166,21 @@ export const en: FacTexts = {
 
 export const es: FacTexts = {
   meta: {
-    title: "Fac Infoserver: Landing Page",
+    title: "Del boca a boca a la búsqueda activa",
     client: "Fac Infoserver",
-    role: "UI/UX Designer",
-    tagline: "Landing page institucional para generar autoridad y leads.",
+    role: "UX Designer",
+    tagline: "Presencia digital para una empresa de TI con más de 500 clientes y ningún sitio web.",
   },
   about: {
     title: "Sobre el proyecto",
-    lead: "Desarrollo completo de la landing page institucional de Fac Infoserver: estrategia digital, arquitectura de la información, identidad visual web y experiencia de usuario. El proyecto creó un hub profesional que valida la experiencia de la empresa y genera credibilidad con potenciales clientes.",
+    lead: "Un proyecto ágil: discovery rápido, decisiones rápidas y un one-page entregado en 10 días. Fac Infoserver tenía 12 años de reputación construida por recomendación y ninguna forma de ser encontrada o validada por quien todavía no la conocía. El trabajo fue transformar esa reputación en prueba visible para el lead que investiga proveedores por su cuenta, antes de pedir un presupuesto.",
     stats: [
-      { label: "País", value: "BR" },
-      { label: "Nicho", value: "Infraestructura de T.I" },
-      { label: "Tarea", value: "One Page Website" },
-      { label: "Tiempo", value: "10 días" },
+      { label: "Problema", value: "Negocio dependiente de recomendaciones, invisible en la búsqueda" },
+      { label: "Mi rol", value: "UX Designer, del discovery a la UI final" },
+      { label: "Restricción", value: "Un one-page, entregado en 10 días" },
+      { label: "Resultado esperado", value: "Ser encontrada y validada en línea por leads en búsqueda activa" },
     ],
-    tags: ["UI/UX Design", "Development"],
+    tags: ["Generación de leads", "Prueba de credibilidad", "Presencia digital", "Design System"],
   },
   challenge: {
     eyebrow: "Fac Infoserver",
@@ -170,11 +190,7 @@ export const es: FacTexts = {
   },
   process: {
     title: "Design Process",
-    stats: [
-      { label: "Horas", value: "40" },
-      { label: "Equipo", value: "02" },
-      { label: "Etapas", value: "04" },
-    ],
+    lead: "Con un plazo corto, el discovery sirvió para cerrar temprano una sola pregunta: qué necesita ver un lead que nunca oyó hablar de Fac para pedir un presupuesto. Las decisiones de estructura salieron de esa respuesta.",
     steps: [
       { title: "Investigación", caption: "8 horas", tags: ["Briefing", "Onboarding"] },
       {
@@ -193,23 +209,37 @@ export const es: FacTexts = {
         tags: ["SEO", "Seguridad", "Performance"],
       },
     ],
+    note: "Contexto del proyecto: 10 días, 40 horas y un equipo de 2 personas.",
   },
-  wireframe: {
-    eyebrow: "UI Design",
-    title: "Wireframe",
-    lead: "El wireframe estableció la arquitectura informacional del sitio, definiendo el flujo de lectura y la jerarquía visual. La estructura one-page se organizó en bloques funcionales que conducen al usuario desde el impacto inicial hasta la conversión.\n\nSe mapearon los elementos esenciales, sus proporciones y relaciones espaciales. El foco estuvo en crear puntos de anclaje visual, establecer la grilla de contenido y posicionar estratégicamente los CTAs.\n\nEsta etapa permitió validar la lógica de navegación antes de cualquier decisión estética, garantizando que la arquitectura soportara los objetivos de negocio y la usabilidad.",
-    alt: "Fac Infoserver: wireframes de la landing page en perspectiva",
-  },
-  final: {
-    eyebrow: "Validación",
-    title: "Diseño Final",
-    lead: "Esta etapa tuvo como objetivo materializar la identidad visual del proyecto y validar la experiencia completa antes del desarrollo. En Figma se aplicaron decisiones de colores, tipografía, espaciados y elementos visuales que comunican profesionalismo y credibilidad.\n\nEl prototipo de alta fidelidad sirvió como herramienta de alineación entre todas las partes involucradas. La presentación permitió validar decisiones estéticas, probar percepciones de marca y lograr consenso sobre la dirección visual.\n\nEl objetivo principal fue eliminar incertidumbres y establecer una referencia sólida para el desarrollo, asegurando que la implementación técnica reprodujera fielmente la propuesta aprobada.",
-    alt: "Fac Infoserver: diseño final de la landing page en un portátil",
+  decisions: {
+    eyebrow: "Wireframe y UI",
+    title: "Decisiones",
+    lead: "Cada bloque del one-page responde a una pregunta que el lead se hace antes de pedir un presupuesto. Tres decisiones guiaron la estructura, del wireframe a la UI final.",
+    decisionLabel: "Lo que hice",
+    rows: [
+      {
+        label: "Prueba",
+        text: "El lead en búsqueda activa no conoce a Fac y necesita validar la empresa en segundos.",
+        decision: "Los números que antes solo circulaban por recomendación (más de 500 empresas atendidas, 12 años en el mercado, 100% de garantía) quedan anclados en el hero, antes de cualquier descripción de servicio.",
+      },
+      {
+        label: "Oferta",
+        text: "Quien compara proveedores necesita saber rápido si Fac tiene el equipo que busca.",
+        decision: "Las soluciones se organizan por categoría de equipo (servidores, storages, switches y piezas), con las marcas citadas y una llamada propia en cada card.",
+      },
+      {
+        label: "Contacto",
+        text: "Sin recomendación, falta la voz de quien ya compró, y el primer contacto necesita poca fricción.",
+        decision: "Testimonios con nombre y cargo llevan la recomendación al sitio. El cierre combina formulario y WhatsApp, con dirección y mapa como prueba de operación física.",
+      },
+    ],
+    altWireframes: "Fac Infoserver: wireframes de la landing page en perspectiva",
+    altFinal: "Fac Infoserver: diseño final de la landing page en un portátil",
   },
   mobile: {
-    eyebrow: "Desarrollo",
+    eyebrow: "Detalle de entrega",
     title: "Mobile",
-    lead: "Esta etapa tuvo como objetivo transformar el diseño aprobado en un sitio funcional y responsivo. La construcción se realizó en WordPress con Elementor, plataforma elegida por su flexibilidad, facilidad de mantenimiento y capacidad de entrega rápida.\n\nDurante el desarrollo, cada sección se implementó siguiendo fielmente las especificaciones de Figma. Se realizaron pruebas de responsividad en diferentes dispositivos y navegadores para garantizar consistencia visual y funcional.\n\nEl objetivo principal fue entregar un sitio de buen rendimiento, con navegación fluida y totalmente responsivo. La presentación final mostró el proyecto funcionando en desktop, tablet y mobile, validando la calidad de la implementación antes del lanzamiento.",
+    lead: "Construido en WordPress con Elementor a partir del Figma, con pruebas de responsividad en desktop, tablet y celular antes del lanzamiento.",
     altScreens: "Fac Infoserver: pantallas de la versión mobile",
     altPhoto: "Fac Infoserver: landing page en un celular sobre una mesa",
   },

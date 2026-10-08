@@ -2,25 +2,22 @@ import type { CaseFrontmatter } from "@/lib/cases";
 import { buildCeffySections } from "./build";
 
 export const meta: CaseFrontmatter = {
-  title: "CÈFFY: E-commerce",
+  title: "Goma que se leva a sério",
   client: "CÈFFY",
-  role: "UI/UX Designer",
-  tagline: "Loja virtual para uma marca de suplementos em gomas.",
+  role: "Product Designer",
+  tagline: "Uma marca de suplementos que conquistou a confiança de quem desconfiava do formato.",
 };
 
 export const sections = buildCeffySections({
   about: {
     title: "Sobre",
-    lead: "Cèffy é uma plataforma de e-commerce sob medida criada para reposicionar a suplementação em goma como categoria premium de longevidade, unindo um Design System sofisticado a um motor de vendas customizado em PHP, com integração fiscal automatizada.",
-    tags: ["UI/UX", "Design", "PHP Engineering"],
+    lead: "A CÈFFY queria vender suplementação em goma como categoria premium de longevidade, para mulheres que já foram enganadas por promessas milagrosas e associam goma a produto infantil. Meu trabalho foi traduzir essa desconfiança em decisões de produto. A arquitetura se organiza por objetivo (energia, sono, longevidade) e não por categoria. A página de produto coloca transparência nutricional e escolha de kit no mesmo momento da decisão. E a lógica de kits e descontos foi desenhada junto com a engenharia, para o carrinho nunca contradizer o que a interface promete.",
+    tags: ["Discovery", "Arquitetura da informação", "Conversão", "Design System", "E-commerce"],
     alt: "CÈFFY: página de produto da Creatina em um laptop",
   },
   problem: {
-    title: "O Problema",
-    quote:
-      "A CÈFFY enfrentou um desafio duplo. De um lado, era preciso convencer um público maduro de que a suplementação em goma é séria, superando a associação do formato com produtos infantis. Do outro, era necessário viabilizar operações comerciais como kits flexíveis, descontos progressivos e emissão fiscal automatizada, recursos que o WooCommerce nativo não suporta e que exigiram desenvolvimento sob medida.",
-    author: "Equipe Cèffy",
-    role: "Suplementação Feminina",
+    title: "Problema",
+    text: "O desafio era duplo. De um lado, convencer um público maduro de que suplementação em goma é coisa séria, superando a associação do formato com produto infantil. Do outro, viabilizar kits flexíveis, desconto progressivo e emissão fiscal automatizada, recursos que o WooCommerce nativo não suporta.",
   },
   process: {
     title: "Design Process",
@@ -47,7 +44,7 @@ export const sections = buildCeffySections({
   },
   architecture: {
     title: "Arquitetura da Informação",
-    lead: "A arquitetura da Cèffy foi desenhada em torno de pilares de saúde, não de categorias de produto. O fluxo permite que a cliente chegue da Home ao checkout guiada por objetivo (Energia, Sono ou Longevidade), sem carga cognitiva desnecessária.",
+    lead: "A arquitetura da CÈFFY foi desenhada em torno de pilares de saúde, não de categorias de produto. O fluxo permite que a cliente chegue da Home ao checkout guiada por objetivo (Energia, Sono ou Longevidade), sem carga cognitiva desnecessária.",
     columns: [
       {
         title: "Home",
@@ -155,9 +152,9 @@ export const sections = buildCeffySections({
     altHome: "CÈFFY: home do e-commerce em página inteira",
     homeCaption: "Homepage",
   },
-  engineering: {
-    title: "Engenharia PHP",
-    lead: "Kits e desconto progressivo por quantidade são, tecnicamente, duas lógicas de desconto que competem pelo mesmo carrinho. Resolver esse conflito, sem depender de plugins genéricos, exigiu uma cadeia de 12 hooks coordenados no ciclo de vida do WooCommerce, não um shortcode isolado.",
+  constraint: {
+    title: "A restrição que moldou o design",
+    lead: "A Buy Box promete kit e desconto progressivo num único gesto. No WooCommerce nativo, essas são duas regras de desconto que competem pelo mesmo carrinho, e sem resolver o conflito a interface mostraria um preço que o carrinho não entrega. Por isso, as regras do carrinho foram desenhadas como parte da experiência, junto com a engenharia, e viraram uma cadeia de hooks sob medida em PHP.",
     rows: [
       {
         title: "Fee condicional",
@@ -180,40 +177,38 @@ export const sections = buildCeffySections({
         text: "Levar 2 unidades de um item de kit trava a linha em 1 e envia o excedente como produto avulso, com desconto progressivo próprio.",
       },
     ],
-    facts: [
-      "12 hooks coordenados",
-      "Zero conflitos entre kit e desconto progressivo",
-      "Carrinho íntegro em qualquer ação da cliente",
+    codeLabel: "Ver trecho do código",
+  },
+  signals: {
+    title: "Primeiros sinais de comportamento",
+    lead: "A loja roda com Hotjar. Antes de olhar os dados, defini quais sinais confirmam ou derrubam cada decisão da PDP. Os achados, e o que mudar a partir deles, entram aqui quando houver volume de sessões suficiente para conclusão.",
+    decisionLabel: "Decisão em teste",
+    rows: [
+      {
+        label: "Buy Box",
+        text: "Cliques no seletor de kits e no botão de compra, em relação às sessões na PDP.",
+        decision: "Concentrar kit e desconto progressivo na Buy Box resolve a escolha em um único gesto.",
+      },
+      {
+        label: "Tabela nutricional",
+        text: "Scroll até a seção nutricional antes do clique em comprar.",
+        decision: "A transparência é consultada antes da compra, como a persona indicava.",
+      },
+      {
+        label: "Carrinho",
+        text: "Abandono depois que um kit ou desconto é aplicado.",
+        decision: "O carrinho sustenta o preço que a Buy Box prometeu, sem surpresa no checkout.",
+      },
     ],
   },
   performance: {
-    title: "Performance",
-    lead: "Sem histórico de tráfego para citar impacto comercial, a prova concreta está na performance de produção medida antes da entrega: 95 de score médio no PageSpeed, validado em Desktop e Mobile, sem depender de estimativa.",
-    score: "Score",
+    title: "Performance técnica",
+    lead: "Auditoria PageSpeed no site em produção, antes da entrega. É evidência de qualidade técnica, não de impacto no negócio.",
+    labels: ["Performance", "Acessibilidade", "Boas práticas", "SEO"],
     columns: { desktop: "Desktop", mobile: "Mobile" },
-    cards: [
-      {
-        title: "Design & Experiência",
-        text: "Sistema visual mobile-first completo, da paleta institucional ao checkout, testado em wireframe antes da UI final, sem retrabalho de estrutura.",
-      },
-      {
-        title: "Engenharia sob medida",
-        text: "12 hooks coordenados resolvendo kit, desconto progressivo, frete e fiscal no mesmo carrinho, sem depender de plugin genérico e sem conflito entre regras.",
-      },
-      {
-        title: "Performance validada",
-        text: "Auditoria PageSpeed pós-deploy, não estimativa: 92 de Performance em Desktop e Mobile, medidos no site real, antes da entrega.",
-      },
-    ],
-    rows: [
-      { label: "Performance", status: "Excelente" },
-      { label: "Accessibility", status: "Excelente" },
-      { label: "Best Practices", status: "Excelente" },
-      { label: "SEO", status: "Excelente" },
-    ],
   },
   reflection: {
     title: "Reflexão Final",
-    lead: "Se este projeto tivesse uma segunda fase, o maior ganho não estaria na UI, e sim em fechar o ciclo entre decisão de design e comportamento real. A validação de fluxo até aqui foi uma revisão heurística feita por nós, complementada por feedback estruturado dos stakeholders sobre os wireframes, o que é suficiente para reduzir risco técnico, mas não substitui teste moderado com a persona real antes da UI final. O próximo passo natural é instrumentar analytics desde o dia zero, para poder voltar a este case daqui a alguns meses com dado de conversão real, não apenas performance técnica.",
+    lead: "Se este projeto tivesse uma segunda fase, o maior ganho não estaria na UI, e sim em fechar o ciclo entre decisão de design e comportamento real. A validação de fluxo até aqui foi uma revisão heurística feita por nós, complementada por feedback estruturado dos stakeholders sobre os wireframes, o que é suficiente para reduzir risco técnico, mas não substitui teste moderado com a persona real antes da UI final. O próximo passo é ler os sinais acima com volume suficiente e voltar a este case com dado de comportamento e conversão real, não apenas performance técnica.",
   },
 });

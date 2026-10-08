@@ -25,23 +25,6 @@ const STEP_HEIGHTS = [
 const chip =
   "inline-flex items-center rounded-full border border-border px-3 py-1 text-xs tracking-widest uppercase";
 
-function Check() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-3.5 w-3.5"
-      aria-hidden
-    >
-      <path d="m5 12.5 4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
 function Block({ block }: { block: CaseBlock }) {
   switch (block.type) {
     case "tags":
@@ -55,29 +38,15 @@ function Block({ block }: { block: CaseBlock }) {
         </ul>
       );
 
-    case "quote":
+    case "statement":
       return (
-        <figure className="max-w-5xl">
-          <span
-            aria-hidden
-            className="block font-display text-8xl leading-none text-muted"
-          >
-            “
-          </span>
-          <blockquote className="mt-2 font-display text-2xl leading-snug font-medium tracking-tight md:text-3xl lg:text-4xl">
-            {block.text}
-          </blockquote>
-          <figcaption className="mt-12 flex items-center gap-4">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-border font-display text-lg">
-              {block.author.charAt(0)}
-            </span>
-            <span>
-              <span className="block text-sm font-medium">{block.author}</span>
-              <span className="block text-sm text-muted">{block.role}</span>
-            </span>
-          </figcaption>
-        </figure>
+        <p className="max-w-5xl font-display text-2xl leading-snug font-medium tracking-tight md:text-3xl lg:text-4xl">
+          {block.text}
+        </p>
       );
+
+    case "note":
+      return <p className="max-w-2xl text-sm text-muted">{block.text}</p>;
 
     case "image":
       return (
@@ -314,8 +283,8 @@ function Block({ block }: { block: CaseBlock }) {
         </ol>
       );
 
-    case "code":
-      return (
+    case "code": {
+      const code = (
         <div className="border border-border bg-[#141413] text-[#f4f3f0]">
           <div className="flex gap-2 px-6 pt-5" aria-hidden>
             <span className="h-2.5 w-2.5 rounded-full bg-[#f4f3f0]/30" />
@@ -327,79 +296,19 @@ function Block({ block }: { block: CaseBlock }) {
           </pre>
         </div>
       );
-
-    case "facts":
+      if (!block.label) return code;
       return (
-        <p className="flex flex-wrap gap-y-2 text-sm font-medium">
-          {block.items.map((item, i) => (
-            <span key={item}>
-              {item}
-              {i < block.items.length - 1 && (
-                <span className="mx-3 text-muted">·</span>
-              )}
-            </span>
-          ))}
-        </p>
+        <details className="group">
+          <summary
+            className={`${chip} cursor-pointer gap-2 transition-colors hover:border-foreground [&::-webkit-details-marker]:hidden`}
+          >
+            {block.label}
+            <ArrowIcon className="h-3 w-3 rotate-[135deg] transition-transform group-open:-rotate-45" />
+          </summary>
+          <div className="mt-6">{code}</div>
+        </details>
       );
-
-    case "scores":
-      return (
-        <div>
-          <div className="grid gap-4 lg:grid-cols-[14rem_repeat(3,1fr)]">
-            <div className="flex min-h-56 flex-col justify-between bg-foreground p-6 text-background">
-              <span className="text-sm opacity-70">{block.score.label}</span>
-              <span className="font-display text-8xl leading-none font-semibold tracking-tight">
-                {block.score.value}
-              </span>
-            </div>
-            {block.cards.map((card) => (
-              <div key={card.title} className="border border-border p-6">
-                <h3 className="text-base font-medium">{card.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted">
-                  {card.text}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-4 border border-border">
-            {block.rows.map((row) => (
-              <div
-                key={row.label}
-                className="grid items-center gap-5 border-t border-border px-6 py-5 first:border-t-0 md:grid-cols-[1.2fr_2fr_2fr_auto] md:gap-10"
-              >
-                <span className="font-display text-lg font-medium tracking-tight">
-                  {row.label}
-                </span>
-                {(
-                  [
-                    [block.columns.desktop, row.desktop],
-                    [block.columns.mobile, row.mobile],
-                  ] as const
-                ).map(([label, value]) => (
-                  <div key={label}>
-                    <div className="flex items-baseline justify-between text-xs tracking-widest text-muted uppercase">
-                      <span>{label}</span>
-                      <span className="font-display text-lg tracking-normal text-foreground">
-                        {value}
-                      </span>
-                    </div>
-                    <div className="mt-2 h-1 bg-border">
-                      <div
-                        className="h-full bg-foreground"
-                        style={{ width: `${value}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-                <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-border px-3 py-1 text-xs">
-                  <Check />
-                  {row.status}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
+    }
   }
 }
 

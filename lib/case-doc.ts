@@ -2,7 +2,8 @@ export type CaseTone = "light" | "muted" | "dark";
 
 export type CaseBlock =
   | { type: "tags"; items: string[] }
-  | { type: "quote"; text: string; author: string; role: string }
+  | { type: "statement"; text: string }
+  | { type: "note"; text: string }
   | {
       type: "image";
       src: string;
@@ -43,20 +44,7 @@ export type CaseBlock =
       rows: { label: string; text: string; decision: string }[];
     }
   | { type: "speclist"; rows: { title: string; text: string }[] }
-  | { type: "code"; code: string }
-  | { type: "facts"; items: string[] }
-  | {
-      type: "scores";
-      score: { label: string; value: number };
-      cards: { title: string; text: string }[];
-      rows: {
-        label: string;
-        desktop: number;
-        mobile: number;
-        status: string;
-      }[];
-      columns: { desktop: string; mobile: string };
-    };
+  | { type: "code"; code: string; label?: string };
 
 export type CaseSectionDoc = {
   number: string;

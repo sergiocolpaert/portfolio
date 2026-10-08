@@ -14,8 +14,9 @@ export type SemiglobeTexts = {
   };
   process: {
     title: string;
-    stats: { label: string; value: string }[];
+    lead?: string;
     steps: { title: string; caption: string; tags: string[] }[];
+    note: string;
   };
   wireframe: { eyebrow: string; title: string; lead: string; alt: string };
   ui: {
@@ -57,9 +58,9 @@ export function buildSemiglobeSections(t: SemiglobeTexts): CaseSectionDoc[] {
     {
       number: "02",
       title: t.process.title,
+      lead: t.process.lead,
       tone: "muted",
       blocks: [
-        { type: "stats", items: t.process.stats },
         {
           type: "steps",
           items: t.process.steps.map((s, i) => ({
@@ -68,6 +69,7 @@ export function buildSemiglobeSections(t: SemiglobeTexts): CaseSectionDoc[] {
           })),
           ticks: ["00", "15", "30", "45", "60"],
         },
+        { type: "note", text: t.process.note },
       ],
     },
     {

@@ -2,25 +2,22 @@ import type { CaseFrontmatter } from "@/lib/cases";
 import { buildCeffySections } from "./build";
 
 export const meta: CaseFrontmatter = {
-  title: "CÈFFY: E-commerce",
+  title: "Gummies, taken seriously",
   client: "CÈFFY",
-  role: "UI/UX Designer",
-  tagline: "Online store for a fruit-based gummy supplement brand.",
+  role: "Product Designer",
+  tagline: "A supplement brand that earned the trust of people who doubted the format.",
 };
 
 export const sections = buildCeffySections({
   about: {
     title: "About",
-    lead: "Cèffy is a custom-built e-commerce platform created to reposition gummy supplements as a premium longevity category, combining a sophisticated Design System with a sales engine custom-built in PHP, with automated tax integration.",
-    tags: ["UI/UX", "Design", "PHP Engineering"],
+    lead: "CÈFFY wanted to sell gummy supplements as a premium longevity category, to women who had already been fooled by miracle promises and associate gummies with children's products. My job was to translate that distrust into product decisions. The architecture is organized by goal (energy, sleep, longevity), not by category. The product page puts nutritional transparency and kit choice in the same moment of decision. And the kit and discount logic was designed together with engineering, so the cart never contradicts what the interface promises.",
+    tags: ["Discovery", "Information architecture", "Conversion", "Design System", "E-commerce"],
     alt: "CÈFFY: Creatine product page on a laptop",
   },
   problem: {
-    title: "The Problem",
-    quote:
-      "CÈFFY faced a two-sided challenge. On one side, it had to convince a mature audience that gummy supplements are a serious product, overcoming the format's association with children's products. On the other, it had to enable commercial operations such as flexible kits, progressive discounts and automated tax invoicing, features that native WooCommerce does not support and that required custom development.",
-    author: "Cèffy Team",
-    role: "Women's Supplements",
+    title: "Problem",
+    text: "The challenge was two-sided. On one side, convincing a mature audience that gummy supplements are serious, overcoming the format's association with children's products. On the other, enabling flexible kits, progressive discounts and automated tax invoicing, features that native WooCommerce does not support.",
   },
   process: {
     title: "Design Process",
@@ -47,7 +44,7 @@ export const sections = buildCeffySections({
   },
   architecture: {
     title: "Information Architecture",
-    lead: "Cèffy's architecture was designed around health pillars, not product categories. The flow lets the customer go from Home to checkout guided by goal (Energy, Sleep or Longevity), without unnecessary cognitive load.",
+    lead: "CÈFFY's architecture was designed around health pillars, not product categories. The flow lets the customer go from Home to checkout guided by goal (Energy, Sleep or Longevity), without unnecessary cognitive load.",
     columns: [
       {
         title: "Home",
@@ -155,9 +152,9 @@ export const sections = buildCeffySections({
     altHome: "CÈFFY: full-page e-commerce home",
     homeCaption: "Homepage",
   },
-  engineering: {
-    title: "PHP Engineering",
-    lead: "Kits and quantity-based progressive discounts are, technically, two discount logics competing for the same cart. Solving that conflict, without relying on generic plugins, required a chain of 12 coordinated hooks in the WooCommerce lifecycle, not an isolated shortcode.",
+  constraint: {
+    title: "The constraint that shaped the design",
+    lead: "The Buy Box promises kit and progressive discount in a single gesture. In native WooCommerce, those are two discount rules competing for the same cart, and without resolving that conflict the interface would show a price the cart doesn't deliver. So the cart rules were designed as part of the experience, together with engineering, and became a chain of custom PHP hooks.",
     rows: [
       {
         title: "Conditional fee",
@@ -180,40 +177,38 @@ export const sections = buildCeffySections({
         text: "Taking 2 units of a kit item locks the line at 1 and sends the surplus as a standalone product, with its own progressive discount.",
       },
     ],
-    facts: [
-      "12 coordinated hooks",
-      "Zero conflicts between kit and progressive discount",
-      "Cart stays intact on any customer action",
+    codeLabel: "View code excerpt",
+  },
+  signals: {
+    title: "First behavior signals",
+    lead: "The store runs Hotjar. Before looking at the data, I defined which signals confirm or refute each PDP decision. The findings, and what changes because of them, will be added here once there are enough sessions to draw conclusions.",
+    decisionLabel: "Decision under test",
+    rows: [
+      {
+        label: "Buy Box",
+        text: "Clicks on the kit selector and the buy button, relative to PDP sessions.",
+        decision: "Concentrating kit and progressive discount in the Buy Box solves the choice in a single gesture.",
+      },
+      {
+        label: "Nutrition table",
+        text: "Scroll to the nutrition section before clicking buy.",
+        decision: "Transparency is checked before purchase, as the persona suggested.",
+      },
+      {
+        label: "Cart",
+        text: "Abandonment after a kit or discount is applied.",
+        decision: "The cart holds the price the Buy Box promised, with no surprises at checkout.",
+      },
     ],
   },
   performance: {
-    title: "Performance",
-    lead: "With no traffic history to cite commercial impact, the concrete proof is in production performance measured before delivery: a 95 average PageSpeed score, validated on Desktop and Mobile, without relying on estimates.",
-    score: "Score",
+    title: "Technical performance",
+    lead: "PageSpeed audit on the live site, before delivery. It is evidence of technical quality, not of business impact.",
+    labels: ["Performance", "Accessibility", "Best Practices", "SEO"],
     columns: { desktop: "Desktop", mobile: "Mobile" },
-    cards: [
-      {
-        title: "Design & Experience",
-        text: "A complete mobile-first visual system, from the institutional palette to checkout, tested in wireframes before the final UI, with no structural rework.",
-      },
-      {
-        title: "Custom engineering",
-        text: "12 coordinated hooks solving kit, progressive discount, shipping and tax in the same cart, without relying on a generic plugin and without rule conflicts.",
-      },
-      {
-        title: "Validated performance",
-        text: "Post-deploy PageSpeed audit, not an estimate: 92 Performance on Desktop and Mobile, measured on the live site, before delivery.",
-      },
-    ],
-    rows: [
-      { label: "Performance", status: "Excellent" },
-      { label: "Accessibility", status: "Excellent" },
-      { label: "Best Practices", status: "Excellent" },
-      { label: "SEO", status: "Excellent" },
-    ],
   },
   reflection: {
     title: "Final Reflection",
-    lead: "If this project had a second phase, the biggest gain would not be in the UI, but in closing the loop between design decisions and real behavior. Flow validation so far was a heuristic review done by us, complemented by structured stakeholder feedback on the wireframes, which is enough to reduce technical risk but does not replace moderated testing with the real persona before the final UI. The natural next step is to instrument analytics from day zero, so we can come back to this case a few months from now with real conversion data, not just technical performance.",
+    lead: "If this project had a second phase, the biggest gain would not be in the UI, but in closing the loop between design decisions and real behavior. Flow validation so far was a heuristic review done by us, complemented by structured stakeholder feedback on the wireframes, which is enough to reduce technical risk but does not replace moderated testing with the real persona before the final UI. The next step is to read the signals above with enough volume and come back to this case with real behavior and conversion data, not just technical performance.",
   },
 });

@@ -52,9 +52,16 @@ export default async function CaseStudyPage({
         title={frontmatter.title}
         tagline={frontmatter.tagline}
         image={meta.coverImage}
-        imageAlt={frontmatter.title}
+        imageAlt={frontmatter.client}
       />
-      <MetaStrip items={metaItems} />
+      <MetaStrip
+        items={metaItems}
+        note={
+          meta.build?.length
+            ? { label: t("build"), value: meta.build.join(", ") }
+            : undefined
+        }
+      />
 
       <CaseSections sections={sections} />
 

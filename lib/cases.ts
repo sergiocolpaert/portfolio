@@ -11,6 +11,7 @@ export type CaseMeta = {
   category: string;
   tags: string[];
   tools: string[];
+  build?: string[];
   duration: string;
   coverImage: string;
   behanceUrl: string;
@@ -59,7 +60,7 @@ export async function getAllCasesWithTitles(locale: Locale) {
   return Promise.all(
     metas.map(async (meta) => {
       const { frontmatter } = await getCaseContent(meta.slug, locale);
-      return { ...meta, title: frontmatter.title };
+      return { ...meta, title: frontmatter.title, client: frontmatter.client };
     }),
   );
 }

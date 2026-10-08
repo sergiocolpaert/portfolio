@@ -7,9 +7,11 @@ import type { CaseMeta } from "@/lib/cases";
 export default function CaseCard({
   meta,
   title,
+  client,
 }: {
   meta: CaseMeta;
   title: string;
+  client: string;
 }) {
   const t = useTranslations("cases");
 
@@ -29,7 +31,7 @@ export default function CaseCard({
           <h3 className="font-display text-xl font-semibold tracking-tight sm:text-2xl">
             {title}
           </h3>
-          <p className="mt-1 text-sm text-muted">{meta.tags.join(" · ")}</p>
+          <p className="mt-1 text-sm text-muted">{client} · {meta.category}</p>
         </div>
         <span className="link-underline mt-1 inline-flex shrink-0 items-center gap-1 text-sm">
           {t("viewCase")}

@@ -2,30 +2,25 @@ import type { SemiglobeTexts } from "./build";
 
 export const pt: SemiglobeTexts = {
   meta: {
-    title: "SemiGlobe: Website Design",
+    title: "Confiança para dois públicos",
     client: "SemiGlobe",
-    role: "UI/UX Designer",
-    tagline: "Website institucional para uma empresa de energia solar.",
+    role: "UX Designer",
+    tagline: "Uma marca solar nova no Brasil, falando com parceiros de negócio e consumidores no mesmo site.",
   },
   about: {
     title: "Sobre o projeto",
-    lead: "Com 11 anos de experiência no mercado internacional, o desafio da SemiGlobe Tecnologia era construir sua marca do zero no Brasil. O objetivo era criar uma identidade digital que expressasse seus três pilares fundamentais (confiança, eficiência e sustentabilidade) para um público duplo: parceiros de negócio que precisam de uma solução logística completa e consumidores finais em busca de segurança energética.\n\nPara isso, desenhei um website clean, moderno e informativo, pensado como o principal pilar da marca no país. A interface traduz a persona de um especialista confiável e visionário, apresentando de forma clara a solução logística ponta a ponta da empresa. O resultado é um espaço digital que constrói credibilidade imediata e posiciona a SemiGlobe como uma parceira sólida para a transição energética no Brasil.",
+    lead: "A SemiGlobe chegou ao Brasil com 11 anos de operação internacional e nenhuma reputação local. O desafio era fazer dois públicos confiarem nela pelo mesmo site. Parceiros de negócio precisavam enxergar uma operação logística completa. Consumidores finais precisavam sentir segurança energética. Desenhei a arquitetura para que cada público encontrasse sua resposta nos primeiros segundos, sem que um competisse com o outro.",
     stats: [
-      { label: "País", value: "BR" },
-      { label: "Nicho", value: "Energia Solar" },
-      { label: "Tarefa", value: "Website Institucional" },
-      { label: "Tempo", value: "55 dias" },
+      { label: "Problema", value: "Marca sem reputação local, com dois públicos distintos" },
+      { label: "Meu papel", value: "UX Designer, da arquitetura à UI final" },
+      { label: "Restrição", value: "Uma só home para B2B e consumidor final" },
+      { label: "Resultado esperado", value: "Contatos de parceiros e de consumidores, cada um pela sua entrada" },
     ],
-    tags: ["Website Institucional", "UI/UX Design"],
+    tags: ["Posicionamento", "Dois públicos", "Arquitetura da informação", "Design System"],
     alt: "SemiGlobe: home do website em um laptop entre rochas azuis",
   },
   process: {
     title: "Design Process",
-    stats: [
-      { label: "Horas", value: "495h" },
-      { label: "Equipe", value: "03" },
-      { label: "Etapas", value: "04" },
-    ],
     steps: [
       { title: "Pesquisa", caption: "7 dias", tags: ["Briefing", "Onboarding"] },
       {
@@ -44,17 +39,18 @@ export const pt: SemiglobeTexts = {
         tags: ["SEO", "Segurança", "Performance"],
       },
     ],
+    note: "Contexto do projeto: 55 dias, 495 horas e uma equipe de 3 pessoas.",
   },
   wireframe: {
-    eyebrow: "UX/UI Design",
-    title: "Wireframe",
-    lead: 'A fase de wireframes foi essencial para transformar a complexa operação da SemiGlobe em uma jornada digital intuitiva, com o desafio de atender tanto ao público B2B quanto ao cliente final. O foco foi criar uma arquitetura da informação que construísse uma base de Confiança e Eficiência, organizando os blocos de conteúdo e CTAs para destacar a solução "ponta a ponta" da empresa. Essa etapa validou a lógica e a usabilidade, garantindo que a estrutura do site estivesse perfeitamente alinhada aos objetivos de negócio antes da camada de design visual.',
+    eyebrow: "Wireframe",
+    title: "Uma home, duas entradas",
+    lead: "O wireframe resolveu primeiro a pergunta de produto: como dois públicos com necessidades diferentes dividem a mesma página sem que um atrapalhe o outro.\n\nA abertura é comum aos dois e fala do que ambos têm em jogo, o risco do investimento. Logo depois, a home se divide em dois blocos paralelos. \"Para Clientes Finais\" responde com importação descomplicada, distribuição, armazenagem e economia imediata. \"Para Empresas e Integradores\" responde com operação ponta a ponta, armazenagem, logística nacional e suporte técnico. Cada público reconhece sua entrada pelo título e não precisa ler o argumento do outro.",
     alt: "SemiGlobe: wireframes da home em três colunas",
   },
   ui: {
     eyebrow: "UI Design",
-    title: "UI Design Final",
-    lead: 'Nesta fase, o objetivo foi materializar os pilares da Semiglobe em uma identidade visual coesa e impactante. Com base nas diretrizes do briefing por um site clean e de tendência moderna, o design da interface foi desenvolvido para transmitir segurança e inovação acessível. A paleta de cores, a tipografia e a organização dos elementos foram cuidadosamente selecionadas para refletir a persona de um "especialista confiável e visionário", garantindo que o protótipo final em alta fidelidade servisse como uma referência sólida para o desenvolvimento e comunicasse a proposta de valor da marca de forma clara e profissional.',
+    title: "Credibilidade sem histórico local",
+    lead: "Sem reputação no Brasil, adjetivo não convence. A prova precisava ser verificável. Por isso, a solução ponta a ponta virou uma tabela comparativa, SemiGlobe de um lado e o padrão de mercado do outro, item por item da cadeia: importação, logística, custos, armazenagem, suporte e consultoria.\n\nA fotografia separa os cenários. O bloco de clientes finais mostra uma casa com painéis no telhado. O de empresas mostra uma equipe em instalação. Cada público se vê no próprio contexto antes de ler qualquer argumento.",
     altHero: "SemiGlobe: hero da home em um laptop sobre uma rocha",
     altScreens: "SemiGlobe: telas do website em perspectiva",
     altHome: "SemiGlobe: home do website em página inteira",
@@ -65,30 +61,25 @@ export const pt: SemiglobeTexts = {
 
 export const en: SemiglobeTexts = {
   meta: {
-    title: "SemiGlobe: Website Design",
+    title: "Trust for two audiences",
     client: "SemiGlobe",
-    role: "UI/UX Designer",
-    tagline: "Institutional website for a solar energy company.",
+    role: "UX Designer",
+    tagline: "A solar brand new to Brazil, speaking to business partners and consumers on the same site.",
   },
   about: {
     title: "About the project",
-    lead: "With 11 years of experience in the international market, SemiGlobe Tecnologia's challenge was to build its brand from scratch in Brazil. The goal was to create a digital identity that expressed its three core pillars (trust, efficiency, and sustainability) for a dual audience: business partners who need a complete logistics solution and end consumers looking for energy security.\n\nTo get there, I designed a clean, modern, and informative website, conceived as the brand's main pillar in the country. The interface translates the persona of a trusted, visionary specialist, clearly presenting the company's end-to-end logistics solution. The result is a digital space that builds immediate credibility and positions SemiGlobe as a solid partner for Brazil's energy transition.",
+    lead: "SemiGlobe arrived in Brazil with 11 years of international operation and no local reputation. The challenge was to get two audiences to trust it through the same site. Business partners needed to see a complete logistics operation. End consumers needed to feel energy security. I designed the architecture so each audience would find its answer in the first few seconds, without one competing with the other.",
     stats: [
-      { label: "Country", value: "BR" },
-      { label: "Niche", value: "Solar Energy" },
-      { label: "Task", value: "Institutional Website" },
-      { label: "Time", value: "55 days" },
+      { label: "Problem", value: "A brand with no local reputation and two distinct audiences" },
+      { label: "My role", value: "UX Designer, from architecture to final UI" },
+      { label: "Constraint", value: "A single home for B2B and end consumers" },
+      { label: "Expected outcome", value: "Contact requests from partners and consumers, each through their own entry point" },
     ],
-    tags: ["Institutional Website", "UI/UX Design"],
+    tags: ["Positioning", "Two audiences", "Information architecture", "Design System"],
     alt: "SemiGlobe: website home on a laptop between blue rocks",
   },
   process: {
     title: "Design Process",
-    stats: [
-      { label: "Hours", value: "495h" },
-      { label: "Team", value: "03" },
-      { label: "Stages", value: "04" },
-    ],
     steps: [
       { title: "Research", caption: "7 days", tags: ["Briefing", "Onboarding"] },
       {
@@ -107,17 +98,18 @@ export const en: SemiglobeTexts = {
         tags: ["SEO", "Security", "Performance"],
       },
     ],
+    note: "Project context: 55 days, 495 hours and a team of 3.",
   },
   wireframe: {
-    eyebrow: "UX/UI Design",
-    title: "Wireframe",
-    lead: `The wireframe phase was essential to turn SemiGlobe's complex operation into an intuitive digital journey, with the challenge of serving both the B2B audience and the end customer. The focus was on building an information architecture grounded in Trust and Efficiency, organizing content blocks and CTAs to highlight the company's "end-to-end" solution. This stage validated the logic and usability, ensuring the site structure was fully aligned with business goals before the visual design layer.`,
+    eyebrow: "Wireframe",
+    title: "One home, two entry points",
+    lead: "The wireframe tackled the product question first: how two audiences with different needs share the same page without getting in each other's way.\n\nThe opening is shared and speaks to what both have at stake, the risk of the investment. Right after, the home splits into two parallel blocks. \"For End Customers\" answers with hassle-free import, distribution, storage and immediate savings. \"For Companies and Integrators\" answers with end-to-end operation, storage, national logistics and technical support. Each audience recognizes its entry point by the heading and doesn't need to read the other's argument.",
     alt: "SemiGlobe: home wireframes in three columns",
   },
   ui: {
     eyebrow: "UI Design",
-    title: "Final UI Design",
-    lead: `In this phase, the goal was to materialize SemiGlobe's pillars into a cohesive, impactful visual identity. Based on the briefing's guidelines for a clean, modern-trend site, the interface design was developed to convey security and accessible innovation. The color palette, typography and arrangement of elements were carefully selected to reflect the persona of a "trusted, visionary specialist", ensuring the final high-fidelity prototype served as a solid reference for development and communicated the brand's value proposition clearly and professionally.`,
+    title: "Credibility without a local track record",
+    lead: "With no reputation in Brazil, adjectives don't convince anyone. The proof had to be verifiable. So the end-to-end solution became a comparison table, SemiGlobe on one side and the market standard on the other, item by item along the chain: import, logistics, costs, storage, support and consulting.\n\nPhotography separates the scenarios. The end-customer block shows a house with panels on the roof. The companies block shows a crew at an installation. Each audience sees itself in its own context before reading any argument.",
     altHero: "SemiGlobe: home hero on a laptop over a rock",
     altScreens: "SemiGlobe: website screens in perspective",
     altHome: "SemiGlobe: full-page website home",
@@ -128,30 +120,25 @@ export const en: SemiglobeTexts = {
 
 export const es: SemiglobeTexts = {
   meta: {
-    title: "SemiGlobe: Website Design",
+    title: "Confianza para dos públicos",
     client: "SemiGlobe",
-    role: "UI/UX Designer",
-    tagline: "Sitio web institucional para una empresa de energía solar.",
+    role: "UX Designer",
+    tagline: "Una marca solar nueva en Brasil, que habla con socios de negocio y consumidores en el mismo sitio.",
   },
   about: {
     title: "Sobre el proyecto",
-    lead: "Con 11 años de experiencia en el mercado internacional, el desafío de SemiGlobe Tecnología era construir su marca desde cero en Brasil. El objetivo era crear una identidad digital que expresara sus tres pilares fundamentales (confianza, eficiencia y sostenibilidad) para un público doble: socios de negocio que necesitan una solución logística completa y consumidores finales en busca de seguridad energética.\n\nPara lograrlo, diseñé un sitio web limpio, moderno e informativo, pensado como el principal pilar de la marca en el país. La interfaz traduce la persona de un especialista confiable y visionario, presentando de forma clara la solución logística de punta a punta de la empresa. El resultado es un espacio digital que construye credibilidad inmediata y posiciona a SemiGlobe como una socia sólida para la transición energética en Brasil.",
+    lead: "SemiGlobe llegó a Brasil con 11 años de operación internacional y ninguna reputación local. El desafío era que dos públicos confiaran en ella a través del mismo sitio. Los socios de negocio necesitaban ver una operación logística completa. Los consumidores finales necesitaban sentir seguridad energética. Diseñé la arquitectura para que cada público encontrara su respuesta en los primeros segundos, sin que uno compitiera con el otro.",
     stats: [
-      { label: "País", value: "BR" },
-      { label: "Nicho", value: "Energía Solar" },
-      { label: "Tarea", value: "Sitio Web Institucional" },
-      { label: "Tiempo", value: "55 días" },
+      { label: "Problema", value: "Marca sin reputación local, con dos públicos distintos" },
+      { label: "Mi rol", value: "UX Designer, de la arquitectura a la UI final" },
+      { label: "Restricción", value: "Una sola home para B2B y consumidor final" },
+      { label: "Resultado esperado", value: "Contactos de socios y de consumidores, cada uno por su propia entrada" },
     ],
-    tags: ["Sitio Web Institucional", "UI/UX Design"],
+    tags: ["Posicionamiento", "Dos públicos", "Arquitectura de la información", "Design System"],
     alt: "SemiGlobe: home del sitio en un portátil entre rocas azules",
   },
   process: {
     title: "Design Process",
-    stats: [
-      { label: "Horas", value: "495h" },
-      { label: "Equipo", value: "03" },
-      { label: "Etapas", value: "04" },
-    ],
     steps: [
       { title: "Investigación", caption: "7 días", tags: ["Briefing", "Onboarding"] },
       {
@@ -170,17 +157,18 @@ export const es: SemiglobeTexts = {
         tags: ["SEO", "Seguridad", "Performance"],
       },
     ],
+    note: "Contexto del proyecto: 55 días, 495 horas y un equipo de 3 personas.",
   },
   wireframe: {
-    eyebrow: "UX/UI Design",
-    title: "Wireframe",
-    lead: `La fase de wireframes fue esencial para transformar la compleja operación de SemiGlobe en un recorrido digital intuitivo, con el desafío de atender tanto al público B2B como al cliente final. El foco fue crear una arquitectura de la información que construyera una base de Confianza y Eficiencia, organizando los bloques de contenido y los CTAs para destacar la solución "punta a punta" de la empresa. Esta etapa validó la lógica y la usabilidad, garantizando que la estructura del sitio estuviera perfectamente alineada con los objetivos de negocio antes de la capa de diseño visual.`,
+    eyebrow: "Wireframe",
+    title: "Una home, dos entradas",
+    lead: "El wireframe resolvió primero la pregunta de producto: cómo dos públicos con necesidades distintas comparten la misma página sin que uno estorbe al otro.\n\nLa apertura es común a ambos y habla de lo que los dos tienen en juego, el riesgo de la inversión. Justo después, la home se divide en dos bloques paralelos. \"Para Clientes Finales\" responde con importación sin complicaciones, distribución, almacenamiento y ahorro inmediato. \"Para Empresas e Integradores\" responde con operación de punta a punta, almacenamiento, logística nacional y soporte técnico. Cada público reconoce su entrada por el título y no necesita leer el argumento del otro.",
     alt: "SemiGlobe: wireframes de la home en tres columnas",
   },
   ui: {
     eyebrow: "UI Design",
-    title: "UI Design Final",
-    lead: `En esta fase, el objetivo fue materializar los pilares de SemiGlobe en una identidad visual cohesiva e impactante. Con base en las directrices del briefing para un sitio limpio y de tendencia moderna, el diseño de la interfaz se desarrolló para transmitir seguridad e innovación accesible. La paleta de colores, la tipografía y la organización de los elementos se seleccionaron cuidadosamente para reflejar la persona de un "especialista confiable y visionario", garantizando que el prototipo final de alta fidelidad sirviera como una referencia sólida para el desarrollo y comunicara la propuesta de valor de la marca de forma clara y profesional.`,
+    title: "Credibilidad sin historial local",
+    lead: "Sin reputación en Brasil, los adjetivos no convencen. La prueba tenía que ser verificable. Por eso, la solución de punta a punta se convirtió en una tabla comparativa, SemiGlobe de un lado y el estándar del mercado del otro, ítem por ítem de la cadena: importación, logística, costos, almacenamiento, soporte y consultoría.\n\nLa fotografía separa los escenarios. El bloque de clientes finales muestra una casa con paneles en el techo. El de empresas muestra un equipo en una instalación. Cada público se ve en su propio contexto antes de leer cualquier argumento.",
     altHero: "SemiGlobe: hero de la home en un portátil sobre una roca",
     altScreens: "SemiGlobe: pantallas del sitio en perspectiva",
     altHome: "SemiGlobe: home del sitio en página completa",

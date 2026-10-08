@@ -19,11 +19,19 @@ export type FacTexts = {
   };
   process: {
     title: string;
-    stats: { label: string; value: string }[];
+    lead?: string;
     steps: { title: string; caption: string; tags: string[] }[];
+    note: string;
   };
-  wireframe: { eyebrow: string; title: string; lead: string; alt: string };
-  final: { eyebrow: string; title: string; lead: string; alt: string };
+  decisions: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    decisionLabel: string;
+    rows: { label: string; text: string; decision: string }[];
+    altWireframes: string;
+    altFinal: string;
+  };
   mobile: {
     eyebrow: string;
     title: string;
@@ -67,9 +75,9 @@ export function buildFacSections(t: FacTexts): CaseSectionDoc[] {
     {
       number: "03",
       title: t.process.title,
+      lead: t.process.lead,
       tone: "muted",
       blocks: [
-        { type: "stats", items: t.process.stats },
         {
           type: "steps",
           items: t.process.steps.map((s, i) => ({
@@ -78,38 +86,57 @@ export function buildFacSections(t: FacTexts): CaseSectionDoc[] {
           })),
           ticks: ["00", "10", "20", "30", "40"],
         },
+        { type: "note", text: t.process.note },
       ],
     },
     {
       number: "04",
-      eyebrow: t.wireframe.eyebrow,
-      title: t.wireframe.title,
-      lead: t.wireframe.lead,
+      eyebrow: t.decisions.eyebrow,
+      title: t.decisions.title,
+      lead: t.decisions.lead,
       blocks: [
+        {
+          type: "mapping",
+          decisionLabel: t.decisions.decisionLabel,
+          rows: t.decisions.rows,
+        },
         {
           type: "image",
           src: `${IMG}/wireframes.webp`,
           width: 2399,
           height: 1606,
-          alt: t.wireframe.alt,
+          alt: t.decisions.altWireframes,
+          rounded: true,
+        },
+        {
+          type: "image",
+          src: `${IMG}/design-final.webp`,
+          width: 2399,
+          height: 1610,
+          alt: t.decisions.altFinal,
           rounded: true,
         },
       ],
     },
     {
       number: "05",
-      eyebrow: t.final.eyebrow,
-      title: t.final.title,
-      lead: t.final.lead,
+      eyebrow: t.system.eyebrow,
+      title: t.system.title,
       tone: "muted",
       blocks: [
         {
-          type: "image",
-          src: `${IMG}/design-final.webp`,
-          width: 2399,
-          height: 1610,
-          alt: t.final.alt,
-          rounded: true,
+          type: "palette",
+          swatches: [
+            { colors: ["#5573CD", "#40A4DB"] },
+            { colors: ["#FFFFFF", "#D9D9D9"] },
+          ],
+          fonts: [
+            { name: "Syne", weights: ["Medium", "SemiBold"] },
+            {
+              name: "Plus Jakarta Sans",
+              weights: ["Light", "Regular", "Medium"],
+            },
+          ],
         },
       ],
     },
@@ -135,28 +162,6 @@ export function buildFacSections(t: FacTexts): CaseSectionDoc[] {
           height: 1598,
           alt: t.mobile.altPhoto,
           rounded: true,
-        },
-      ],
-    },
-    {
-      number: "07",
-      eyebrow: t.system.eyebrow,
-      title: t.system.title,
-      tone: "muted",
-      blocks: [
-        {
-          type: "palette",
-          swatches: [
-            { colors: ["#5573CD", "#40A4DB"] },
-            { colors: ["#FFFFFF", "#D9D9D9"] },
-          ],
-          fonts: [
-            { name: "Syne", weights: ["Medium", "SemiBold"] },
-            {
-              name: "Plus Jakarta Sans",
-              weights: ["Light", "Regular", "Medium"],
-            },
-          ],
         },
       ],
     },

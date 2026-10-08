@@ -115,7 +115,11 @@ export default async function AboutPage({
             <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
               {cases.slice(0, 2).map((meta) => (
                 <Reveal key={meta.slug}>
-                  <CaseCard meta={meta} title={meta.title} />
+                  <CaseCard
+                    meta={meta}
+                    title={meta.title}
+                    client={meta.client}
+                  />
                 </Reveal>
               ))}
             </div>

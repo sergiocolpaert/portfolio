@@ -1,9 +1,10 @@
 {
   "slug": "semiglobe",
   "year": 2025,
-  "category": "Web Design",
-  "tags": ["Web Design", "UI Design"],
+  "category": "Product Design · B2B & B2C",
+  "tags": ["B2B", "B2C"],
   "tools": ["Figma"],
+  "build": ["WordPress", "Elementor Pro"],
   "duration": "",
   "coverImage": "/images/cases/semiglobe/cover.webp",
   "behanceUrl": "https://www.behance.net/gallery/236705739/SemiGlobe-Website-Institucional",
