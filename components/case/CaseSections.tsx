@@ -335,7 +335,7 @@ export default function CaseSections({
                 )}
               </div>
               <div className="md:col-span-3">
-                <h2 className="font-display text-4xl leading-[1.02] font-medium tracking-tight md:text-6xl">
+                <h2 className="font-display text-4xl leading-[1.02] font-medium tracking-tight md:text-5xl lg:text-6xl">
                   {section.title}
                 </h2>
                 {section.lead && (

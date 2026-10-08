@@ -49,7 +49,7 @@ export default async function CaseStudyPage({
       <CaseTopBar backLabel={t("back")} />
       <CaseHero
         eyebrow={meta.category}
-        title={frontmatter.title}
+        title={frontmatter.pageTitle ?? frontmatter.title}
         tagline={frontmatter.tagline}
         image={meta.coverImage}
         imageAlt={frontmatter.client}
@@ -91,7 +91,7 @@ export default async function CaseStudyPage({
                 </p>
                 <ArrowIcon className="h-5 w-5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
-              <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight uppercase transition-colors sm:text-6xl">
+              <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight transition-colors sm:text-6xl">
                 {nextCaseTitle}
               </h2>
             </Container>

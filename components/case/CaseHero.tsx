@@ -27,7 +27,7 @@ export default function CaseHero({
           as="h1"
           text={title}
           lineHeight={0.89}
-          className="mt-6 font-display text-5xl font-semibold tracking-tight uppercase sm:text-6xl lg:text-7xl"
+          className="mt-6 font-display text-4xl font-semibold tracking-tight sm:text-6xl md:text-[2.75rem] lg:text-6xl xl:text-7xl"
         />
         {tagline && (
           <Reveal delay={0.25}>

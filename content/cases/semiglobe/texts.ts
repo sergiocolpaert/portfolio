@@ -2,9 +2,10 @@ import type { SemiglobeTexts } from "./build";
 
 export const pt: SemiglobeTexts = {
   meta: {
-    title: "Confiança para dois públicos",
+    title: "Uma marca solar, confiança para dois públicos",
+    pageTitle: "Uma home, duas jornadas: confiança para parceiros e consumidores",
     client: "SemiGlobe",
-    role: "UX Designer",
+    role: "UI/UX Designer",
     tagline: "Uma marca solar nova no Brasil, falando com parceiros de negócio e consumidores no mesmo site.",
   },
   about: {
@@ -12,7 +13,7 @@ export const pt: SemiglobeTexts = {
     lead: "A SemiGlobe chegou ao Brasil com 11 anos de operação internacional e nenhuma reputação local. O desafio era fazer dois públicos confiarem nela pelo mesmo site. Parceiros de negócio precisavam enxergar uma operação logística completa. Consumidores finais precisavam sentir segurança energética. Desenhei a arquitetura para que cada público encontrasse sua resposta nos primeiros segundos, sem que um competisse com o outro.",
     stats: [
       { label: "Problema", value: "Marca sem reputação local, com dois públicos distintos" },
-      { label: "Meu papel", value: "UX Designer, da arquitetura à UI final" },
+      { label: "Meu papel", value: "UI/UX Designer, da arquitetura à UI final" },
       { label: "Restrição", value: "Uma só home para B2B e consumidor final" },
       { label: "Resultado esperado", value: "Contatos de parceiros e de consumidores, cada um pela sua entrada" },
     ],
@@ -61,9 +62,10 @@ export const pt: SemiglobeTexts = {
 
 export const en: SemiglobeTexts = {
   meta: {
-    title: "Trust for two audiences",
+    title: "One solar brand, trust for two audiences",
+    pageTitle: "One home, two journeys: trust for partners and consumers",
     client: "SemiGlobe",
-    role: "UX Designer",
+    role: "UI/UX Designer",
     tagline: "A solar brand new to Brazil, speaking to business partners and consumers on the same site.",
   },
   about: {
@@ -71,7 +73,7 @@ export const en: SemiglobeTexts = {
     lead: "SemiGlobe arrived in Brazil with 11 years of international operation and no local reputation. The challenge was to get two audiences to trust it through the same site. Business partners needed to see a complete logistics operation. End consumers needed to feel energy security. I designed the architecture so each audience would find its answer in the first few seconds, without one competing with the other.",
     stats: [
       { label: "Problem", value: "A brand with no local reputation and two distinct audiences" },
-      { label: "My role", value: "UX Designer, from architecture to final UI" },
+      { label: "My role", value: "UI/UX Designer, from architecture to final UI" },
       { label: "Constraint", value: "A single home for B2B and end consumers" },
       { label: "Expected outcome", value: "Contact requests from partners and consumers, each through their own entry point" },
     ],
@@ -120,9 +122,10 @@ export const en: SemiglobeTexts = {
 
 export const es: SemiglobeTexts = {
   meta: {
-    title: "Confianza para dos públicos",
+    title: "Una marca solar, confianza para dos públicos",
+    pageTitle: "Una home, dos recorridos: confianza para socios y consumidores",
     client: "SemiGlobe",
-    role: "UX Designer",
+    role: "UI/UX Designer",
     tagline: "Una marca solar nueva en Brasil, que habla con socios de negocio y consumidores en el mismo sitio.",
   },
   about: {
@@ -130,7 +133,7 @@ export const es: SemiglobeTexts = {
     lead: "SemiGlobe llegó a Brasil con 11 años de operación internacional y ninguna reputación local. El desafío era que dos públicos confiaran en ella a través del mismo sitio. Los socios de negocio necesitaban ver una operación logística completa. Los consumidores finales necesitaban sentir seguridad energética. Diseñé la arquitectura para que cada público encontrara su respuesta en los primeros segundos, sin que uno compitiera con el otro.",
     stats: [
       { label: "Problema", value: "Marca sin reputación local, con dos públicos distintos" },
-      { label: "Mi rol", value: "UX Designer, de la arquitectura a la UI final" },
+      { label: "Mi rol", value: "UI/UX Designer, de la arquitectura a la UI final" },
       { label: "Restricción", value: "Una sola home para B2B y consumidor final" },
       { label: "Resultado esperado", value: "Contactos de socios y de consumidores, cada uno por su propia entrada" },
     ],

@@ -20,7 +20,10 @@ export type CaseMeta = {
 };
 
 export type CaseFrontmatter = {
+  /** Short title used on cards and in the next-case link. */
   title: string;
+  /** Longer title for the case page hero; falls back to `title`. */
+  pageTitle?: string;
   client: string;
   role: string;
   tagline?: string;

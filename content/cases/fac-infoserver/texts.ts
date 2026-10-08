@@ -2,9 +2,10 @@ import type { FacTexts } from "./build";
 
 export const pt: FacTexts = {
   meta: {
-    title: "Do boca a boca à busca ativa",
+    title: "12 anos de reputação, do boca a boca à busca ativa",
+    pageTitle: "Do boca a boca à busca ativa: 12 anos de reputação transformados em prova online",
     client: "Fac Infoserver",
-    role: "UX Designer",
+    role: "UI/UX Designer",
     tagline: "Presença digital para uma empresa de TI com mais de 500 clientes e nenhum site.",
   },
   about: {
@@ -12,7 +13,7 @@ export const pt: FacTexts = {
     lead: "Um projeto enxuto: discovery rápido, decisões rápidas e um one-page entregue em 10 dias. A Fac Infoserver tinha 12 anos de reputação construída por indicação e nenhuma forma de ser encontrada ou validada por quem ainda não a conhecia. O trabalho foi transformar essa reputação em prova visível para o lead que pesquisa fornecedores sozinho, antes de pedir orçamento.",
     stats: [
       { label: "Problema", value: "Negócio dependente de indicação, invisível na busca" },
-      { label: "Meu papel", value: "UX Designer, do discovery à UI final" },
+      { label: "Meu papel", value: "UI/UX Designer, do discovery à UI final" },
       { label: "Restrição", value: "Um one-page, entregue em 10 dias" },
       { label: "Resultado esperado", value: "Ser encontrada e validada online por leads em pesquisa ativa" },
     ],
@@ -84,9 +85,10 @@ export const pt: FacTexts = {
 
 export const en: FacTexts = {
   meta: {
-    title: "From word of mouth to active search",
+    title: "12 years of reputation, from word of mouth to active search",
+    pageTitle: "From word of mouth to active search: 12 years of reputation turned into online proof",
     client: "Fac Infoserver",
-    role: "UX Designer",
+    role: "UI/UX Designer",
     tagline: "Digital presence for an IT company with over 500 clients and no website.",
   },
   about: {
@@ -94,7 +96,7 @@ export const en: FacTexts = {
     lead: "A lean project: fast discovery, fast decisions and a one-page site delivered in 10 days. Fac Infoserver had 12 years of reputation built on referrals and no way to be found or validated by anyone who didn't already know it. The work was to turn that reputation into visible proof for the lead who researches suppliers on their own, before asking for a quote.",
     stats: [
       { label: "Problem", value: "A referral-dependent business, invisible in search" },
-      { label: "My role", value: "UX Designer, from discovery to final UI" },
+      { label: "My role", value: "UI/UX Designer, from discovery to final UI" },
       { label: "Constraint", value: "A one-page site, delivered in 10 days" },
       { label: "Expected outcome", value: "Being found and validated online by leads in active search" },
     ],
@@ -166,9 +168,10 @@ export const en: FacTexts = {
 
 export const es: FacTexts = {
   meta: {
-    title: "Del boca a boca a la búsqueda activa",
+    title: "12 años de reputación, del boca a boca a la búsqueda activa",
+    pageTitle: "Del boca a boca a la búsqueda activa: 12 años de reputación convertidos en prueba online",
     client: "Fac Infoserver",
-    role: "UX Designer",
+    role: "UI/UX Designer",
     tagline: "Presencia digital para una empresa de TI con más de 500 clientes y ningún sitio web.",
   },
   about: {
@@ -176,7 +179,7 @@ export const es: FacTexts = {
     lead: "Un proyecto ágil: discovery rápido, decisiones rápidas y un one-page entregado en 10 días. Fac Infoserver tenía 12 años de reputación construida por recomendación y ninguna forma de ser encontrada o validada por quien todavía no la conocía. El trabajo fue transformar esa reputación en prueba visible para el lead que investiga proveedores por su cuenta, antes de pedir un presupuesto.",
     stats: [
       { label: "Problema", value: "Negocio dependiente de recomendaciones, invisible en la búsqueda" },
-      { label: "Mi rol", value: "UX Designer, del discovery a la UI final" },
+      { label: "Mi rol", value: "UI/UX Designer, del discovery a la UI final" },
       { label: "Restricción", value: "Un one-page, entregado en 10 días" },
       { label: "Resultado esperado", value: "Ser encontrada y validada en línea por leads en búsqueda activa" },
     ],
