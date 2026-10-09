@@ -28,6 +28,7 @@ export default function CaseGallery({
       <div className="flex flex-wrap gap-3 border-b border-border pb-8 text-sm">
         <button
           onClick={() => setActiveTag(null)}
+          aria-pressed={activeTag === null}
           className={
             activeTag === null
               ? "rounded-full bg-foreground px-4 py-1.5 text-background"
@@ -40,6 +41,7 @@ export default function CaseGallery({
           <button
             key={tag}
             onClick={() => setActiveTag(tag)}
+            aria-pressed={activeTag === tag}
             className={
               activeTag === tag
                 ? "rounded-full bg-foreground px-4 py-1.5 text-background"
@@ -51,7 +53,12 @@ export default function CaseGallery({
         ))}
       </div>
 
-      <StaggerGroup className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2">
+      {/* Remount on filter change: the group animates once, so cards added
+          later would otherwise stay in their hidden state. */}
+      <StaggerGroup
+        key={activeTag ?? "all"}
+        className="mt-10 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2"
+      >
         {filtered.map((meta) => (
           <StaggerItem key={meta.slug}>
             <CaseCard
