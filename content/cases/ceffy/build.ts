@@ -101,6 +101,7 @@ export function buildCeffySections(t: CeffyTexts): CaseSectionDoc[] {
     {
       number: "02",
       title: t.problem.title,
+      titleLeft: true,
       tone: "dark",
       blocks: [
         { type: "statement", text: t.problem.text },
@@ -128,6 +129,7 @@ export function buildCeffySections(t: CeffyTexts): CaseSectionDoc[] {
     {
       number: "05",
       title: t.persona.title,
+      titleLeft: true,
       lead: t.persona.lead,
       blocks: [
         {
