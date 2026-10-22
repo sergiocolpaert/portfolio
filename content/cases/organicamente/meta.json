@@ -1,0 +1,12 @@
+{
+  "slug": "organicamente",
+  "year": 2026,
+  "category": "Product Design",
+  "tags": ["CSA", "Web App"],
+  "tools": ["Figma", "Claude Code"],
+  "build": ["Supabase", "Vercel", "Google Apps Script"],
+  "duration": "",
+  "coverImage": "/images/cases/organicamente/cover.webp",
+  "behanceUrl": "https://www.behance.net/gallery/257455701/Organicamente-Web-App",
+  "featuredOrder": 1
+}
