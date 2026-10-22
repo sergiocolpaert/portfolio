@@ -1,76 +1,122 @@
-import type { CaseSectionDoc } from "@/lib/case-doc";
+import type { CaseBlock, CaseSectionDoc } from "@/lib/case-doc";
 
 const IMG = "/images/cases/organicamente";
 
-const GREEN = "#1c4533";
-const WHITE = "#ffffff";
-const CREAM = "#f7f6f2";
+type Row = { label: string; text: string };
 
 export type OrganicamenteTexts = {
   about: { title: string; lead: string; tags: string[]; alt: string };
-  summary: { title: string; alt: string };
-  context: { title: string; lead: string; alt: string };
-  problem: { title: string; altSides: string; altNumbers: string; altForms: string };
-  users: { title: string; lead: string; alt: string };
+  summary: { title: string; rows: Row[] };
+  context: { title: string; lead: string; stepLabel: string; steps: string[] };
+  problem: {
+    title: string;
+    sides: Row[];
+    kpis: { label: string; value: string; caption: string }[];
+    altRules: string;
+    altFields: string;
+  };
+  users: {
+    title: string;
+    lead: string;
+    cards: { label: string; text: string; tags: string[] }[];
+  };
   discovery: {
     title: string;
     lead: string;
+    metric: {
+      label: string;
+      value: string;
+      caption: string;
+      rows: { label: string; value: string }[];
+      note: string;
+    };
     hypothesis: string;
     hypothesisNote: string;
-    alt: string;
   };
-  decisions: { title: string; lead: string; alt: string };
-  discarded: { title: string; alt: string };
-  solution: { title: string; lead: string; alt: string };
+  decisions: {
+    title: string;
+    lead: string;
+    decisionLabel: string;
+    rows: { label: string; text: string; decision: string }[];
+  };
+  discarded: {
+    title: string;
+    items: { kind: "no" | "yes"; title: string; text: string }[];
+  };
+  solution: {
+    title: string;
+    lead: string;
+    screens: { title: string; caption: string; alt: string }[];
+    note: string;
+  };
   admin: {
     title: string;
     lead: string;
-    altFeatures: string;
+    features: { title: string; text: string }[];
     altOverview: string;
-    altScreens: string;
+    altDeliveries: string;
+    altProfile: string;
   };
   system: {
     title: string;
     lead: string;
-    altNumbers: string;
-    altShowcase: string;
-    altDecisions: string;
+    kpis: { label: string; value: string; caption: string }[];
+    fonts: { name: string; weights: string[] }[];
+    statuses: string[];
+    rules: string;
+    decisions: { title: string; text: string }[];
     note: string;
   };
   results: {
     title: string;
     lead: string;
-    altHighlights: string;
-    altTable: string;
+    metrics: {
+      label: string;
+      value: string;
+      caption: string;
+      note: string;
+    }[];
+    columns: string[];
+    rows: {
+      cells: string[];
+      status: string;
+      tone: "good" | "info" | "neutral";
+    }[];
     note: string;
   };
   learnings: { title: string; lead: string };
 };
 
-type Img = { name: string; w: number; h: number };
+const SWATCHES = [
+  { name: "primary", colors: ["#1C4533"] },
+  { name: "primary-light", colors: ["#2B684F"] },
+  { name: "secondary", colors: ["#51B888"] },
+  { name: "accent", colors: ["#EBF5EF"] },
+  { name: "bg", colors: ["#F7F6F2"] },
+  { name: "text", colors: ["#2D322E"] },
+  { name: "success", colors: ["#2B684F"] },
+  { name: "warning", colors: ["#945610"] },
+  { name: "danger", colors: ["#B42322"] },
+  { name: "info", colors: ["#215D9F"] },
+];
 
-function panel(
-  img: Img,
-  alt: string,
-  bg: string,
-  narrow = false,
-  maxWidth?: number,
-) {
-  return {
-    type: "image" as const,
-    src: `${IMG}/${img.name}.webp`,
-    width: img.w,
-    height: img.h,
-    alt,
-    panel: bg,
-    narrow,
-    maxWidth,
-  };
-}
+const screen = (name: string, w: number, h: number) => ({
+  src: `${IMG}/${name}.webp`,
+  width: w,
+  height: h,
+});
 
 export function buildOrganicamenteSections(
   t: OrganicamenteTexts,
 ): CaseSectionDoc[] {
+  const flow: CaseBlock = {
+    type: "screens",
+    items: t.solution.screens.map((s, i) => ({
+      ...screen(`passo-${i + 1}`, 485, i === 0 ? 1056 : 1069),
+      ...s,
+    })),
+  };
+
   return [
     {
       number: "01",
@@ -78,23 +124,32 @@ export function buildOrganicamenteSections(
       lead: t.about.lead,
       blocks: [
         { type: "tags", items: t.about.tags },
-        panel({ name: "capa-mockup", w: 2551, h: 1167 }, t.about.alt, GREEN),
+        {
+          type: "image",
+          ...screen("capa-mockup", 2551, 1167),
+          alt: t.about.alt,
+          rounded: true,
+        },
       ],
     },
     {
       number: "02",
       title: t.summary.title,
       tone: "muted",
-      blocks: [
-        panel({ name: "ficha", w: 1742, h: 782 }, t.summary.alt, WHITE, true),
-      ],
+      blocks: [{ type: "facts", rows: t.summary.rows }],
     },
     {
       number: "03",
       title: t.context.title,
       lead: t.context.lead,
       blocks: [
-        panel({ name: "contexto", w: 1742, h: 193 }, t.context.alt, CREAM, true),
+        {
+          type: "stats",
+          items: t.context.steps.map((value, i) => ({
+            label: `${t.context.stepLabel} ${i + 1}`,
+            value,
+          })),
+        },
       ],
     },
     {
@@ -102,18 +157,22 @@ export function buildOrganicamenteSections(
       title: t.problem.title,
       tone: "muted",
       blocks: [
-        panel({ name: "problema-lados", w: 2551, h: 544 }, t.problem.altSides, WHITE),
-        panel({ name: "problema-numeros", w: 2551, h: 216 }, t.problem.altNumbers, WHITE),
-        panel({ name: "problema-forms", w: 2551, h: 1244 }, t.problem.altForms, WHITE),
+        { type: "cards", items: t.problem.sides },
+        { type: "kpis", items: t.problem.kpis },
+        {
+          type: "gallery",
+          items: [
+            { ...screen("forms-regras", 1252, 1244), alt: t.problem.altRules },
+            { ...screen("forms-campos", 1252, 1244), alt: t.problem.altFields },
+          ],
+        },
       ],
     },
     {
       number: "05",
       title: t.users.title,
       lead: t.users.lead,
-      blocks: [
-        panel({ name: "usuarios", w: 2551, h: 517 }, t.users.alt, CREAM),
-      ],
+      blocks: [{ type: "cards", items: t.users.cards }],
     },
     {
       number: "06",
@@ -123,7 +182,7 @@ export function buildOrganicamenteSections(
       blocks: [
         { type: "statement", text: t.discovery.hypothesis },
         { type: "note", text: t.discovery.hypothesisNote },
-        panel({ name: "linha-de-base", w: 778, h: 840 }, t.discovery.alt, WHITE, true, 520),
+        { type: "metrics", items: [{ ...t.discovery.metric, dark: true }] },
       ],
     },
     {
@@ -131,24 +190,24 @@ export function buildOrganicamenteSections(
       title: t.decisions.title,
       lead: t.decisions.lead,
       blocks: [
-        panel({ name: "decisoes", w: 2551, h: 1954 }, t.decisions.alt, CREAM),
+        {
+          type: "mapping",
+          decisionLabel: t.decisions.decisionLabel,
+          rows: t.decisions.rows,
+        },
       ],
     },
     {
       number: "08",
       title: t.discarded.title,
       tone: "muted",
-      blocks: [
-        panel({ name: "descartei", w: 1742, h: 681 }, t.discarded.alt, WHITE, true),
-      ],
+      blocks: [{ type: "verdicts", items: t.discarded.items }],
     },
     {
       number: "09",
       title: t.solution.title,
       lead: t.solution.lead,
-      blocks: [
-        panel({ name: "inscricao-fluxo", w: 2551, h: 1686 }, t.solution.alt, CREAM),
-      ],
+      blocks: [flow, { type: "note", text: t.solution.note }],
     },
     {
       number: "10",
@@ -156,9 +215,20 @@ export function buildOrganicamenteSections(
       lead: t.admin.lead,
       tone: "muted",
       blocks: [
-        panel({ name: "painel-funcoes", w: 2551, h: 517 }, t.admin.altFeatures, WHITE),
-        panel({ name: "painel-visao-geral", w: 2551, h: 1361 }, t.admin.altOverview, WHITE),
-        panel({ name: "painel-entregas-ficha", w: 2551, h: 856 }, t.admin.altScreens, WHITE),
+        { type: "cards", cols: 4, items: t.admin.features },
+        {
+          type: "image",
+          ...screen("painel-visao-geral", 2551, 1361),
+          alt: t.admin.altOverview,
+          rounded: true,
+        },
+        {
+          type: "gallery",
+          items: [
+            { ...screen("painel-entregas", 1252, 856), alt: t.admin.altDeliveries },
+            { ...screen("painel-ficha", 1252, 856), alt: t.admin.altProfile },
+          ],
+        },
       ],
     },
     {
@@ -166,9 +236,11 @@ export function buildOrganicamenteSections(
       title: t.system.title,
       lead: t.system.lead,
       blocks: [
-        panel({ name: "ds-numeros", w: 2551, h: 249 }, t.system.altNumbers, CREAM),
-        panel({ name: "ds-vitrine", w: 2551, h: 953 }, t.system.altShowcase, CREAM),
-        panel({ name: "ds-decisoes", w: 2551, h: 416 }, t.system.altDecisions, CREAM),
+        { type: "kpis", items: t.system.kpis },
+        { type: "palette", swatches: SWATCHES, fonts: t.system.fonts },
+        { type: "tags", items: t.system.statuses },
+        { type: "note", text: t.system.rules },
+        { type: "speclist", rows: t.system.decisions },
         { type: "note", text: t.system.note },
       ],
     },
@@ -178,8 +250,11 @@ export function buildOrganicamenteSections(
       lead: t.results.lead,
       tone: "muted",
       blocks: [
-        panel({ name: "resultado-destaques", w: 2551, h: 506 }, t.results.altHighlights, WHITE),
-        panel({ name: "resultado-tabela", w: 2551, h: 774 }, t.results.altTable, WHITE),
+        {
+          type: "metrics",
+          items: t.results.metrics.map((m, i) => ({ ...m, dark: i === 0 })),
+        },
+        { type: "table", columns: t.results.columns, rows: t.results.rows },
         { type: "note", text: t.results.note },
       ],
     },

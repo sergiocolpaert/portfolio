@@ -48,42 +48,24 @@ function Block({ block }: { block: CaseBlock }) {
     case "note":
       return <p className="max-w-2xl text-sm text-muted">{block.text}</p>;
 
-    case "image": {
-      const img = (
-        <Image
-          src={block.src}
-          width={block.width}
-          height={block.height}
-          alt={block.alt}
-          sizes="(min-width: 1440px) 1392px, 100vw"
-          className={`h-auto w-full ${
-            block.panel ? "min-w-[760px] md:min-w-0" : ""
-          } ${block.rounded ? "rounded-[18px]" : ""}`}
-        />
-      );
+    case "image":
       return (
-        <figure
-          className={block.narrow ? "mx-auto max-w-4xl md:mr-0" : undefined}
-          style={block.maxWidth ? { maxWidth: block.maxWidth } : undefined}
-        >
+        <figure className={block.narrow ? "mx-auto max-w-4xl" : undefined}>
           {block.caption && (
             <figcaption className="mb-4 text-xs tracking-widest text-muted uppercase">
               {block.caption}
             </figcaption>
           )}
-          {block.panel ? (
-            <div
-              className="overflow-x-auto rounded-[18px] p-4 md:p-8 lg:p-12"
-              style={{ background: block.panel }}
-            >
-              {img}
-            </div>
-          ) : (
-            img
-          )}
+          <Image
+            src={block.src}
+            width={block.width}
+            height={block.height}
+            alt={block.alt}
+            sizes="(min-width: 1440px) 1392px, 100vw"
+            className={`h-auto w-full ${block.rounded ? "rounded-[18px]" : ""}`}
+          />
         </figure>
       );
-    }
 
     case "steps":
       return (
@@ -168,7 +150,7 @@ function Block({ block }: { block: CaseBlock }) {
             }`}
           >
             {block.swatches.map((sw) => (
-              <li key={sw.colors.join("-")} className="min-w-0">
+              <li key={sw.name ?? sw.colors.join("-")} className="min-w-0">
                 <div
                   className="h-28 border border-border"
                   style={{
@@ -179,6 +161,7 @@ function Block({ block }: { block: CaseBlock }) {
                   }}
                 />
                 <p className="mt-3 text-xs tracking-widest text-muted uppercase">
+                  {sw.name && <span className="text-foreground">{sw.name} </span>}
                   {sw.colors.join(" → ")}
                 </p>
               </li>
@@ -299,6 +282,254 @@ function Block({ block }: { block: CaseBlock }) {
             </li>
           ))}
         </ol>
+      );
+
+    case "cards":
+      return (
+        <div
+          className={`grid gap-4 ${
+            block.cols === 4
+              ? "sm:grid-cols-2 lg:grid-cols-4"
+              : "md:grid-cols-2"
+          }`}
+        >
+          {block.items.map((item) => (
+            <div
+              key={item.label ?? item.title}
+              className="flex flex-col border border-border p-6 md:p-8"
+            >
+              {item.label && (
+                <p className="text-xs tracking-widest text-muted uppercase">
+                  {item.label}
+                </p>
+              )}
+              {item.title && (
+                <h3 className="font-display text-2xl font-medium tracking-tight">
+                  {item.title}
+                </h3>
+              )}
+              <p
+                className={`text-sm leading-relaxed ${
+                  item.title ? "mt-4 text-muted" : "mt-5"
+                }`}
+              >
+                {item.text}
+              </p>
+              {item.tags && (
+                <ul className="mt-auto flex flex-wrap gap-2 pt-6">
+                  {item.tags.map((tag) => (
+                    <li key={tag} className={chip}>
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+
+    case "kpis":
+      return (
+        <dl className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {block.items.map((item) => (
+            <div key={item.label} className="border border-border p-6">
+              <dt className="text-xs tracking-widest text-muted uppercase">
+                {item.label}
+              </dt>
+              <dd className="mt-4 font-display text-5xl font-medium tracking-tight">
+                {item.value}
+              </dd>
+              {item.caption && (
+                <p className="mt-3 text-sm text-muted">{item.caption}</p>
+              )}
+            </div>
+          ))}
+        </dl>
+      );
+
+    case "metrics":
+      return (
+        <div className="grid gap-4 md:grid-cols-2">
+          {block.items.map((item) => (
+            <div
+              key={item.label}
+              className={`flex flex-col p-8 md:p-10 ${
+                item.dark
+                  ? "bg-foreground text-background"
+                  : "border border-border"
+              }`}
+            >
+              <p className="text-xs tracking-widest uppercase opacity-60">
+                {item.label}
+              </p>
+              <p className="mt-6 font-display text-6xl font-medium tracking-tight md:text-7xl">
+                {item.value}
+              </p>
+              <p className="mt-4 max-w-sm text-base opacity-80">
+                {item.caption}
+              </p>
+              {item.rows && (
+                <dl className="mt-8 border-t border-current/20">
+                  {item.rows.map((row) => (
+                    <div
+                      key={row.label}
+                      className="flex justify-between gap-6 border-b border-current/20 py-3 text-sm"
+                    >
+                      <dt className="opacity-70">{row.label}</dt>
+                      <dd className="text-right font-medium">{row.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
+              {item.note && (
+                <p className="mt-auto pt-6 text-sm opacity-60">{item.note}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+
+    case "facts":
+      return (
+        <dl className="border-b border-border">
+          {block.rows.map((row) => (
+            <div
+              key={row.label}
+              className="grid gap-2 border-t border-border py-6 md:grid-cols-[14rem_1fr] md:gap-8"
+            >
+              <dt className="text-xs tracking-widest text-muted uppercase md:pt-1">
+                {row.label}
+              </dt>
+              <dd className="text-base leading-relaxed">{row.text}</dd>
+            </div>
+          ))}
+        </dl>
+      );
+
+    case "verdicts":
+      return (
+        <ul className="space-y-4">
+          {block.items.map((item) => (
+            <li
+              key={item.title}
+              className={`flex items-start gap-5 p-6 md:p-8 ${
+                item.kind === "yes"
+                  ? "bg-foreground text-background"
+                  : "border border-border"
+              }`}
+            >
+              <span
+                aria-hidden
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-current text-base"
+              >
+                {item.kind === "yes" ? "✓" : "✕"}
+              </span>
+              <div>
+                <h3 className="text-base font-medium">{item.title}</h3>
+                <p
+                  className={`mt-2 text-sm ${
+                    item.kind === "yes" ? "opacity-70" : "text-muted"
+                  }`}
+                >
+                  {item.text}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      );
+
+    case "screens":
+      return (
+        <ol className="-mx-6 flex snap-x gap-4 overflow-x-auto px-6 pb-2 lg:mx-0 lg:grid lg:grid-cols-5 lg:overflow-visible lg:px-0">
+          {block.items.map((item, i) => (
+            <li
+              key={item.title}
+              className="w-60 shrink-0 snap-start lg:w-auto"
+            >
+              <p className="text-xs tracking-widest text-muted uppercase">
+                {String(i + 1).padStart(2, "0")}
+              </p>
+              <h3 className="mt-2 text-sm font-medium">{item.title}</h3>
+              <Image
+                src={item.src}
+                width={item.width}
+                height={item.height}
+                alt={item.alt}
+                sizes="(min-width: 1024px) 270px, 240px"
+                className="mt-5 h-auto w-full rounded-[18px] border border-border"
+              />
+              <p className="mt-4 text-sm text-muted">{item.caption}</p>
+            </li>
+          ))}
+        </ol>
+      );
+
+    case "gallery":
+      return (
+        <div className="grid gap-4 md:grid-cols-2">
+          {block.items.map((item) => (
+            <Image
+              key={item.src}
+              src={item.src}
+              width={item.width}
+              height={item.height}
+              alt={item.alt}
+              sizes="(min-width: 1440px) 684px, (min-width: 768px) 50vw, 100vw"
+              className="h-auto w-full rounded-[18px]"
+            />
+          ))}
+        </div>
+      );
+
+    case "table":
+      return (
+        <div className="-mx-6 overflow-x-auto px-6 lg:mx-0 lg:px-0">
+          <table className="w-full min-w-[44rem] border-y border-border text-left text-sm">
+            <thead>
+              <tr className="border-b border-border text-xs tracking-widest text-muted uppercase">
+                {block.columns.map((col) => (
+                  <th key={col} className="py-4 pr-6 font-normal">
+                    {col}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row) => (
+                <tr
+                  key={row.cells[0]}
+                  className="border-b border-border last:border-b-0"
+                >
+                  {row.cells.map((cell, i) => (
+                    <td
+                      key={i}
+                      className={`py-5 pr-6 align-top ${
+                        i === 0 ? "font-medium" : i === 1 ? "text-muted" : ""
+                      }`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                  <td className="py-5 align-top">
+                    <span
+                      className={`${chip} ${
+                        row.tone === "good"
+                          ? "border-foreground bg-foreground text-background"
+                          : row.tone === "info"
+                            ? "border-foreground"
+                            : "text-muted"
+                      }`}
+                    >
+                      {row.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       );
 
     case "code": {

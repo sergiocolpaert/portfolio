@@ -13,10 +13,6 @@ export type CaseBlock =
       caption?: string;
       narrow?: boolean;
       rounded?: boolean;
-      /** Figma frame shown on a rounded panel of this color, scrolling sideways on small screens. */
-      panel?: string;
-      /** Caps the block's width in px. */
-      maxWidth?: number;
     }
   | {
       type: "steps";
@@ -31,7 +27,7 @@ export type CaseBlock =
   | { type: "stats"; items: { label: string; value: string }[] }
   | {
       type: "palette";
-      swatches: { colors: string[] }[];
+      swatches: { colors: string[]; name?: string }[];
       fonts: { name: string; weights: string[] }[];
     }
   | { type: "sitemap"; columns: { title: string; items: string[] }[] }
@@ -48,7 +44,52 @@ export type CaseBlock =
       rows: { label: string; text: string; decision: string }[];
     }
   | { type: "speclist"; rows: { title: string; text: string }[] }
-  | { type: "code"; code: string; label?: string };
+  | { type: "code"; code: string; label?: string }
+  | {
+      type: "cards";
+      cols?: 2 | 4;
+      items: { label?: string; title?: string; text: string; tags?: string[] }[];
+    }
+  | {
+      type: "kpis";
+      items: { label: string; value: string; caption?: string }[];
+    }
+  | {
+      type: "metrics";
+      items: {
+        label: string;
+        value: string;
+        caption: string;
+        rows?: { label: string; value: string }[];
+        note?: string;
+        dark?: boolean;
+      }[];
+    }
+  | { type: "facts"; rows: { label: string; text: string }[] }
+  | {
+      type: "verdicts";
+      items: { kind: "no" | "yes"; title: string; text: string }[];
+    }
+  | {
+      type: "screens";
+      items: {
+        src: string;
+        width: number;
+        height: number;
+        alt: string;
+        title: string;
+        caption: string;
+      }[];
+    }
+  | {
+      type: "gallery";
+      items: { src: string; width: number; height: number; alt: string }[];
+    }
+  | {
+      type: "table";
+      columns: string[];
+      rows: { cells: string[]; status: string; tone: "good" | "info" | "neutral" }[];
+    };
 
 export type CaseSectionDoc = {
   number: string;
