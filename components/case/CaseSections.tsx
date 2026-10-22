@@ -574,8 +574,8 @@ export default function CaseSections({
           className={TONE_CLASS[section.tone ?? "light"]}
         >
           <Container className="py-20 sm:py-28">
-            <Reveal className="grid gap-6 md:grid-cols-5 md:gap-10">
-              <div className="md:col-span-2">
+            <Reveal className="grid gap-6 md:grid-cols-2 md:gap-10">
+              <div>
                 <p className="text-sm tracking-widest text-muted uppercase">
                   ({section.number})
                 </p>
@@ -583,7 +583,7 @@ export default function CaseSections({
                   <p className="mt-3 text-sm">{section.eyebrow}</p>
                 )}
               </div>
-              <div className="md:col-span-3">
+              <div>
                 <h2 className="font-display text-4xl leading-[1.02] font-medium tracking-tight md:text-5xl lg:text-6xl">
                   {section.title}
                 </h2>
