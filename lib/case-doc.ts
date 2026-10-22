@@ -13,6 +13,10 @@ export type CaseBlock =
       caption?: string;
       narrow?: boolean;
       rounded?: boolean;
+      /** Figma frame shown on a rounded panel of this color, scrolling sideways on small screens. */
+      panel?: string;
+      /** Caps the block's width in px. */
+      maxWidth?: number;
     }
   | {
       type: "steps";

@@ -48,24 +48,42 @@ function Block({ block }: { block: CaseBlock }) {
     case "note":
       return <p className="max-w-2xl text-sm text-muted">{block.text}</p>;
 
-    case "image":
+    case "image": {
+      const img = (
+        <Image
+          src={block.src}
+          width={block.width}
+          height={block.height}
+          alt={block.alt}
+          sizes="(min-width: 1440px) 1392px, 100vw"
+          className={`h-auto w-full ${
+            block.panel ? "min-w-[760px] md:min-w-0" : ""
+          } ${block.rounded ? "rounded-[18px]" : ""}`}
+        />
+      );
       return (
-        <figure className={block.narrow ? "mx-auto max-w-4xl" : undefined}>
+        <figure
+          className={block.narrow ? "mx-auto max-w-4xl md:mr-0" : undefined}
+          style={block.maxWidth ? { maxWidth: block.maxWidth } : undefined}
+        >
           {block.caption && (
             <figcaption className="mb-4 text-xs tracking-widest text-muted uppercase">
               {block.caption}
             </figcaption>
           )}
-          <Image
-            src={block.src}
-            width={block.width}
-            height={block.height}
-            alt={block.alt}
-            sizes="(min-width: 1440px) 1392px, 100vw"
-            className={`h-auto w-full ${block.rounded ? "rounded-[18px]" : ""}`}
-          />
+          {block.panel ? (
+            <div
+              className="overflow-x-auto rounded-[18px] p-4 md:p-8 lg:p-12"
+              style={{ background: block.panel }}
+            >
+              {img}
+            </div>
+          ) : (
+            img
+          )}
         </figure>
       );
+    }
 
     case "steps":
       return (
