@@ -350,7 +350,11 @@ function Block({ block }: { block: CaseBlock }) {
 
     case "metrics":
       return (
-        <div className="grid gap-4 md:grid-cols-2">
+        <div
+          className={`grid gap-4 ${
+            block.items.length > 1 ? "md:grid-cols-2" : ""
+          }`}
+        >
           {block.items.map((item) => (
             <div
               key={item.label}
@@ -392,11 +396,17 @@ function Block({ block }: { block: CaseBlock }) {
 
     case "facts":
       return (
-        <dl className="border-b border-border">
+        <dl
+          className={`border-b border-border ${
+            block.inset ? "md:ml-auto md:w-[calc(50%-1.25rem)]" : ""
+          }`}
+        >
           {block.rows.map((row) => (
             <div
               key={row.label}
-              className="grid gap-2 border-t border-border py-6 md:grid-cols-[14rem_1fr] md:gap-8"
+              className={`grid gap-2 border-t border-border py-6 md:gap-8 ${
+                block.inset ? "md:grid-cols-[9rem_1fr]" : "md:grid-cols-[14rem_1fr]"
+              }`}
             >
               <dt className="text-xs tracking-widest text-muted uppercase md:pt-1">
                 {row.label}
@@ -405,6 +415,22 @@ function Block({ block }: { block: CaseBlock }) {
             </div>
           ))}
         </dl>
+      );
+
+    case "split":
+      return (
+        <div className="grid gap-10 md:grid-cols-2 md:items-start">
+          <div className="space-y-6">
+            {block.left.map((b, i) => (
+              <Block key={i} block={b} />
+            ))}
+          </div>
+          <div>
+            {block.right.map((b, i) => (
+              <Block key={i} block={b} />
+            ))}
+          </div>
+        </div>
       );
 
     case "verdicts":

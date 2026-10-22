@@ -134,7 +134,7 @@ export function buildOrganicamenteSections(
       number: "02",
       title: t.summary.title,
       tone: "muted",
-      blocks: [{ type: "facts", rows: t.summary.rows }],
+      blocks: [{ type: "facts", rows: t.summary.rows, inset: true }],
     },
     {
       number: "03",
@@ -178,9 +178,16 @@ export function buildOrganicamenteSections(
       lead: t.discovery.lead,
       tone: "muted",
       blocks: [
-        { type: "statement", text: t.discovery.hypothesis },
-        { type: "note", text: t.discovery.hypothesisNote },
-        { type: "metrics", items: [{ ...t.discovery.metric, dark: true }] },
+        {
+          type: "split",
+          left: [
+            { type: "statement", text: t.discovery.hypothesis },
+            { type: "note", text: t.discovery.hypothesisNote },
+          ],
+          right: [
+            { type: "metrics", items: [{ ...t.discovery.metric, dark: true }] },
+          ],
+        },
       ],
     },
     {

@@ -65,7 +65,13 @@ export type CaseBlock =
         dark?: boolean;
       }[];
     }
-  | { type: "facts"; rows: { label: string; text: string }[] }
+  | {
+      type: "facts";
+      rows: { label: string; text: string }[];
+      /** Aligns the list with the section title column. */
+      inset?: boolean;
+    }
+  | { type: "split"; left: CaseBlock[]; right: CaseBlock[] }
   | {
       type: "verdicts";
       items: { kind: "no" | "yes"; title: string; text: string }[];
