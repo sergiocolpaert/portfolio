@@ -133,8 +133,9 @@ export function buildOrganicamenteSections(
     {
       number: "02",
       title: t.summary.title,
+      titleLeft: true,
       tone: "muted",
-      blocks: [{ type: "facts", rows: t.summary.rows, inset: true }],
+      blocks: [{ type: "facts", rows: t.summary.rows }],
     },
     {
       number: "03",
@@ -153,6 +154,7 @@ export function buildOrganicamenteSections(
     {
       number: "04",
       title: t.problem.title,
+      titleLeft: true,
       tone: "muted",
       blocks: [
         { type: "cards", items: t.problem.sides },
@@ -205,6 +207,7 @@ export function buildOrganicamenteSections(
     {
       number: "08",
       title: t.discarded.title,
+      titleLeft: true,
       tone: "muted",
       blocks: [{ type: "verdicts", items: t.discarded.items }],
     },

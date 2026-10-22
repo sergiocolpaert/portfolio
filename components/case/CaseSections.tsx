@@ -396,17 +396,11 @@ function Block({ block }: { block: CaseBlock }) {
 
     case "facts":
       return (
-        <dl
-          className={`border-b border-border ${
-            block.inset ? "md:ml-auto md:w-[calc(50%-1.25rem)]" : ""
-          }`}
-        >
+        <dl className="border-b border-border">
           {block.rows.map((row) => (
             <div
               key={row.label}
-              className={`grid gap-2 border-t border-border py-6 md:gap-8 ${
-                block.inset ? "md:grid-cols-[9rem_1fr]" : "md:grid-cols-[14rem_1fr]"
-              }`}
+              className="grid gap-2 border-t border-border py-6 md:grid-cols-[14rem_1fr] md:gap-8"
             >
               <dt className="text-xs tracking-widest text-muted uppercase md:pt-1">
                 {row.label}
@@ -600,7 +594,11 @@ export default function CaseSections({
           className={TONE_CLASS[section.tone ?? "light"]}
         >
           <Container className="py-20 sm:py-28">
-            <Reveal className="grid gap-6 md:grid-cols-2 md:gap-10">
+            <Reveal
+              className={`grid gap-6 ${
+                section.titleLeft ? "" : "md:grid-cols-2 md:gap-10"
+              }`}
+            >
               <div>
                 <p className="text-sm tracking-widest text-muted uppercase">
                   ({section.number})

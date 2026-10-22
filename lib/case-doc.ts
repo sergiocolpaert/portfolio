@@ -68,8 +68,6 @@ export type CaseBlock =
   | {
       type: "facts";
       rows: { label: string; text: string }[];
-      /** Aligns the list with the section title column. */
-      inset?: boolean;
     }
   | { type: "split"; left: CaseBlock[]; right: CaseBlock[] }
   | {
@@ -103,5 +101,7 @@ export type CaseSectionDoc = {
   title: string;
   lead?: string;
   tone?: CaseTone;
+  /** Puts the title in the left column instead of the right half. */
+  titleLeft?: boolean;
   blocks?: CaseBlock[];
 };
