@@ -62,8 +62,6 @@ export type OrganicamenteTexts = {
     lead: string;
     kpis: { label: string; value: string; caption: string }[];
     fonts: { name: string; weights: string[] }[];
-    statuses: string[];
-    rules: string;
     decisions: { title: string; text: string }[];
     note: string;
   };
@@ -238,8 +236,6 @@ export function buildOrganicamenteSections(
       blocks: [
         { type: "kpis", items: t.system.kpis },
         { type: "palette", swatches: SWATCHES, fonts: t.system.fonts },
-        { type: "tags", items: t.system.statuses },
-        { type: "note", text: t.system.rules },
         { type: "speclist", rows: t.system.decisions },
         { type: "note", text: t.system.note },
       ],

@@ -17,7 +17,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         "Product Design",
         "UI/UX Design"
       ],
-      "alt": "Organicamente: pantallas del flujo de inscripción en tres celulares"
+      "alt": "Pantallas del flujo de inscripción de Organicamente en tres celulares"
     },
     "summary": {
       "title": "Resumen del proyecto",
@@ -36,7 +36,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         },
         {
           "label": "Resultado",
-          "text": "Sistema y panel en línea desde el 01/10/2026. En el primer mes, 6 nuevos suscriptores y cierre en 12h a 24h. Recolección de datos en curso"
+          "text": "En el primer mes, 6 nuevos suscriptores y cierre en 12h a 24h. Recolección de datos en curso"
         },
         {
           "label": "Stack",
@@ -88,8 +88,8 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "caption": "con decenas de valores"
         }
       ],
-      "altRules": "Captura del Google Forms antiguo: reglas en bloque de texto",
-      "altFields": "Captura del Google Forms antiguo: campos y condiciones financieras"
+      "altRules": "Captura del Google Forms antiguo con las reglas en bloque de texto",
+      "altFields": "Captura del Google Forms antiguo con campos y condiciones financieras"
     },
     "users": {
       "title": "Usuarios",
@@ -143,7 +143,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         ],
         "note": "Muestra pequeña, usada como referencia para medir el nuevo flujo."
       },
-      "hypothesis": "Hipótesis: el formulario era un bloqueo fuerte en la decisión.",
+      "hypothesis": "Mi hipótesis era que el formulario funcionaba como un bloqueo fuerte en la decisión.",
       "hypothesisNote": "No era la única causa posible, ya que el precio, la expectativa sobre alimentos sin agrotóxicos y los leads fuera de ruta también pesaban. Pero era la causa que yo podía probar y rediseñar."
     },
     "decisions": {
@@ -188,52 +188,52 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
       "items": [
         {
           "kind": "no",
-          "title": "Descarté: mantener el Forms con ajustes",
+          "title": "Descarté mantener el Forms con ajustes",
           "text": "El problema estaba en la estructura y no en la apariencia."
         },
         {
           "kind": "no",
-          "title": "Descarté: usar herramientas listas",
+          "title": "Descarté usar herramientas listas",
           "text": "Por costo y por las limitaciones para modelar la lógica de una CSA."
         },
         {
           "kind": "yes",
-          "title": "Opté por: diseñar en Figma y construir con Claude Code, Supabase y Vercel",
+          "title": "Opté por diseñar en Figma y construir con Claude Code, Supabase y Vercel",
           "text": "Lo que me permitió diseñar, probar y ajustar con el equipo sin depender de otro equipo."
         }
       ]
     },
     "solution": {
       "title": "La solución",
-      "lead": "Inscripción en cinco pasos: región y agricultor, suscripción y opcionales, datos de contacto, dirección y contingencia de ausencia, y por último el pacto con el resumen financiero.",
+      "lead": "La inscripción tiene cinco pasos. Región y agricultor, suscripción y opcionales, datos de contacto, dirección y contingencia de ausencia, y por último el pacto con el resumen financiero.",
       "screens": [
         {
           "title": "Región y agricultor",
           "caption": "La primera pantalla pide la región y ya muestra al agricultor responsable",
-          "alt": "Paso 1: elección de región y barrio"
+          "alt": "Paso 1, elección de región y barrio"
         },
         {
           "title": "Suscripción y opcionales",
           "caption": "Suscripción, opcionales y resumen lateral con el total del primer mes",
-          "alt": "Paso 2: tamaño de la suscripción"
+          "alt": "Paso 2, tamaño de la suscripción"
         },
         {
           "title": "Datos de contacto",
           "caption": "Nombre y WhatsApp antes de la dirección",
-          "alt": "Paso 3: identificación"
+          "alt": "Paso 3, identificación"
         },
         {
           "title": "Dirección y ausencia",
           "caption": "Dirección de entrega y qué hacer en caso de ausencia",
-          "alt": "Paso 4: dirección de entrega"
+          "alt": "Paso 4, dirección de entrega"
         },
         {
           "title": "Pacto y resumen",
           "caption": "Reglas en tarjetas visuales y resumen financiero",
-          "alt": "Paso 5: pacto de confianza y resumen financiero"
+          "alt": "Paso 5, pacto de confianza y resumen financiero"
         }
       ],
-      "note": "Cobro automático: al final de la inscripción, el cobro sale automáticamente por Asaas, por PIX o boleto."
+      "note": "Cobro automático. Al final de la inscripción, el cobro sale automáticamente por Asaas, por PIX o boleto."
     },
     "admin": {
       "title": "Panel administrativo",
@@ -299,14 +299,6 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           ]
         }
       ],
-      "statuses": [
-        "Activa",
-        "Pausada",
-        "Cancelada",
-        "En espera",
-        "Archivada"
-      ],
-      "rules": "Espaciado en base 4 (4 a 64 px) · radios de 8, 12, 16 y 20 px · sombras verdosas suaves.",
       "decisions": [
         {
           "title": "Contraste dentro de AA",
@@ -331,13 +323,13 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "label": "Nuevos suscriptores por mes",
           "value": "+140%",
           "caption": "6 en el primer mes en línea, contra un promedio de 2,5 por mes antes",
-          "note": "Antes: 5 suscripciones en dos meses de referencia"
+          "note": "Antes eran 5 suscripciones en dos meses de referencia"
         },
         {
           "label": "Tiempo de cierre",
-          "value": "−70%",
-          "caption": "en el tiempo para cerrar una suscripción: de 2 a 3 días hábiles a 12h a 24h",
-          "note": "Cálculo por el punto medio: de 60h a 18h"
+          "value": "-70%",
+          "caption": "en el tiempo para cerrar una suscripción, de 2 a 3 días hábiles a 12h a 24h",
+          "note": "Cálculo por el punto medio, de 60h a 18h"
         }
       ],
       "columns": [
@@ -352,7 +344,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "cells": [
             "Conversión de lead a suscriptor",
             "5 suscripciones en dos meses (108 leads)",
-            "6 nuevos suscriptores en el primer mes (promedio anterior: 2,5 por mes)",
+            "6 nuevos suscriptores en el primer mes (promedio anterior de 2,5 por mes)",
             "+140%"
           ],
           "status": "Primer dato",
@@ -383,7 +375,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
             "Tiempo para cerrar una suscripción",
             "De 2 a 3 días hábiles",
             "De 12h a 24h",
-            "−70%"
+            "-70%"
           ],
           "status": "Mejoró",
           "tone": "good"

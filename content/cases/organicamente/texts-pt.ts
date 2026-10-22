@@ -17,7 +17,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         "Product Design",
         "UI/UX Design"
       ],
-      "alt": "Organicamente: telas do fluxo de inscrição em três celulares"
+      "alt": "Telas do fluxo de inscrição da Organicamente em três celulares"
     },
     "summary": {
       "title": "Resumo do projeto",
@@ -36,7 +36,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         },
         {
           "label": "Resultado",
-          "text": "Sistema e painel no ar desde 01/10/2026. No primeiro mês, 6 novos assinantes e fechamento em 12h a 24h. Coleta de dados em andamento"
+          "text": "No primeiro mês, 6 novos assinantes e fechamento em 12h a 24h. Coleta de dados em andamento"
         },
         {
           "label": "Stack",
@@ -63,7 +63,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         },
         {
           "label": "Para quem operava",
-          "text": "Cada inscrição era conferida à mão. O financeiro calculava o valor de cada assinante manualmente, e os dados viviam em planilhas difíceis de cruzar, sem nenhuma automação."
+          "text": "Cada inscrição passava por conferência manual. O financeiro calculava o valor de cada assinante manualmente, e os dados viviam em planilhas difíceis de cruzar, sem nenhuma automação."
         }
       ],
       "kpis": [
@@ -88,8 +88,8 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "caption": "com dezenas de valores"
         }
       ],
-      "altRules": "Print do Google Forms antigo: regras em bloco de texto",
-      "altFields": "Print do Google Forms antigo: campos e condições financeiras"
+      "altRules": "Print do Google Forms antigo com as regras em bloco de texto",
+      "altFields": "Print do Google Forms antigo com campos e condições financeiras"
     },
     "users": {
       "title": "Usuários",
@@ -118,7 +118,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
     },
     "discovery": {
       "title": "Como percebi o problema",
-      "lead": "Os leads chegavam, o atendimento respondia, e mesmo assim poucos fechavam. Nos dois meses de referência que tenho, foram 5 assinaturas para 108 leads, cerca de 4,6%. A amostra é pequena, mas serve como linha de base.\n\nEm maio apresentei à equipe uma página de cadastro interativa, pensada para filtrar bairros fora de rota logo no primeiro clique e capturar o contato antes de o lead desistir. Ao ver o novo fluxo, a equipe apontou também as dores da gestão. Entendi como organizavam os clientes em planilhas e decidi criar o painel.",
+      "lead": "Os leads chegavam, o atendimento respondia, e mesmo assim poucos fechavam. Nos dois meses de referência que tenho, foram 5 assinaturas para 108 leads, cerca de 4,6%. A amostra é pequena, mas serve como linha de base.\n\nEm maio apresentei para a equipe uma página de cadastro interativa, pensada para filtrar bairros fora de rota logo no primeiro clique e capturar o contato antes de o lead desistir. Ao ver o novo fluxo, a equipe apontou também as dores da gestão. Entendi como organizavam os clientes em planilhas e decidi criar o painel.",
       "metric": {
         "label": "Linha de base",
         "value": "≈ 4,6%",
@@ -143,7 +143,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         ],
         "note": "Amostra pequena, usada como referência para medir o novo fluxo."
       },
-      "hypothesis": "Hipótese: o formulário era um bloqueio forte na decisão.",
+      "hypothesis": "Minha hipótese era que o formulário funcionava como um bloqueio forte na decisão.",
       "hypothesisNote": "Não era a única causa possível, já que preço, expectativa sobre alimentos sem agrotóxico e leads fora da rota também pesavam. Mas era a causa que eu podia testar e redesenhar."
     },
     "decisions": {
@@ -178,7 +178,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         },
         {
           "label": "06 · Equipe",
-          "text": "A logística precisa servir à rota.",
+          "text": "A logística precisa funcionar para a rota.",
           "decision": "Retirei a escolha de faixas de horário e a opção de ligar na hora. A decisão veio da gestão, a partir das restrições operacionais de entrega."
         }
       ]
@@ -188,52 +188,52 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
       "items": [
         {
           "kind": "no",
-          "title": "Descartei: manter o Forms com ajustes",
+          "title": "Descartei manter o Forms com ajustes",
           "text": "O problema estava na estrutura e não na aparência."
         },
         {
           "kind": "no",
-          "title": "Descartei: usar ferramentas prontas",
+          "title": "Descartei usar ferramentas prontas",
           "text": "Por custo e pelas limitações para modelar a lógica de uma CSA."
         },
         {
           "kind": "yes",
-          "title": "Optei por: projetar no Figma e construir com Claude Code, Supabase e Vercel",
+          "title": "Optei por projetar no Figma e construir com Claude Code, Supabase e Vercel",
           "text": "O que me deixou desenhar, testar e ajustar com a equipe sem depender de outro time."
         }
       ]
     },
     "solution": {
       "title": "A solução",
-      "lead": "Inscrição em cinco passos: região e agricultor, assinatura e opcionais, dados de contato, endereço e contingência de ausência, e por fim o pacto com o resumo financeiro.",
+      "lead": "A inscrição tem cinco passos. Região e agricultor, assinatura e opcionais, dados de contato, endereço e contingência de ausência, e por fim o pacto com o resumo financeiro.",
       "screens": [
         {
           "title": "Região e agricultor",
           "caption": "A primeira tela pede a região e já mostra o agricultor responsável",
-          "alt": "Passo 1: escolha de região e bairro"
+          "alt": "Passo 1, escolha de região e bairro"
         },
         {
           "title": "Assinatura e opcionais",
           "caption": "Assinatura, opcionais e resumo lateral com o total do primeiro mês",
-          "alt": "Passo 2: tamanho da assinatura"
+          "alt": "Passo 2, tamanho da assinatura"
         },
         {
           "title": "Dados de contato",
           "caption": "Nome e WhatsApp antes do endereço",
-          "alt": "Passo 3: identificação"
+          "alt": "Passo 3, identificação"
         },
         {
           "title": "Endereço e ausência",
           "caption": "Endereço de entrega e o que fazer em caso de ausência",
-          "alt": "Passo 4: endereço de entrega"
+          "alt": "Passo 4, endereço de entrega"
         },
         {
           "title": "Pacto e resumo",
           "caption": "Regras em cards visuais e resumo financeiro",
-          "alt": "Passo 5: pacto de confiança e resumo financeiro"
+          "alt": "Passo 5, pacto de confiança e resumo financeiro"
         }
       ],
-      "note": "Cobrança automática: ao final da inscrição, a cobrança sai automaticamente pelo Asaas, por PIX ou boleto."
+      "note": "Cobrança automática. Ao final da inscrição, a cobrança sai automaticamente pelo Asaas, por PIX ou boleto."
     },
     "admin": {
       "title": "Painel administrativo",
@@ -299,14 +299,6 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           ]
         }
       ],
-      "statuses": [
-        "Ativa",
-        "Pausada",
-        "Cancelada",
-        "Aguardando",
-        "Arquivada"
-      ],
-      "rules": "Espaçamento em base 4 (4 a 64 px) · raios de 8, 12, 16 e 20 px · sombras esverdeadas suaves.",
       "decisions": [
         {
           "title": "Contraste dentro do AA",
@@ -331,13 +323,13 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "label": "Novos assinantes por mês",
           "value": "+140%",
           "caption": "6 no primeiro mês no ar, contra uma média de 2,5 por mês antes",
-          "note": "Antes: 5 assinaturas em dois meses de referência"
+          "note": "Antes eram 5 assinaturas em dois meses de referência"
         },
         {
           "label": "Tempo de fechamento",
-          "value": "−70%",
-          "caption": "no tempo para fechar uma assinatura: de 2 a 3 dias úteis para 12h a 24h",
-          "note": "Cálculo pelo ponto médio: de 60h para 18h"
+          "value": "-70%",
+          "caption": "no tempo para fechar uma assinatura, de 2 a 3 dias úteis para 12h a 24h",
+          "note": "Cálculo pelo ponto médio, de 60h para 18h"
         }
       ],
       "columns": [
@@ -352,7 +344,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "cells": [
             "Conversão de lead para assinante",
             "5 assinaturas em dois meses (108 leads)",
-            "6 novos assinantes no primeiro mês (média anterior: 2,5 por mês)",
+            "6 novos assinantes no primeiro mês (média anterior de 2,5 por mês)",
             "+140%"
           ],
           "status": "Primeiro dado",
@@ -383,7 +375,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
             "Tempo para fechar uma assinatura",
             "De 2 a 3 dias úteis",
             "De 12h a 24h",
-            "−70%"
+            "-70%"
           ],
           "status": "Melhorou",
           "tone": "good"

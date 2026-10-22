@@ -17,7 +17,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         "Product Design",
         "UI/UX Design"
       ],
-      "alt": "Organicamente: sign-up flow screens on three phones"
+      "alt": "Sign-up flow screens of Organicamente on three phones"
     },
     "summary": {
       "title": "Project summary",
@@ -36,7 +36,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         },
         {
           "label": "Outcome",
-          "text": "System and dashboard live since 10/01/2026. In the first month, 6 new subscribers and closing in 12h to 24h. Data collection is ongoing"
+          "text": "In the first month, 6 new subscribers and closing in 12h to 24h. Data collection is ongoing"
         },
         {
           "label": "Stack",
@@ -88,8 +88,8 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "caption": "with dozens of values"
         }
       ],
-      "altRules": "Screenshot of the old Google Form: rules in a block of text",
-      "altFields": "Screenshot of the old Google Form: fields and financial terms"
+      "altRules": "Screenshot of the old Google Form with the rules in a block of text",
+      "altFields": "Screenshot of the old Google Form with fields and financial terms"
     },
     "users": {
       "title": "Users",
@@ -143,7 +143,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
         ],
         "note": "Small sample, used as a reference to measure the new flow."
       },
-      "hypothesis": "Hypothesis: the form was a strong blocker in the decision.",
+      "hypothesis": "My hypothesis was that the form acted as a strong blocker in the decision.",
       "hypothesisNote": "It was not the only possible cause, since price, expectations about pesticide-free food and out-of-route leads also weighed. But it was the cause I could test and redesign."
     },
     "decisions": {
@@ -188,52 +188,52 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
       "items": [
         {
           "kind": "no",
-          "title": "Discarded: keeping the Form with tweaks",
+          "title": "Discarded keeping the Form with tweaks",
           "text": "The problem was in the structure, not in the appearance."
         },
         {
           "kind": "no",
-          "title": "Discarded: using off-the-shelf tools",
+          "title": "Discarded using off-the-shelf tools",
           "text": "For cost and for the limitations in modeling a CSA's logic."
         },
         {
           "kind": "yes",
-          "title": "Chose: design in Figma and build with Claude Code, Supabase and Vercel",
+          "title": "Chose to design in Figma and build with Claude Code, Supabase and Vercel",
           "text": "What let me design, test and adjust with the team without depending on another team."
         }
       ]
     },
     "solution": {
       "title": "The solution",
-      "lead": "Sign-up in five steps: region and farmer, subscription and add-ons, contact details, address and absence contingency, and finally the pact with the financial summary.",
+      "lead": "Sign-up has five steps. Region and farmer, subscription and add-ons, contact details, address and absence contingency, and finally the pact with the financial summary.",
       "screens": [
         {
           "title": "Region and farmer",
           "caption": "The first screen asks for the region and already shows the responsible farmer",
-          "alt": "Step 1: choose region and neighborhood"
+          "alt": "Step 1, choose region and neighborhood"
         },
         {
           "title": "Subscription and add-ons",
           "caption": "Subscription, add-ons and a side summary with the first month's total",
-          "alt": "Step 2: subscription size"
+          "alt": "Step 2, subscription size"
         },
         {
           "title": "Contact details",
           "caption": "Name and WhatsApp before the address",
-          "alt": "Step 3: identification"
+          "alt": "Step 3, identification"
         },
         {
           "title": "Address and absence",
           "caption": "Delivery address and what to do in case of absence",
-          "alt": "Step 4: delivery address"
+          "alt": "Step 4, delivery address"
         },
         {
           "title": "Pact and summary",
           "caption": "Rules in visual cards and a financial summary",
-          "alt": "Step 5: trust pact and financial summary"
+          "alt": "Step 5, trust pact and financial summary"
         }
       ],
-      "note": "Automatic billing: at the end of sign-up, the charge goes out automatically through Asaas, by PIX or boleto."
+      "note": "Automatic billing. At the end of sign-up, the charge goes out automatically through Asaas, by PIX or boleto."
     },
     "admin": {
       "title": "Admin dashboard",
@@ -299,14 +299,6 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           ]
         }
       ],
-      "statuses": [
-        "Active",
-        "Paused",
-        "Canceled",
-        "Pending",
-        "Archived"
-      ],
-      "rules": "Base-4 spacing (4 to 64 px) · radii of 8, 12, 16 and 20 px · soft green-tinted shadows.",
       "decisions": [
         {
           "title": "Contrast within AA",
@@ -331,13 +323,13 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "label": "New subscribers per month",
           "value": "+140%",
           "caption": "6 in the first month live, versus an average of 2.5 per month before",
-          "note": "Before: 5 subscriptions in two reference months"
+          "note": "Before it was 5 subscriptions in two reference months"
         },
         {
           "label": "Closing time",
-          "value": "−70%",
-          "caption": "in the time to close a subscription: from 2 to 3 business days to 12h to 24h",
-          "note": "Calculated by the midpoint: from 60h to 18h"
+          "value": "-70%",
+          "caption": "in the time to close a subscription, from 2 to 3 business days to 12h to 24h",
+          "note": "Calculated by the midpoint, from 60h to 18h"
         }
       ],
       "columns": [
@@ -352,7 +344,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
           "cells": [
             "Lead-to-subscriber conversion",
             "5 subscriptions in two months (108 leads)",
-            "6 new subscribers in the first month (previous average: 2.5 per month)",
+            "6 new subscribers in the first month (previous average of 2.5 per month)",
             "+140%"
           ],
           "status": "First data",
@@ -383,7 +375,7 @@ export const texts: { meta: CaseFrontmatter; sections: OrganicamenteTexts } = {
             "Time to close a subscription",
             "2 to 3 business days",
             "12h to 24h",
-            "−70%"
+            "-70%"
           ],
           "status": "Improved",
           "tone": "good"
